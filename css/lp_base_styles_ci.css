@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
+.open-sans {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.lato {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+.font-extra-light {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semi-bold {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.font-extra-bold {
+  font-weight: 700;
+}
+
+.font-heavy {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.text-body {
+  color: #212529;
+}
+
+.bg-body {
+  background-color: #212529;
+}
+
+.border-body {
+  border-color: #212529 !important;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.border-white {
+  border-color: #ffffff !important;
+}
+
+.text-grey {
+  color: #f4f8ff;
+}
+
+.bg-grey {
+  background-color: #f4f8ff;
+}
+
+.border-grey {
+  border-color: #f4f8ff !important;
+}
+
+.text-orange {
+  color: #ff7300;
+}
+
+.bg-orange {
+  background-color: #ff7300;
+}
+
+.border-orange {
+  border-color: #ff7300 !important;
+}
+
+.text-blue {
+  color: #082b4b;
+}
+
+.bg-blue {
+  background-color: #082b4b;
+}
+
+.border-blue {
+  border-color: #082b4b !important;
+}
+
+.text-dark-blue {
+  color: #051c31;
+}
+
+.bg-dark-blue {
+  background-color: #051c31;
+}
+
+.border-dark-blue {
+  border-color: #051c31 !important;
+}
+
+html {
+  font-size: 16px;
+  /* Required for Function + Mixin */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Base HTML Elements                          */
+/* -------------------------------------------------------------------------- */
+body {
+  font-size: 16px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-size: inherit;
+}
+
+a {
+  color: #082b4b;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ff7300;
+}
+
+.btn-primary, .btn-secondary, .btn-light {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #ffffff;
+  background-color: #ff7300;
+  border-color: #ff7300;
+  padding: 0.75rem 1.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* Small devices (landscape phones, 576px and up) */
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-light:hover {
+  background-color: #082b4b;
+  border-color: #082b4b;
+}
+
+@media (min-width: 576px) {
+  .btn-primary, .btn-secondary, .btn-light {
+    font-size: 22px;
+    font-size: 1.375rem;
+    padding: 1rem 2rem;
+  }
+}
+
+.btn-secondary {
+  background-color: #082b4b;
+}
+
+.btn-secondary:hover {
+  background-color: #ff7300;
+  border-color: #ff7300;
+}
+
+.btn-light {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.btn-light:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Hero Styles                                 */
+/* -------------------------------------------------------------------------- */
+#hero {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Hero w/ Form Styles                         */
+/* -------------------------------------------------------------------------- */
+header.form-header #form-outer {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+  /* Small devices (landscape phones, 576px and up) */
+}
+
+@media (min-width: 576px) {
+  header.form-header #form-outer {
+    margin-top: 0;
+  }
+}
+
+header.form-header #hero {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Two-Column Form Right                           */
+/* -------------------------------------------------------------------------- */
+section#content-left-form-right {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      Two-Column Image Left / Content Right                 */
+/* -------------------------------------------------------------------------- */
+section#image-left-content-right {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Video Section                               */
+/* -------------------------------------------------------------------------- */
+section#video {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #082b4b;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 FAQ Section                                */
+/* -------------------------------------------------------------------------- */
+section#faq {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              3-Column Services                             */
+/* -------------------------------------------------------------------------- */
+section#three-col-services {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f4f8ff;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Testimonial                                */
+/* -------------------------------------------------------------------------- */
+section#testimonial {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #082b4b;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Whitepaper                                 */
+/* -------------------------------------------------------------------------- */
+section#whitepaper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #ff7300;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Headline - CTA                                 */
+/* -------------------------------------------------------------------------- */
+section#headline-cta {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f4f8ff;
+  color: #212529;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Pre-Footer Section                             */
+/* -------------------------------------------------------------------------- */
+section#pre-footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #ff7300;
+  color: #ffffff;
+  text-align: center;
+}
+
+section#pre-footer a {
+  color: #ffffff !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #082b4b;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #ff7300;
+  text-decoration: none;
+}
+
+#copyright {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background-color: #051c31;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#social-share {
+  margin: inherit auto;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+#social-share a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 4px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.75;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  background-color: transparent;
+  /* Small devices (landscape phones, 576px and up) */
+}
+
+@media (min-width: 576px) {
+  #social-share a {
+    margin: 6px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+  }
+}
+
+#social-share a:hover {
+  opacity: 1;
+}
+
+#social-share i {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Base Navbar Styles                             */
+/* -------------------------------------------------------------------------- */
+nav.navbar {
+  background-color: #082b4b;
+  color: #212529;
+  padding: 1.875rem;
+}
+
+nav.navbar .navbar-brand {
+  color: #ffffff;
+}
+
+nav.navbar .navbar-toggler {
+  background-color: #ff7300;
+  width: 50px;
+  text-align: center;
+}
+
+nav.navbar .navbar-toggler .navbar-toggler-icon {
+  color: #ffffff;
+  line-height: 30px;
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      Default (Expanded) Navbar Styles                      */
+/* -------------------------------------------------------------------------- */
+.navbar-collapse ul.navbar-nav li.nav-item {
+  margin: 0 1rem;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: #ff7300;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:active {
+  color: #ff7300;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:focus {
+  color: #ff7300;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Mobile Navbar Styles                            */
+/* -------------------------------------------------------------------------- */
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  background-color: #ffffff;
+  padding: 1.875rem;
+}
+
+.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link {
+  color: #082b4b;
+}
+
+.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:hover,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: #ff7300;
+}
+
+.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:active,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:active {
+  color: #ff7300;
+}
+
+.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:focus,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:focus {
+  color: #ff7300;
+}
+/*# sourceMappingURL=lp_base_styles_ci.css.map */
