@@ -1,0 +1,27 @@
+{% extends "layout/_layout.html" %}
+
+
+{% block custom_css %}
+
+<!--  Place Custom Styles Inside <style> Tag  -->
+
+{% endblock %}
+
+{% block header %}
+{% include "sections/_header.html"%}
+{% endblock %}
+
+{% block content %}
+
+{% include "sections/_content-left-form-right.html" %}
+{% include "sections/_video.html" %}
+{% include "sections/_faq.html" %}
+{% include "sections/_pre-footer.html" %}
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% include "sections/_footer.html"%}
+{% endblock %}
