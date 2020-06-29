@@ -1,21 +1,14 @@
 // Custom Fonts
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
+@import url("https://use.typekit.net/mnw0dxe.css");
 
 $font-stack: (
-  open-sans: (
-    "Open Sans",
+  gill: (
+    "gill-sans-nova",
     Arial,
     Helvetica,
     sans-serif,
-  ),
-  lato: (
-    "Lato",
-    Arial,
-    Helvetica,
-    sans-serif,
-  ),
+  )
 );
 // Accessor Function of map-get $font-stack
 @function font-stack($key) {
@@ -30,8 +23,8 @@ $font-stack: (
   }
 }
 
-$primary-font: font-stack(open-sans);
-$headline-font: font-stack(lato);
+$primary-font: font-stack(gill);
+$headline-font: font-stack(gill);
 
 $font-weight: (
   extra-light: 200,
@@ -56,12 +49,14 @@ $font-weight: (
 
 $color: (
   transparent: transparent,
-  body: #212529,
+  body: #3d3d3d,
   white: #ffffff,
   grey: #f4f8ff,
-  orange: #ff7300,
-  blue: #082b4b,
-  dark-blue: #051c31,
+  dark-grey: #bebebe,
+  teal: #2ab2af,
+  blue: #13416f,
+  dark-blue: #18294a,
+  yellow: #fef0c5,
 );
 
 // Accessor Function of map-get $color
@@ -84,8 +79,8 @@ $color: (
   }
 }
 
-$primary-color: color(orange);
-$secondary-color: color(blue);
+$primary-color: color(blue);
+$secondary-color: color(teal);
 $third-color: color(dark-blue);
 
 // Border Radius

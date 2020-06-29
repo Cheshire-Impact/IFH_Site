@@ -1,8 +1,19 @@
-<h2>Templates</h2>
-<ul>
-{% for page in pages %}
-<li><a href="/{{ page.filename }}">{{ page.filename }}</a></li>
-{% endfor %}
-</ul>
+{% set page_title = "Integrated Financial Holdings, Inc." %}
 
-   
+
+{% extends "layout/layout.html" %}
+
+
+
+{% block header %}
+{% include "sections/header.html"%}
+{% endblock %}
+
+
+{% block content %}
+{% include "sections/about.html"%}
+{% endblock %}
+
+{% block footer %}
+{% include "sections/footer.html"%}
+{% endblock %}
