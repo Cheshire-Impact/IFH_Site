@@ -4,6 +4,209 @@
 @import "inc/base";
 
 
+
+
+// Circles 
+@mixin circle($bg, $color, $size, $border, $after, $space )
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparentize($bg,.2);
+  color: $color;
+  width: $size;
+  height: $size;
+  max-width: $size;
+  max-height: $size;
+  border: $size/60 solid $border;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  transform: scale(1);
+  @include transition(all ease .5s);
+  &:hover {
+      background-color: $bg;
+      box-shadow: 0 20px 50px rgba(254,254,254,.5);
+      transform: scale(.95);
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      border: $size/62 solid $after;
+      width: $space;
+      height: $space;
+      border-radius: 50%;
+  }
+}
+
+@mixin flipCircle($bg, $color, $size, $border, $after, $space )
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg;
+  color: $color;
+  width: $size;
+  height: $size;
+  max-width: $size;
+  max-height: $size;
+  border: $size/60 solid $border;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  transform: scale(1);
+  @include transition(all ease .5s);
+  &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: $primary-color;
+      box-shadow: 0 20px 50px rgba(0,0,0,.3);
+      transform: scale(.95);
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      border: $size/62 solid $after;
+      width: $space;
+      height: $space;
+      border-radius: 50%;
+  }
+  .front {
+    @include transition(all .5s ease);
+  }
+  &:hover .front {
+    display: none;
+  }
+  .back {
+    display:none;
+    @include transition(all .5s ease);
+  }
+  &:hover .back {
+    display: block;
+  }
+  h2 {
+    color: $color;
+    @include font-size($size/3);
+  }
+}
+
+.title {
+  position: relative;
+  text-align: left;
+  @include font-size(48px);
+  text-transform: uppercase;
+  color: color(dark-blue);
+  margin-bottom: 3rem;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 33%;
+    height: 8px;
+    bottom: -10px;
+    left: 0;
+    border-top: 6px solid color(aqua);
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    
+}
+}
+
+// Nav
+ 
+nav.navbar {
+  background-color: transparentize(color(dark-blue),.3);
+  color: color(body);
+  padding: calculateRem(30px);
+  // Logo
+  .navbar-brand {
+    color: color(white);
+  }
+  // Mobile Nav Toggle Button
+  .navbar-toggler {
+    background-color: $primary-color;
+    width: 50px;
+    text-align: center;
+    // Nav Toggle Button Icon
+    .navbar-toggler-icon {
+      color: color(white);
+      line-height: 30px;
+      width: 100%;
+    }
+  }
+}
+
+// Default Nav
+
+.navbar-collapse {
+  ul.navbar-nav {
+    li.nav-item {
+      margin: 0;
+      a.nav-link {
+        width: 100%;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          padding-top: .75rem;
+        text-transform: uppercase;
+        color: color(white);
+        font-weight: 300;
+        letter-spacing: 1px;
+        @include transition(all 0.3s ease);
+        &:hover {
+          background-color: $secondary-color;
+        }
+        &:active {
+          background-color: $secondary-color;
+        }
+        &:focus {
+          background-color: $secondary-color;
+        }
+      }
+      
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 8px;
+      top: 6.3em;
+      right: 0;
+      border-top: 6px solid color(aqua);
+      border-left: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      
+  }
+  }
+}
+
+// Mobile Nav
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  background-color: color(white);
+  padding: calculateRem(30px);
+  ul.navbar-nav {
+    li.nav-item {
+      a.nav-link {
+        color: $secondary-color;
+        &:hover {
+          color: $primary-color;
+        }
+        &:active {
+          color: $primary-color;
+        }
+        &:focus {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+
 // Header 
 
 .v-header {
@@ -29,24 +232,25 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: color(dark-blue);
+        background: #000;
         z-index: 1;
-        opacity: .4;
+        opacity: .5;
        
     }
     .header-overlay-layer-2 {
         @extend .header-overlay-layer-1;
-        background: color(dark-blue);
+        background: color(dark-grey);
         z-index: 4;
-        opacity: .5;
-        clip-path: polygon(0 63%, 100% 84%, 100% 100%, 0% 100%);
+        opacity: .1;
+        clip-path: polygon(0 94%, 100% 85%, 100% 100%, 0% 100%);
     }
     .header-overlay-layer-3 {
         @extend .header-overlay-layer-1;
         background: color(blue);
         z-index: 3;
         opacity: .8;
-        clip-path: polygon(71% 0, 100% 0%, 100% 100%, 36% 100%);
+        // clip-path: polygon(71% 0, 100% 0%, 100% 100%, 36% 100%);
+        clip-path: polygon(0 0, 35% 0, 59% 100%, 0% 100%);
     }
     .header-content {
         z-index: 100;
@@ -54,191 +258,213 @@
         justify-content: space-between;
         align-items: center;
         height: 100vh;
+        h1 {
+          color: color(white);
+          @include font-size(74px);
+          font-weight: 200;
+        }
     }
     .headline-circle {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: transparentize($secondary-color, .2);
-        color: #fff;
-        width: 500px;
-        height: 500px;
-        max-width: 500px;
-        max-height: 500px;
-        border: 12px solid $secondary-color;
-        border-radius: 50%;
-        padding: 2rem;
-        text-align: center;
-        transform: scale(1);
-        @include transition(all ease .5s);
-        &:hover {
-            background-color: $secondary-color;
-            box-shadow: 0 20px 50px rgba(254,254,254,.5);
-            transform: scale(.95);
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            border: 8px solid color(dark-grey);
-            width: 111%;
-            height: 111%;
-            border-radius: 50%;
-        }
+      @include circle($secondary-color,#ffffff,500px,$secondary-color,color(dark-grey),110%);
         h1 {
             color: $primary-color;
             font-weight: 600;
         }
     }
     .quote-circle {
-        position: relative;
-        align-self: flex-end;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: transparentize(color(dark-blue), .2);
-        color: #fff;
-        width: 400px;
-        height: 400px;
-        max-width: 400px;
-        max-height: 400px;
-        border: 12px solid color(dark-blue);
-        border-radius: 50%;
-        padding: 2rem;
-        text-align: center;
-        transform: scale(1);
-        @include transition(all ease .5s);
-        &:hover {
-            background-color: transparentize(color(dark-blue), .1);
-            box-shadow: 0 20px 50px rgba(254,254,254,.2);
-            border: 12px solid darken(color(dark-blue),.8);
-            transform: scale(.95);
-        }
-       
+      @include circle(color(dark-blue),#ffffff,400px,color(dark-blue),transparent, 0%);
+      align-self: flex-end;
+      margin-bottom: 3rem;
     }
 }
 
 
 
-// Nav
- 
-nav.navbar {
-    background-color: transparent;
-    color: color(body);
-    padding: calculateRem(30px);
-    // Logo
-    .navbar-brand {
-      color: color(white);
-    }
-    // Mobile Nav Toggle Button
-    .navbar-toggler {
-      background-color: $primary-color;
-      width: 50px;
-      text-align: center;
-      // Nav Toggle Button Icon
-      .navbar-toggler-icon {
-        color: color(white);
-        line-height: 30px;
-        width: 100%;
-      }
-    }
-  }
-  
-// Default Nav
-  
-  .navbar-collapse {
-    ul.navbar-nav {
-      li.nav-item {
-        margin: 0;
-        a.nav-link {
-          width: 100%;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            padding-top: .75rem;
-          text-transform: uppercase;
-          color: color(white);
-          font-weight: 300;
-          letter-spacing: 1px;
-          @include transition(all 0.3s ease);
-          &:hover {
-            background-color: $secondary-color;
-          }
-          &:active {
-            background-color: $secondary-color;
-          }
-          &:focus {
-            background-color: $secondary-color;
-          }
-        }
-        
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 50%;
-        height: 8px;
-        top: 6.3em;
-        right: 0;
-        border-top: 6px solid color(teal);
-        border-left: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        
-    }
-    }
-  }
-  
-// Mobile Nav
-  
-  .navbar-collapse.show,
-  .navbar-collapse.collapsing {
-    background-color: color(white);
-    padding: calculateRem(30px);
-    ul.navbar-nav {
-      li.nav-item {
-        a.nav-link {
-          color: $secondary-color;
-          &:hover {
-            color: $primary-color;
-          }
-          &:active {
-            color: $primary-color;
-          }
-          &:focus {
-            color: $primary-color;
-          }
-        }
-      }
-    }
-  }
+main {
+  scroll-snap-type: x mandatory;
+}
+
   
 
-  main {
-      scroll-snap-type: x mandatory;
-  }
 
 
   // About Us Section 
 
 
   section#about {
-      scroll-snap-align: start;
-      background-image: url('../images/about-bg.jpg');
-      background-size: 50% 100%;
+    height: 100vh;
+      border-top: 10px solid color(aqua);
+      overflow: hidden;
       background-repeat: no-repeat;
-      height: 100vh;
+      padding: 0;
       #about-left {
-          background-color: #fff;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          clip-path: circle(21.1% at 50% 50%);
-          h2 {
-              color: $primary-color;
-              font-weight: 600;
+        height: 100vh;
+        padding-top: 3rem;
+        background-image: url('../images/about-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+          display: grid;
+          grid-template-columns: 40% 30% 25%;
+          grid-template-rows: 40% 60%;
+          grid-template-areas: 
+          "one two ."
+          "three . four";
+          .about-circle-1{
+            @include flipCircle(color(dark-grey), color(white),200px, color(dark-grey),transparent , 108%);
+            grid-area: one;
+            margin-left: 2rem;
+           
           }
+          .about-circle-2{
+            @include flipCircle(color(blue), color(white),350px, color(dark-blue),transparent , 108%);
+            grid-area: two;
+            margin-top: 2rem;
+          }
+          .about-circle-3{
+            @include flipCircle(transparentize(color(aqua),.2), color(white),400px, color(aqua),color(dark-grey) , 108%);
+            grid-area: three;
+            margin-left: 4rem;
+          }
+          .about-circle-4{
+            @include flipCircle(color(dark-grey), color(white),200px, color(dark-grey),transparent , 108%);
+            grid-area: four;
+          }
+          
+      }
+  }
+
+
+
+  section#companies {
+      padding: 0;
+      background-color: color(white);
+
+      #companies-head-container{
+        padding: 3rem 0;
+        background-image: url('../images/companies-bg-v2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-bottom: 10px solid color(aqua);
+        position: relative;
+        z-index: 1;
+      }
+      
+      #companies-head-overlay-1{
+        height: 100%;
+        width: 100vw;
+        background-color: transparentize(color(dark-blue),.4);
+        clip-path: polygon(0 0, 35% 0, 40% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      #companies-head-content {
+        position: relative;
+        z-index: 4;
+        
+      }
+
+      .title {
+        padding-top: 1rem;
+        margin-bottom: 0px;
+        color: #fff;
+        position: relative;
+        &::after{
+          display:none;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 50%;
+          height: 8px;
+          top: -10px;
+          left: 0;
+          border-top: 6px solid color(aqua);
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid transparent;
+      }
+    }
+      #company-container {
+          width: 100vw;
+          height: 100%;
+          min-height: 800px;
+          display: grid;
+          grid-template-columns: 20% 20% 20% 20% 20%;
+          grid-template-rows: 20% 40% 40%;
+          grid-template-areas: 
+          "one one three four five"
+          "six seven eight nine ten"
+          "eleven twelve thirteen fourteen fifteen";
+          .intro {
+            grid-area: one;
+            margin-top: 2rem;
+            margin-left: 4rem;
+          }
+          .company-circle-1{
+            @include flipCircle(color(blue), color(white),400px, color(dark-blue),transparent , 108%);
+            grid-area: four;
+            margin-top: 3rem;
+           h4{
+             color: #fff;
+           }
+          }
+          .company-circle-2{
+            @include flipCircle(color(aqua), color(white),300px, color(aqua),transparent , 108%);
+            grid-area: fifteen;
+            h4 {
+              color: #fff;
+            }
+           
+          }
+          .company-circle-3{
+            @include flipCircle(color(dark-grey), color(white),300px, color(dark-grey),transparent , 108%);
+            grid-area: thirteen;
+           
+          }
+          .company-circle-4{
+            @include flipCircle(color(aqua), color(white),400px, color(aqua),color(dark-grey) , 108%);
+            grid-area: twelve;
+            h4 {
+              color: #fff;
+            }
+           
+          }
+          .company-circle-5{
+            @include flipCircle(color(dark-grey), color(white),200px, color(dark-grey),transparent , 108%);
+            grid-area: six;
+            margin-left: 4rem;
+            h4 {
+              color: #fff;
+            }
+            p.lead {
+              font-size: 13px;
+            }
+          }
+          .company-circle-6{
+            @include flipCircle(color(dark-grey), color(white),200px, color(dark-grey),transparent , 108%);
+            grid-area: eleven;
+            margin-left: 4rem;
+            h4 {
+              color: #fff;
+            }
+            p.lead {
+              font-size: 13px;
+            }
+          }
+          .company-circle-7{
+            @include flipCircle(color(dark-grey), color(white),200px, color(dark-grey),transparent , 108%);
+            grid-area: ten;
+            margin-left: 4rem;
+            margin-top: 4rem;
+            h4 {
+              color: #fff;
+            }
+            p.lead {
+              font-size: 13px;
+            }
+          }
+          
       }
   }

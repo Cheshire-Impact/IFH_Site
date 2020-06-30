@@ -3,8 +3,7 @@
     "business_name": "Integrated Financial Holdings, Inc.",
     "logo": "images/ifh-logo-white.png",
     "logo_width": "150",
-    "favicon": "https://www.cheshireimpact.com/wp-content/uploads/2018/07/new-favicon.png",
-    "contact_url": "https://www.cheshireimpact.com/contact/"
+    "favicon": "images/ifh-favicon.png"
   },
   "nav": {
     "fixed": true,
@@ -24,11 +23,11 @@
       },
       {
         "text": "Investor Relations",
-        "url": "/investor-relations"
+        "url": "https://investors.westtownbancorp.com/"
       },
       {
         "text": "News & Press",
-        "url": "/news"
+        "url": "https://www.westtownbank.com/newsletter"
       },
       {
         "text": "Contact",

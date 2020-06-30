@@ -53,8 +53,8 @@ $color: (
   white: #ffffff,
   grey: #f4f8ff,
   dark-grey: #bebebe,
-  teal: #2ab2af,
-  blue: #13416f,
+  aqua: #2ab2af,
+  blue: #203967,
   dark-blue: #18294a,
   yellow: #fef0c5,
 );
@@ -80,7 +80,7 @@ $color: (
 }
 
 $primary-color: color(blue);
-$secondary-color: color(teal);
+$secondary-color: color(aqua);
 $third-color: color(dark-blue);
 
 // Border Radius
