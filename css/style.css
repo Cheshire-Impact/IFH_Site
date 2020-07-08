@@ -1,6 +1,10 @@
 @import url("https://use.typekit.net/mnw0dxe.css");
-.gill {
-  font-family: "gill-sans-nova", Arial, Helvetica, sans-serif;
+.futura {
+  font-family: "futura-pt", Arial, Helvetica, sans-serif;
+}
+
+.garamond {
+  font-family: "adobe-garamond-pro", serif;
 }
 
 .font-extra-light {
@@ -155,7 +159,7 @@ html {
 
 body {
   font-size: 16px;
-  font-family: "gill-sans-nova", Arial, Helvetica, sans-serif;
+  font-family: "adobe-garamond-pro", serif;
   color: #3d3d3d;
   overflow-x: hidden;
 }
@@ -166,7 +170,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "gill-sans-nova", Arial, Helvetica, sans-serif;
+  font-family: "futura-pt", Arial, Helvetica, sans-serif;
   font-weight: 300;
   color: #2ab2af;
 }
@@ -252,6 +256,7 @@ a:hover {
 }
 
 nav.navbar {
+  font-family: "futura-pt", Arial, Helvetica, sans-serif;
   background-color: rgba(24, 41, 74, 0.7);
   color: #3d3d3d;
   padding: 1.875rem;
@@ -281,9 +286,8 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: .75rem;
+  padding-top: 0.75rem;
   text-transform: uppercase;
-  color: #ffffff;
   font-weight: 300;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease;
@@ -373,13 +377,13 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   left: 0;
   background: #000;
   z-index: 1;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .v-header .header-overlay-layer-2 {
   background: #bebebe;
   z-index: 4;
-  opacity: .1;
+  opacity: 0.1;
   -webkit-clip-path: polygon(0 94%, 100% 85%, 100% 100%, 0% 100%);
           clip-path: polygon(0 94%, 100% 85%, 100% 100%, 0% 100%);
 }
@@ -387,7 +391,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 .v-header .header-overlay-layer-3 {
   background: #203967;
   z-index: 3;
-  opacity: .8;
+  opacity: 0.8;
   -webkit-clip-path: polygon(0 0, 35% 0, 59% 100%, 0% 100%);
           clip-path: polygon(0 0, 35% 0, 59% 100%, 0% 100%);
 }
@@ -406,115 +410,17 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   height: 100vh;
 }
 
-.v-header .header-content h1 {
+.v-header .header-content .headline {
   color: #ffffff;
   font-size: 74px;
   font-size: 4.625rem;
-  font-weight: 200;
+  letter-spacing: 1px;
 }
 
-.v-header .headline-circle {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
+.v-header .header-content .subhead {
+  font-weight: 300;
   color: #ffffff;
-  width: 500px;
-  height: 500px;
-  max-width: 500px;
-  max-height: 500px;
-  border: 8.33333px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-.v-header .headline-circle:hover {
-  background-color: #2ab2af;
-  -webkit-box-shadow: 0 20px 50px rgba(254, 254, 254, 0.5);
-          box-shadow: 0 20px 50px rgba(254, 254, 254, 0.5);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
-.v-header .headline-circle::after {
-  content: "";
-  position: absolute;
-  border: 8.06452px solid #bebebe;
-  width: 110%;
-  height: 110%;
-  border-radius: 50%;
-}
-
-.v-header .headline-circle h1 {
-  color: #203967;
-  font-weight: 600;
-}
-
-.v-header .quote-circle {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(24, 41, 74, 0.8);
-  color: #ffffff;
-  width: 400px;
-  height: 400px;
-  max-width: 400px;
-  max-height: 400px;
-  border: 6.66667px solid #18294a;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 3rem;
-}
-
-.v-header .quote-circle:hover {
-  background-color: #18294a;
-  -webkit-box-shadow: 0 20px 50px rgba(254, 254, 254, 0.5);
-          box-shadow: 0 20px 50px rgba(254, 254, 254, 0.5);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
-.v-header .quote-circle::after {
-  content: "";
-  position: absolute;
-  border: 6.45161px solid transparent;
-  width: 0%;
-  height: 0%;
-  border-radius: 50%;
+  text-transform: uppercase;
 }
 
 main {
@@ -576,7 +482,6 @@ section#about #about-left .about-circle-1 {
   transition: all ease 0.5s;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: one;
   margin-left: 2rem;
 }
@@ -587,8 +492,9 @@ section#about #about-left .about-circle-1:hover {
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
 section#about #about-left .about-circle-1::after {
@@ -603,6 +509,11 @@ section#about #about-left .about-circle-1::after {
 section#about #about-left .about-circle-1 .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+section#about #about-left .about-circle-1 .front h4 {
+  text-transform: uppercase;
+  color: unset;
 }
 
 section#about #about-left .about-circle-1:hover .front {
@@ -666,8 +577,9 @@ section#about #about-left .about-circle-2:hover {
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
 section#about #about-left .about-circle-2::after {
@@ -682,6 +594,11 @@ section#about #about-left .about-circle-2::after {
 section#about #about-left .about-circle-2 .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+section#about #about-left .about-circle-2 .front h4 {
+  text-transform: uppercase;
+  color: unset;
 }
 
 section#about #about-left .about-circle-2:hover .front {
@@ -733,8 +650,8 @@ section#about #about-left .about-circle-3 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: three;
   margin-left: 4rem;
 }
@@ -745,8 +662,9 @@ section#about #about-left .about-circle-3:hover {
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
 section#about #about-left .about-circle-3::after {
@@ -761,6 +679,11 @@ section#about #about-left .about-circle-3::after {
 section#about #about-left .about-circle-3 .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+section#about #about-left .about-circle-3 .front h4 {
+  text-transform: uppercase;
+  color: unset;
 }
 
 section#about #about-left .about-circle-3:hover .front {
@@ -812,8 +735,8 @@ section#about #about-left .about-circle-4 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: four;
 }
 
@@ -823,8 +746,9 @@ section#about #about-left .about-circle-4:hover {
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
 section#about #about-left .about-circle-4::after {
@@ -839,6 +763,11 @@ section#about #about-left .about-circle-4::after {
 section#about #about-left .about-circle-4 .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+section#about #about-left .about-circle-4 .front h4 {
+  text-transform: uppercase;
+  color: unset;
 }
 
 section#about #about-left .about-circle-4:hover .front {
@@ -864,10 +793,16 @@ section#about #about-left .about-circle-4 h2 {
 section#companies {
   padding: 0;
   background-color: #ffffff;
+  background: url("../images/companies-bg-main.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 5rem;
 }
 
 section#companies #companies-head-container {
-  padding: 3rem 0;
   background-image: url("../images/companies-bg-v2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -917,29 +852,71 @@ section#companies .title::before {
   border-bottom: 6px solid transparent;
 }
 
-section#companies #company-container {
+section#companies .grid-container {
+  height: 100vh;
   width: 100vw;
-  height: 100%;
-  min-height: 800px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 20% 20% 20% 20%;
-      grid-template-columns: 20% 20% 20% 20% 20%;
-  -ms-grid-rows: 20% 40% 40%;
-      grid-template-rows: 20% 40% 40%;
-      grid-template-areas: "one one three four five" "six seven eight nine ten" "eleven twelve thirteen fourteen fifteen";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1.1fr 0.9fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1.1fr 0.9fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+      grid-template-areas: "Intro Intro Intro Intro . . . . ." "Intro Intro Intro Intro WTB WTB WTB . ." "Commercial Commercial Hemp Hemp WTB WTB WTB . ." "Commercial Commercial Hemp Hemp WTB WTB WTB Mortgage Mortgage" "Commercial Commercial Hemp Hemp WTB WTB WTB Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments . ." "Small Small Gov Gov Gov Payments Payments . ." ". . . . . Payments Payments . .";
 }
 
-section#companies #company-container .intro {
+section#companies .Intro {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: one;
-  margin-top: 2rem;
-  margin-left: 4rem;
+  -ms-grid-column-span: 4;
+  grid-area: Intro;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em;
 }
 
-section#companies #company-container .company-circle-1 {
+section#companies .Intro .title {
+  color: #18294a;
+}
+
+section#companies .Intro h4 {
+  font-weight: 600;
+}
+
+section#companies .WTB {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: WTB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#companies .WTB .circle {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -956,11 +933,11 @@ section#companies #company-container .company-circle-1 {
           justify-content: center;
   background-color: #203967;
   color: #ffffff;
-  width: 400px;
-  height: 400px;
-  max-width: 400px;
-  max-height: 400px;
-  border: 6.66667px solid #18294a;
+  width: 450px;
+  height: 450px;
+  max-width: 450px;
+  max-height: 450px;
+  border: 7.5px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -968,61 +945,92 @@ section#companies #company-container .company-circle-1 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: four;
-  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-section#companies #company-container .company-circle-1:hover {
+section#companies .WTB .circle:hover {
   background-color: #fff;
   border-color: #fff;
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
-section#companies #company-container .company-circle-1::after {
+section#companies .WTB .circle::after {
   content: "";
   position: absolute;
-  border: 6.45161px solid transparent;
+  border: 7.25806px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
 }
 
-section#companies #company-container .company-circle-1 .front {
+section#companies .WTB .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-1:hover .front {
+section#companies .WTB .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .WTB .circle:hover .front {
   display: none;
 }
 
-section#companies #company-container .company-circle-1 .back {
+section#companies .WTB .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-1:hover .back {
+section#companies .WTB .circle:hover .back {
   display: block;
 }
 
-section#companies #company-container .company-circle-1 h2 {
+section#companies .WTB .circle h2 {
   color: #ffffff;
-  font-size: 133.33333px;
-  font-size: 8.33333rem;
+  font-size: 150px;
+  font-size: 9.375rem;
 }
 
-section#companies #company-container .company-circle-1 h4 {
+section#companies .WTB .circle h4 {
   color: #fff;
 }
 
-section#companies #company-container .company-circle-2 {
+section#companies .Mortgage {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-area: Mortgage;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+section#companies .Mortgage .circle {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1039,11 +1047,11 @@ section#companies #company-container .company-circle-2 {
           justify-content: center;
   background-color: #2ab2af;
   color: #ffffff;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid #2ab2af;
+  width: 320px;
+  height: 320px;
+  max-width: 320px;
+  max-height: 320px;
+  border: 5.33333px solid #2ab2af;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -1051,60 +1059,88 @@ section#companies #company-container .company-circle-2 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-  grid-area: fifteen;
 }
 
-section#companies #company-container .company-circle-2:hover {
+section#companies .Mortgage .circle:hover {
   background-color: #fff;
   border-color: #fff;
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
-section#companies #company-container .company-circle-2::after {
+section#companies .Mortgage .circle::after {
   content: "";
   position: absolute;
-  border: 4.83871px solid transparent;
+  border: 5.16129px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
 }
 
-section#companies #company-container .company-circle-2 .front {
+section#companies .Mortgage .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-2:hover .front {
+section#companies .Mortgage .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .Mortgage .circle:hover .front {
   display: none;
 }
 
-section#companies #company-container .company-circle-2 .back {
+section#companies .Mortgage .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-2:hover .back {
+section#companies .Mortgage .circle:hover .back {
   display: block;
 }
 
-section#companies #company-container .company-circle-2 h2 {
+section#companies .Mortgage .circle h2 {
   color: #ffffff;
-  font-size: 100px;
-  font-size: 6.25rem;
+  font-size: 106.66667px;
+  font-size: 6.66667rem;
 }
 
-section#companies #company-container .company-circle-2 h4 {
+section#companies .Mortgage .circle h4 {
   color: #fff;
 }
 
-section#companies #company-container .company-circle-3 {
+section#companies .Payments {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: Payments;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 1em;
+}
+
+section#companies .Payments .circle {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1121,11 +1157,11 @@ section#companies #company-container .company-circle-3 {
           justify-content: center;
   background-color: #bebebe;
   color: #ffffff;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid #bebebe;
+  width: 350px;
+  height: 350px;
+  max-width: 350px;
+  max-height: 350px;
+  border: 5.83333px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -1133,56 +1169,80 @@ section#companies #company-container .company-circle-3 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: thirteen;
 }
 
-section#companies #company-container .company-circle-3:hover {
+section#companies .Payments .circle:hover {
   background-color: #fff;
   border-color: #fff;
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
-section#companies #company-container .company-circle-3::after {
+section#companies .Payments .circle::after {
   content: "";
   position: absolute;
-  border: 4.83871px solid transparent;
+  border: 5.64516px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
 }
 
-section#companies #company-container .company-circle-3 .front {
+section#companies .Payments .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-3:hover .front {
+section#companies .Payments .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .Payments .circle:hover .front {
   display: none;
 }
 
-section#companies #company-container .company-circle-3 .back {
+section#companies .Payments .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-3:hover .back {
+section#companies .Payments .circle:hover .back {
   display: block;
 }
 
-section#companies #company-container .company-circle-3 h2 {
+section#companies .Payments .circle h2 {
   color: #ffffff;
-  font-size: 100px;
-  font-size: 6.25rem;
+  font-size: 116.66667px;
+  font-size: 7.29167rem;
 }
 
-section#companies #company-container .company-circle-4 {
+section#companies .Gov {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: Gov;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#companies .Gov .circle {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1211,22 +1271,20 @@ section#companies #company-container .company-circle-4 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: twelve;
 }
 
-section#companies #company-container .company-circle-4:hover {
+section#companies .Gov .circle:hover {
   background-color: #fff;
   border-color: #fff;
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
-section#companies #company-container .company-circle-4::after {
+section#companies .Gov .circle::after {
   content: "";
   position: absolute;
   border: 6.45161px solid #bebebe;
@@ -1235,210 +1293,68 @@ section#companies #company-container .company-circle-4::after {
   border-radius: 50%;
 }
 
-section#companies #company-container .company-circle-4 .front {
+section#companies .Gov .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-4:hover .front {
+section#companies .Gov .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .Gov .circle:hover .front {
   display: none;
 }
 
-section#companies #company-container .company-circle-4 .back {
+section#companies .Gov .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-4:hover .back {
+section#companies .Gov .circle:hover .back {
   display: block;
 }
 
-section#companies #company-container .company-circle-4 h2 {
+section#companies .Gov .circle h2 {
   color: #ffffff;
   font-size: 133.33333px;
   font-size: 8.33333rem;
 }
 
-section#companies #company-container .company-circle-4 h4 {
+section#companies .Gov .circle h4 {
   color: #fff;
 }
 
-section#companies #company-container .company-circle-5 {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #bebebe;
-  color: #ffffff;
-  width: 200px;
-  height: 200px;
-  max-width: 200px;
-  max-height: 200px;
-  border: 3.33333px solid #bebebe;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: six;
-  margin-left: 4rem;
-}
-
-section#companies #company-container .company-circle-5:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #203967;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
-section#companies #company-container .company-circle-5::after {
-  content: "";
-  position: absolute;
-  border: 3.22581px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies #company-container .company-circle-5 .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies #company-container .company-circle-5:hover .front {
-  display: none;
-}
-
-section#companies #company-container .company-circle-5 .back {
-  display: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies #company-container .company-circle-5:hover .back {
-  display: block;
-}
-
-section#companies #company-container .company-circle-5 h2 {
-  color: #ffffff;
-  font-size: 66.66667px;
-  font-size: 4.16667rem;
-}
-
-section#companies #company-container .company-circle-5 h4 {
-  color: #fff;
-}
-
-section#companies #company-container .company-circle-5 p.lead {
-  font-size: 13px;
-}
-
-section#companies #company-container .company-circle-6 {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #bebebe;
-  color: #ffffff;
-  width: 200px;
-  height: 200px;
-  max-width: 200px;
-  max-height: 200px;
-  border: 3.33333px solid #bebebe;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
+section#companies .Commercial {
   -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  grid-area: eleven;
-  margin-left: 4rem;
+  -ms-grid-column-span: 2;
+  grid-area: Commercial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-section#companies #company-container .company-circle-6:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #203967;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
-section#companies #company-container .company-circle-6::after {
-  content: "";
-  position: absolute;
-  border: 3.22581px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies #company-container .company-circle-6 .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies #company-container .company-circle-6:hover .front {
-  display: none;
-}
-
-section#companies #company-container .company-circle-6 .back {
-  display: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies #company-container .company-circle-6:hover .back {
-  display: block;
-}
-
-section#companies #company-container .company-circle-6 h2 {
-  color: #ffffff;
-  font-size: 66.66667px;
-  font-size: 4.16667rem;
-}
-
-section#companies #company-container .company-circle-6 h4 {
-  color: #fff;
-}
-
-section#companies #company-container .company-circle-6 p.lead {
-  font-size: 13px;
-}
-
-section#companies #company-container .company-circle-7 {
+section#companies .Commercial .circle {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1453,13 +1369,13 @@ section#companies #company-container .company-circle-7 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #bebebe;
+  background-color: rgba(42, 178, 175, 0.8);
   color: #ffffff;
-  width: 200px;
-  height: 200px;
-  max-width: 200px;
-  max-height: 200px;
-  border: 3.33333px solid #bebebe;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  border: 5px solid #2ab2af;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -1467,62 +1383,299 @@ section#companies #company-container .company-circle-7 {
           transform: scale(1);
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  -ms-grid-row: 2;
-  -ms-grid-column: 5;
-  grid-area: ten;
   margin-left: 4rem;
-  margin-top: 4rem;
 }
 
-section#companies #company-container .company-circle-7:hover {
+section#companies .Commercial .circle:hover {
   background-color: #fff;
   border-color: #fff;
   color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
 }
 
-section#companies #company-container .company-circle-7::after {
+section#companies .Commercial .circle::after {
   content: "";
   position: absolute;
-  border: 3.22581px solid transparent;
+  border: 4.83871px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
 }
 
-section#companies #company-container .company-circle-7 .front {
+section#companies .Commercial .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-7:hover .front {
+section#companies .Commercial .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .Commercial .circle:hover .front {
   display: none;
 }
 
-section#companies #company-container .company-circle-7 .back {
+section#companies .Commercial .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#companies #company-container .company-circle-7:hover .back {
+section#companies .Commercial .circle:hover .back {
   display: block;
 }
 
-section#companies #company-container .company-circle-7 h2 {
+section#companies .Commercial .circle h2 {
   color: #ffffff;
-  font-size: 66.66667px;
-  font-size: 4.16667rem;
+  font-size: 100px;
+  font-size: 6.25rem;
 }
 
-section#companies #company-container .company-circle-7 h4 {
+section#companies .Commercial .circle h4 {
   color: #fff;
 }
 
-section#companies #company-container .company-circle-7 p.lead {
+section#companies .Commercial .circle p.lead {
+  font-size: 13px;
+}
+
+section#companies .Hemp {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: Hemp;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: -2em;
+}
+
+section#companies .Hemp .circle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(42, 178, 175, 0.8);
+  color: #ffffff;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  border: 5px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section#companies .Hemp .circle:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #203967;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
+}
+
+section#companies .Hemp .circle::after {
+  content: "";
+  position: absolute;
+  border: 4.83871px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section#companies .Hemp .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#companies .Hemp .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .Hemp .circle:hover .front {
+  display: none;
+}
+
+section#companies .Hemp .circle .back {
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#companies .Hemp .circle:hover .back {
+  display: block;
+}
+
+section#companies .Hemp .circle h2 {
+  color: #ffffff;
+  font-size: 100px;
+  font-size: 6.25rem;
+}
+
+section#companies .Hemp .circle h4 {
+  color: #fff;
+}
+
+section#companies .Hemp .circle p.lead {
+  font-size: 13px;
+}
+
+section#companies .Small {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Small;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -2em;
+  margin-right: -2em;
+}
+
+section#companies .Small .circle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(42, 178, 175, 0.8);
+  color: #ffffff;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  border: 5px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section#companies .Small .circle:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #203967;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 1000;
+}
+
+section#companies .Small .circle::after {
+  content: "";
+  position: absolute;
+  border: 4.83871px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section#companies .Small .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#companies .Small .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section#companies .Small .circle:hover .front {
+  display: none;
+}
+
+section#companies .Small .circle .back {
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#companies .Small .circle:hover .back {
+  display: block;
+}
+
+section#companies .Small .circle h2 {
+  color: #ffffff;
+  font-size: 100px;
+  font-size: 6.25rem;
+}
+
+section#companies .Small .circle h4 {
+  color: #fff;
+}
+
+section#companies .Small .circle p.lead {
   font-size: 13px;
 }
 /*# sourceMappingURL=style.css.map */
