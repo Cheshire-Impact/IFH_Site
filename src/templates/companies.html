@@ -6,14 +6,15 @@
 
 
 {% block header %}
-{% include "sections/nav.html" %}
+{% from "sections/nav-macro.html" import navBar %}
+{{ navBar('Companies','text-blue','bg-transparent','blue') }}
 {% endblock %}
 
 
 {% block content %}
-{% include "sections/home.html"%}
+{% include "sections/companies.html" %}
 {% endblock %}
 
 {% block footer %}
-{% include "sections/footer.html"%}
+{% include "sections/footer.html" %}
 {% endblock %}

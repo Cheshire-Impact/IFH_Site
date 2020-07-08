@@ -3,11 +3,15 @@
 @import url("https://use.typekit.net/mnw0dxe.css");
 
 $font-stack: (
-  gill: (
-    "gill-sans-nova",
+  futura: (
+    "futura-pt",
     Arial,
     Helvetica,
     sans-serif,
+  ),
+  garamond: (
+    "adobe-garamond-pro",
+    serif,
   )
 );
 // Accessor Function of map-get $font-stack
@@ -23,8 +27,8 @@ $font-stack: (
   }
 }
 
-$primary-font: font-stack(gill);
-$headline-font: font-stack(gill);
+$primary-font: font-stack(garamond);
+$headline-font: font-stack(futura);
 
 $font-weight: (
   extra-light: 200,

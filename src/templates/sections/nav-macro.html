@@ -1,0 +1,47 @@
+{% macro navBar(activeLink, textColor, backgroundColor, lineColor) %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg {%if nav.fixed %}fixed-top{% endif%} {{backgroundColor}} {{lineColor}}">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <a href="{{ general.website }}" target="_blank"><img pardot-region="Logo" class="img-fluid"
+                    src="{{ general.logo }}" width="{{ general.logo_width }}"
+                    style="width:{{ general.logo_width }}px" /></a>
+        </div>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link {{textColor}}" href="/about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{textColor}}" href="/companies">Companies</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{textColor}}" href="/people">People</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{textColor}}" href="https://investors.westtownbancorp.com/">Investor
+                        Relations</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{textColor}}" href="https://www.westtownbank.com/newsletter">News &amp;
+                        Press</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{textColor}}" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endmacro %}
