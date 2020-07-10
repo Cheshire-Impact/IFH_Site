@@ -6,7 +6,8 @@
 
 
 {% block header %}
-{% include "sections/nav.html" %}
+{% from "sections/nav-macro.html" import navBar %}
+{{ navBar('images/IFH_Logo.png','text-white','bg-transparent','blue') }}
 {% endblock %}
 
 

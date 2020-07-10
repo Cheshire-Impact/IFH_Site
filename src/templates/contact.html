@@ -1,4 +1,6 @@
-{% set page_title = "Companies | Integrated Financial Holdings, Inc." %}
+{% set page_title = "Contact | Integrated Financial Holdings, Inc." %}
+{% set heading = "Contact Us" %}
+
 
 
 {% extends "layout/layout.html" %}
@@ -7,12 +9,12 @@
 
 {% block header %}
 {% from "sections/nav-macro.html" import navBar %}
-{{ navBar('Companies','text-blue','bg-transparent','blue') }}
+{{ navBar('Companies','text-blue','transparent','blue') }}
 {% endblock %}
 
 
 {% block content %}
-{% include "sections/companies.html" %}
+{% include "sections/contact.html" %}
 {% endblock %}
 
 {% block footer %}

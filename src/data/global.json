@@ -1,8 +1,10 @@
 {
   "general": {
     "business_name": "Integrated Financial Holdings, Inc.",
-    "logo": "images/ifh-logo-white.png",
-    "logo_width": "150",
+    "address_1": "123 Main St.",
+    "address_2": "Raleigh, NC 12345",
+    "logo": "images/IFH_Logo_Reverse.png",
+    "logo_width": "200",
     "favicon": "images/ifh-favicon.png"
   },
   "nav": {

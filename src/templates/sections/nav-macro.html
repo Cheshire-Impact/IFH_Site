@@ -1,11 +1,9 @@
-{% macro navBar(activeLink, textColor, backgroundColor, lineColor) %}
+{% macro navBar(logo, textColor, backgroundColor, lineColor) %}
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg {%if nav.fixed %}fixed-top{% endif%} {{backgroundColor}} {{lineColor}}">
+<nav class="navbar navbar-expand-lg fixed-top {{backgroundColor}} {{lineColor}}">
     <div class="container-fluid">
         <div class="navbar-brand">
-            <a href="{{ general.website }}" target="_blank"><img pardot-region="Logo" class="img-fluid"
-                    src="{{ general.logo }}" width="{{ general.logo_width }}"
-                    style="width:{{ general.logo_width }}px" /></a>
+            <a href="/"><img class="img-fluid" src="{{logo}}" width="120" style="width:120px" /></a>
         </div>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
