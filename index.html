@@ -29,10 +29,10 @@
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top bg-transparent blue">
+<nav class="navbar navbar-expand-lg fixed bg-transparent blue">
     <div class="container-fluid">
         <div class="navbar-brand">
-            <a href="/"><img class="img-fluid" src="images/IFH_Logo.png" width="120" style="width:120px" /></a>
+            <a href="index.html"><img class="img-fluid" src="images/IFH_Logo.png" width="120" style="width:120px" /></a>
         </div>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -43,15 +43,15 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item ">
-                    <a class="nav-link text-white" href="/about">About</a>
+                    <a class="nav-link text-white" href="about.html">About</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/companies">Companies</a>
+                    <a class="nav-link text-white" href="companies.html">Companies</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/people">People</a>
+                    <a class="nav-link text-white" href="people.html">People</a>
                 </li>
 
                 <li class="nav-item">
@@ -65,7 +65,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/contact">Contact</a>
+                    <a class="nav-link text-white" href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -78,14 +78,15 @@
     
 <section class="v-header">
     <div class="fullscreen-video-wrap">
-        <video id="header-bg-video" src="images/ifh-video-bg-stock.mov" loop="true"></video>
+        <video id="header-bg-video" src="images/ifh-bg-video.mp4" loop="true">
+            <source src="images/ifh-bg-video.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="header-overlay-layer-1"></div>
-    <div class="header-overlay-layer-2"></div>
     <div class="header-overlay-layer-3"></div>
     <div class="header-content container-fluid">
         <div class="row">
-            <div class="col-md-5 offset-md-1 text-left text-white">
+            <div class="col-lg-4 offset-lg-1 text-left text-white">
                 <h1 class="headline">
                     <span class="v-1">Passion.</span><br />
                     <span class="v-2">Collaboration.</span><br />
@@ -95,9 +96,9 @@
                 <h3 class="subhead">At Integrated Financial Holidings, Inc., our highest priorities are solving problems
                     and helping people. We run our business day in and day out with a focus on these four core values.
                 </h3>
-                <a href="#" class="btn btn-primary mt-4">Learn More &raquo;</a>
+                <a href="about.html" class="btn btn-primary mt-4">Learn More &raquo;</a>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 offset-md-1">
                 <div id="home-quote">
                     <div class="quote">
                         As demands for more efficient financial service offerings from small businesses increase,
@@ -116,7 +117,7 @@
                         client retention.
                     </div>
                     <div class="author">
-                        <img src="images/eric.png" width="150" alt=""><br />
+
                         – Eric J. Bergevin, President & CEO
                     </div>
                 </div>
@@ -130,7 +131,26 @@
   </main>
 
   
+<footer class="fixed-bottom">
+    <div class="footer-overlay"></div>
+    <div class="container-fluid">
+        <div id="footer-content" class="row">
+            <div class="col-md-8 text-center text-lg-left text-white d-flex align-items-end">
+                <p>
+                    Copyright © 2020 Integrated Financial Holdings, Inc. All Rights Reserved. | Member FDIC, Equal
+                    Housing Lender | Terms & Conditions | Legal | Privacy Statement | Community Reinvestment Act
+                    Strategic Plan
+                </p>
 
+            </div>
+            <div class="col-md-4 text-center text-lg-right text-white">
+                <p>8450 Falls Of Neuse Road, Suite 202<br />Raleigh, NC 27615 | (919) 948-1978</p>
+                <img src="images/ifh-footer-logo.png" width="300" style="width: 300px; height: auto;" alt="">
+
+            </div>
+        </div>
+    </div>
+</footer>
 
 
   <!-- jQuery, Popper, Bootstrap -->
