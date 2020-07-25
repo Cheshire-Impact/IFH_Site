@@ -487,7 +487,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 .v-header .header-content .subhead {
   font-weight: 300;
-  color: #3d3d3d;
+  color: #203967;
   /* Medium devices (tablets, 768px and down) The navbar toggle appears at this breakpoint */
 }
 
@@ -515,6 +515,10 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
     margin-right: 5em;
     margin-left: auto;
   }
+}
+
+.v-header .header-content #home-quote #main-cta {
+  width: auto;
 }
 
 .v-header .header-content #home-quote .quote {
@@ -573,19 +577,20 @@ section.about #about-overlay-2 {
   left: 0;
   background: #000;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 section.about .container {
   position: relative;
   z-index: 2;
-  background-color: #fff;
   padding: 1rem;
 }
 
 section.about .container .row {
   margin: 1rem 0;
   padding: 1rem 0;
+  color: #fff;
+  font-size: 18px !important;
 }
 
 section.about .container .row:first-of-type {
@@ -652,10 +657,19 @@ section#companies .Intro {
 
 section#companies .Intro .title {
   color: #18294a;
+  padding-left: 65px;
+  font-size: 28px;
 }
 
 section#companies .Intro h4 {
   font-weight: 600;
+  padding-left: 65px;
+  font-size: 22px;
+}
+
+section#companies .Intro p {
+  padding-left: 65px;
+  font-size: 18px;
 }
 
 section#companies .WTB {
