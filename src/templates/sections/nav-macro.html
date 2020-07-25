@@ -1,9 +1,10 @@
-{% macro navBar(logo, textColor, backgroundColor, lineColor) %}
+{% macro navBar(logo, width, textColor, backgroundColor, lineColor) %}
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg fixed {{backgroundColor}} {{lineColor}}">
     <div class="container-fluid">
         <div class="navbar-brand">
-            <a href="index.html"><img class="img-fluid" src="{{logo}}" width="120" style="width:120px" /></a>
+            <a href="index.html"><img class="img-fluid" src="{{logo}}" width="{{width}}"
+                    style="width:{{width}}px" /></a>
         </div>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
