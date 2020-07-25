@@ -1,7 +1,8 @@
 {
   "general": {
     "business_name": "Integrated Financial Holdings, Inc.",
-    "address_1": "8450 Falls Of Neuse Road, Suite 202, Raleigh, NC 27615, (919) 948-1978",
+    "address_1": "8450 Falls Of Neuse Road, Suite 202, Raleigh, NC 27615",
+    "phone": "(919) 948-1978",
     "logo": "images/IFH_Logo_Reverse.png",
     "logo_width": "200",
     "favicon": "images/ifh-favicon.png"
@@ -75,5 +76,268 @@
       "link": "",
       "icon": "<i class=\"fas fa-globe-americas\"></i>"
     }
-  ]
+  ],
+  "people": {
+    "exec": [
+      {
+        "id": "ericBergevin",
+        "image": "images/team/eric-bergevin.jpg",
+        "name": "Eric J. Bergevin",
+        "title": "President & CEO",
+        "bio": "<p>Eric is President & CEO of Integrated Financial Holdings, Inc., President & CEO of West Town Bank & Trust and a Member of the Board at Dogwood State Bank. Eric’s prior experiences include President & CEO and lead organizer of Albemarle Bank & Trust, Founder &OwnerofNewVisionMortgage, President of Anova Financial Corporation and Senior Vice President & Chief Operating Officer of OBA Bank. Eric joined the West Town Bank & Trust Board of Directors in 2009, Integrated Financial Holdings, Inc. Board of Directors in 2016 (formerly West Town Bancorp, Inc.) and Dogwood State Bank Board of Directors in 2017 (formerly Sound Bank).</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/eric-bergevin-199232b/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(252)482-4400",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:eric@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "melissaMarsal",
+        "image": "images/team/melissa-marsal.jpg",
+        "name": "Melissa D. Marsal",
+        "title": "EVP, Chief Operation Officer",
+        "bio": "<p>Melissa is the Chief Operating Officer of West Town Bank & Trust and has been with the Bank for over a decade. In addition to overseeing all aspects of Operations, she’s responsible for helping the Bank build a program uniquely tailored to the challenges of hemp-relatedbusinesses. Melissaand her team of Commercial Account Service specialists are dedicated to designing cash management solutions for the Bank’s business customers. Through the Bank’s partnership with VeriLeaf, Melissa and her team help to provide a first-class onboarding and client experience that reduces the time to open an account from weeks to a matter of hours.</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/melissa-marsal-219b2b98/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(919)647-9575",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:melissa@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "riddickSkinner",
+        "image": "images/team/riddick-skinner.jpg",
+        "name": "A. Riddick Skinner",
+        "title": "EVP, Government Lending",
+        "bio": "<p>Riddick joined West Town Bank & Trust in 2011 and leads the Bank’s Government Guaranteed Lending division. Providing strategic and business development oversight, Riddick is responsible for all SBA and USDA front-end loan production, including pricing, creative structuring,productdiversityandstrategic partnerships. Riddick and his team have helped provide over $1 billion in loans to more than 500 entities. Riddick’s primary niche has been within the solar electric power generation space through USDA’s Rural Energy of America Program (REAP). Riddick graduated from North Carolina State University and has over 20 years of experience in the banking industry.</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/riddick-skinner-52896091/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(919)948-1986",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:riddick@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "joshuaHyman",
+        "image": "images/team/joshua-s-hyman.jpg",
+        "name": "Joshua S. Hyman",
+        "title": "EVP, Chief Legal Council",
+        "bio": "<p>Joshua graduated from Washington University School of Law in 1989. Since that time, Josh has been a banking lawyer in Chicago and New York and currently serves as Managing Director of SBA Loan Documentation Services and oversees Legal, Compliance and HR departments forWestTownBank&Trust.Formore than 30 years, Josh grew and maintained a national banking practice whereby he represented hundreds of banks, credit unions, loan service providers and institutional note buyers on a wide spectrum of banking and SBA issues. Josh has been recognized and approved as a “Leading Lawyer” by his peers in Illinois for nine straight years, a distinction earned by fewer than 5% of all lawyers registered to practice in Illinois.</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/josh-hyman-6ba7b54/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(312)855-4367",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:jhyman@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "steveCrouse",
+        "image": "images/team/steve-crouse.jpg",
+        "name": "Steven E. Crouse",
+        "title": "EVP, Chief Financial Officer",
+        "bio": "<p>Steve has nearly 30 years of banking experience and recently joined the IFH family of companies in 2019. In addition to overseeing the audit function and IT for West Town Bank & Trust, he is responsible for the financial managementof the Holding Company and the Bank andalsospearheadseffortsrelatedtothe Patriarch Initiatives. Prior to his tenure, Steve was the Chief Financial Officer at Paragon Bank (now Towne Bank) and Chief Accounting Officer at Capital Bank Financial Corporation, working to help develop strategies to maximize shareholder value. HealsospenttimeasanAudit Manager at McGladrey. He serves as an Executive Board Member and past Director of Finance for the Boy Scouts of America and holds a degree in Accounting from North Carolina State University.</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/steve-crouse-2462579/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(919)861-8018",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:steve@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "earlDonnelly",
+        "image": "images/team/earl-donnelly.png",
+        "name": "Earl Donnelly, Jr.",
+        "title": "EVP, Chief Lending Officer",
+        "bio": "<p>Earl has over 18 years of banking experience and recently joined West Town Bank & Trust to oversee and manage all aspects of the Bank’s lending functions. This includes supervision of all department managers within government lending, loan operations, credit administration and underwriting, while ensuring each vertical operates in accordance with established policies, procedures and legal requirements. Earl earned his MBA from Auburn University and his undergraduate degree from the University of North Carolina at Pembroke. Prior to West Town Bank & Trust, Earl was a Regional Credit Officer at Fidelity Bank and held various sales and credit roles at BB&T.</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/earl-donnelly-53aa3670/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(919)647-9581",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:edonnelly@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "michaelBreckheimer",
+        "image": "images/team/michael-breckheimer.jpg",
+        "name": "Michael J. Breckheimer",
+        "title": "EVP",
+        "bio": "<p>Mike is responsible for the overall management and direction of Windsor Advantage, LLC. At Glenwood Structured Finance, LLC, Mike’s primary focus is to BACK strategically manage its long-term vision as a placement agent. He also serves as an Executive Vice President at IFH, Inc. and West Town Bank & Trust. Prior to joining the IFH family of companies, Mike was a Senior Management Consultant with KPMG where he gained extensive experience working with diversified financial firms to implement efficiencies and risk management strategies. He began his career with PNC Capital Markets and graduated with honors from Miami University of Ohio with  a degree in Finance and Accounting.</p>",
+        "social": [
+          {
+            "name": "phone",
+            "link": "tel:(312) 763-3219",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:mbreckheimer@windsoradvantage.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      }
+    ],
+    "board": [
+      {
+        "id": "marcMcconell",
+        "image": "images/team/marc-mcconnell.jpg",
+        "name": "Marc McConnell",
+        "title": "Chairman",
+        "bio": "<p>Mr. McConnell joined the Board of Directors in 2009. Mr. McConnell serves as Chairman of Art’s Way Manufacturing Co., Inc. He is also President of Bauer Corporation of Wooster, OH, and Vice-Chairman of McConnell Holdings, Inc. of Kinston, NC, among other business interests</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/marc-mcconnell-022758a/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "ericBergevin",
+        "image": "images/team/eric-bergevin.jpg",
+        "name": "Eric J. Bergevin",
+        "title": "President & CEO",
+        "bio": "<p>Eric is President & CEO of Integrated Financial Holdings, Inc., President & CEO of West Town Bank & Trust and a Member of the Board at Dogwood State Bank. Eric’s prior experiences include President & CEO and lead organizer of Albemarle Bank & Trust, Founder &OwnerofNewVisionMortgage, President of Anova Financial Corporation and Senior Vice President & Chief Operating Officer of OBA Bank. Eric joined the West Town Bank & Trust Board of Directors in 2009, Integrated Financial Holdings, Inc. Board of Directors in 2016 (formerly West Town Bancorp, Inc.) and Dogwood State Bank Board of Directors in 2017 (formerly Sound Bank).</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/eric-bergevin-199232b/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          },
+          {
+            "name": "phone",
+            "link": "tel:(252)482-4400",
+            "icon": "<i class=\"fas fa-phone\"></i>"
+          },
+          {
+            "name": "email",
+            "link": "mailto:eric@westtownbank.com",
+            "icon": "<i class=\"fas fa-envelope\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "jamesKemp",
+        "image": "images/team/james-j-kemp.jpg",
+        "name": "James J. Kemp Jr.",
+        "title": "",
+        "bio": "<p>Founder and Partner in the law firm of Kemp & Grzelakowski, Ltd. Mr. Kemp’s prior experience includes General Counsel to the Illinois Commission of Savings and Loan Associations. Mr. Kemp joined the Board of Directors in 1995 and has served as general counsel since 1990.</p>"
+      },
+      {
+        "id": "jeffMoore",
+        "image": "images/team/dr-jeffrey-moore.jpg",
+        "name": "Jeff Moore",
+        "title": "",
+        "bio": "<p>Dr. Moore is the owner of Moore Orthopedic and Sports Medicine. He is also a Founding Board Member of Sound Bank (now Dogwood State Bank).</p>"
+      },
+      {
+        "id": "randyRamsey",
+        "image": "images/team/randall-c-ramsey.jpg",
+        "name": "Randy Ramsey",
+        "title": "",
+        "bio": "<p>Mr.Ramsey is Founder & president of Jarrett Bay Boat Works, Inc. since 1987. He is the Chairman of the Board of Governors for the University of North Carolina School System and also Chairman of the North Carolina Manufacturer’s Association, as well as a Founding Board Member of Sound Bank (now Dogwood State Bank).</p>",
+        "social": [
+          {
+            "name": "linkedin",
+            "link": "https://www.linkedin.com/in/randy-ramsey-6bb407168/",
+            "icon": "<i class=\"fab fa-linkedin\"></i>"
+          }
+        ]
+      },
+      {
+        "id": "josephSnyder",
+        "image": "images/team/joeseph-t-snyder.jpg",
+        "name": "Joseph T. Snyder",
+        "title": "",
+        "bio": "<p>Founder and President of Snyder Insurance and Financial Services. Mr. Snyder joined the Board of Directors in 2009.</p>"
+      },
+      {
+        "id": "jimmyStallings",
+        "image": "images/team/jimmy-stallings.jpg",
+        "name": "Jimmy E. Stallings",
+        "title": "",
+        "bio": "<p>Founder of the Chowan Agency, a Farm Bureau Insurance company which grew to a multi-million dollar agency. Mr. Stallings (now retired) has served on the Edenton Town Council for many years, having first been elected in 1999. He currently serves as Mayor of Edenton. Mr. Stallings also serves on the Edenton Chowan Partnership. Mr. Stallings joined the Board of Directors in 2014.</p>"
+      },
+      {
+        "id": "sandraWarren",
+        "image": "images/team/sandra-warren.jpg",
+        "name": "Sandra Warren",
+        "title": "",
+        "bio": "<p>Sandra Warren is the Founder and Owner of Executive Personnel Group. A regional staffing and employment service, Executive Personnel Group has 8 offices in North Carolina as well as placement contracts nationwide. Ms. Warren manages operations and employs over 5,000 employees annually. The Company has operated in North Carolina since 1999. Ms. Warren joined the Board of Directors in 2016.</p>"
+      },
+      {
+        "id": "davidWicklund",
+        "image": "images/team/david-wicklund.jpg",
+        "name": "David Wicklund",
+        "title": "",
+        "bio": "<p>Mr. Wicklund is the Director of Advisory Services at Plansmith Corporation. He provides asset/liability management consulting and training services to banks, regulators, and trade groups. Formerly, he was a Senior Bank Examiner with the FDIC where he led exams, developed training materials, and authored articles on liquidity and interest rate risk management. Mr. Wicklund joined the Board of Directors in 2013.</p>"
+      }
+    ]
+  }
 }

@@ -1,0 +1,52 @@
+{% macro mPerson(id, image, name, title, bio, social) %}
+<div class="col-md-3 text-center person">
+    <div class="person-front">
+        <a href="javascript:void(0)" data-toggle="modal" data-target="#{{id}}">
+            <img src="{{image}}" alt="" width="175" class="img-fluid">
+        </a>
+        <h4>{{name}}</h4>
+    </div>
+    <div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="{{id}}Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-4">
+                        <img src="{{image}}" alt="" width="175" class="img-fluid">
+                        <h4 id="{{id}}Label">{{name}}</h4>
+                        <div class="social">
+                            {% for network in social %}
+                            <a href="{{network.link}}" class="{{network.name}}" target="blank">
+                                {{network.icon | safe }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-8 text-left">
+                        {{ bio | safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+<section id="management-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-5">
+                <h1 class="text-blue">Board of Directors</h1>
+            </div>
+        </div>
+        <div class="row team-outer">
+            {% for person in people.board %}
+            {{ mPerson(person.id,person.image,person.name,person.title,person.bio,person.social)}}
+            {% endfor %}
+        </div>
+    </div>
+</section>
