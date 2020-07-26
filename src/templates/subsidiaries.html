@@ -3,14 +3,14 @@
 {% extends "layout/layout.html" %}
 
 {% block header %}
-{% from "sections/nav-macro.html" import navBar %}
-{{ navBar('images/ifh-word-mark-logo.png','600','text-dark-blue','bg-transparent','blue') }}
+    {% from "sections/nav-macro.html" import navBar %}
+    {{ navBar('images/ifh-word-mark-logo-white.png','600','text-white','bg-transparent','blue') }}
 {% endblock %}
 
 {% block content %}
-{% include "sections/subsidiaries.html" %}
+    {% include "sections/subsidiaries.html" %}
 {% endblock %}
 
 {% block footer %}
-{% include "sections/footer.html" %}
+    {% include "sections/footer.html" %}
 {% endblock %}

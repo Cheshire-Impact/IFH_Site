@@ -1,21 +1,17 @@
 {% set page_title = "Integrated Financial Holdings, Inc." %}
 
-
 {% extends "layout/layout.html" %}
 
-
-
 {% block header %}
-{% from "sections/nav-macro.html" import navBar %}
-{{ navBar('images/ifh-word-mark-logo.png','600','text-white','bg-transparent','blue') }}
+    {% from "sections/nav-macro.html" import navBar %}
+    {{ navBar('images/ifh-word-mark-logo.png','600','text-white','bg-transparent','blue') }}
 {% endblock %}
 
-
 {% block content %}
-{% include "sections/home.html"%}
+    {% include "sections/home.html"%}
 {% endblock %}
 
 {% block footer %}
-{% include "sections/footer.html"%}
-{% include "sections/loader.html"%}
+    {% include "sections/footer.html"%}
+    {% include "sections/loader.html"%}
 {% endblock %}

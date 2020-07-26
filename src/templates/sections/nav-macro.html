@@ -1,6 +1,6 @@
 {% macro navBar(logo, width, textColor, backgroundColor, lineColor) %}
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed {{backgroundColor}} {{lineColor}}">
+<nav class="navbar navbar-expand-xl fixed {{backgroundColor}} {{lineColor}}">
     <div class="container-fluid">
         <div class="navbar-brand">
             <a href="index.html"><img class="img-fluid" src="{{logo}}" width="{{width}}"
@@ -19,7 +19,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link {{textColor}}" href="#">Companies</a>
+                    <a class="nav-link {{textColor}}" href="companies.html">Companies</a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item"><a href="companies.html">Banking & Joint Ventures</a></li>
                         <li class="dropdown-item"><a href="subsidiaries.html">Subsidiaries</a></li>
@@ -27,7 +27,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link {{textColor}}" href="#">People</a>
+                    <a class="nav-link {{textColor}}" href="management-team.html">People</a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item"><a href="management-team.html">Management Team</a></li>
                         <li class="dropdown-item"><a href="directors.html">Board of Directors</a></li>
