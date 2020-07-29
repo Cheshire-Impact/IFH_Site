@@ -257,7 +257,7 @@ body.modal-open nav.navbar {
 
 nav.navbar {
   position: relative;
-  z-index: 5000;
+  z-index: 2000;
   /* Large devices (desktops, 992px and up) */
   height: 100px;
   padding-bottom: 0;
@@ -318,15 +318,15 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 }
 
 .navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .navbar-collapse ul.navbar-nav li.nav-item a.nav-link:active {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .navbar-collapse ul.navbar-nav li.nav-item a.nav-link:focus {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .navbar-collapse ul.navbar-nav li.nav-item:hover {
@@ -334,7 +334,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 }
 
 .navbar-collapse ul.navbar-nav li.nav-item:hover a.nav-link {
-  color: #fff;
+  color: #fff !important;
 }
 
 .navbar-collapse ul.navbar-nav::after {
@@ -540,7 +540,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -ms-grid-column-span: 3;
   grid-area: circle-1;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,6 +578,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 }
 
 .v-header #headline-circles .circle-1:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -585,7 +586,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .v-header #headline-circles .circle-1::after {
@@ -639,7 +640,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -ms-grid-column-span: 3;
   grid-area: circle-2;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,6 +678,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 }
 
 .v-header #headline-circles .circle-2:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -684,7 +686,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .v-header #headline-circles .circle-2::after {
@@ -738,7 +740,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -ms-grid-column-span: 5;
   grid-area: circle-3;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -776,6 +778,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 }
 
 .v-header #headline-circles .circle-3:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -783,7 +786,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .v-header #headline-circles .circle-3::after {
@@ -837,7 +840,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -ms-grid-column-span: 3;
   grid-area: circle-4;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,6 +878,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 }
 
 .v-header #headline-circles .circle-4:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -882,7 +886,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .v-header #headline-circles .circle-4::after {
@@ -1005,24 +1009,58 @@ section.about #about-overlay-2 {
   left: 0;
   background: #000;
   z-index: 1;
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 section.about .container {
   position: relative;
-  z-index: 2000;
+  z-index: 1000;
   padding: .5rem;
 }
 
 section.about .container .row {
-  margin: 1rem 0;
-  padding: 1rem 0;
+  margin: 0;
+  padding: 0;
   color: #fff;
   font-size: 18px !important;
 }
 
-section.about .container .row:first-of-type {
-  border-bottom: 3px solid #2ab2af;
+section.about .container .row#who-we-are {
+  position: relative;
+  background-image: url("../images/who-we-are.jpg");
+  background-size: 50% auto;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+section.about .container .row#who-we-are::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1.5px;
+  right: 0;
+  height: 3px;
+  width: 50%;
+  background-color: #18294a;
+}
+
+section.about .container .row#what-we-do {
+  position: relative;
+  background-image: url("../images/what-we-do.jpg");
+  background-size: 50% auto;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+section.about .container .row#what-we-do::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -1.5px;
+  left: 0;
+  height: 3px;
+  width: 50%;
+  background-color: #2ab2af;
 }
 
 section#management-team {
@@ -1077,17 +1115,26 @@ section#management-team {
   opacity: .8;
 }
 
+.modal {
+  z-index: 4000;
+}
+
 .modal-dialog {
   height: 100vh;
-  max-width: 700px !important;
+  max-width: 100% !important;
+  width: 800px;
 }
 
 .modal-dialog .modal-content {
-  margin-top: -50%;
+  margin-top: -20%;
 }
 
 .modal-dialog .modal-content .modal-header {
   border-bottom: 0;
+}
+
+.modal-dialog .modal-content .modal-body {
+  padding: 1em 2em;
 }
 
 .modal-dialog .modal-content img:hover {
@@ -1217,7 +1264,7 @@ section#companies .WTB img {
 
 section#companies .WTB .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1252,6 +1299,7 @@ section#companies .WTB .circle {
 }
 
 section#companies .WTB .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -1259,7 +1307,7 @@ section#companies .WTB .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .WTB .circle::after {
@@ -1347,7 +1395,7 @@ section#companies .Mortgage img {
 
 section#companies .Mortgage .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1380,6 +1428,7 @@ section#companies .Mortgage .circle {
 }
 
 section#companies .Mortgage .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -1387,7 +1436,7 @@ section#companies .Mortgage .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Mortgage .circle::after {
@@ -1473,7 +1522,7 @@ section#companies .Payments img {
 
 section#companies .Payments .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1506,6 +1555,7 @@ section#companies .Payments .circle {
 }
 
 section#companies .Payments .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -1513,7 +1563,7 @@ section#companies .Payments .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Payments .circle::after {
@@ -1592,7 +1642,7 @@ section#companies .Gov img {
 
 section#companies .Gov .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1625,6 +1675,7 @@ section#companies .Gov .circle {
 }
 
 section#companies .Gov .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -1632,7 +1683,7 @@ section#companies .Gov .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Gov .circle::after {
@@ -1720,7 +1771,7 @@ section#companies .Commercial img {
 
 section#companies .Commercial .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1754,6 +1805,7 @@ section#companies .Commercial .circle {
 }
 
 section#companies .Commercial .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -1761,7 +1813,7 @@ section#companies .Commercial .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Commercial .circle::after {
@@ -1854,7 +1906,7 @@ section#companies .Hemp img {
 
 section#companies .Hemp .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1887,6 +1939,7 @@ section#companies .Hemp .circle {
 }
 
 section#companies .Hemp .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -1894,7 +1947,7 @@ section#companies .Hemp .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Hemp .circle::after {
@@ -1988,7 +2041,7 @@ section#companies .Small img {
 
 section#companies .Small .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2021,6 +2074,7 @@ section#companies .Small .circle {
 }
 
 section#companies .Small .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2028,7 +2082,7 @@ section#companies .Small .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Small .circle::after {
@@ -2187,7 +2241,7 @@ section#companies .WTB img {
 
 section#companies .WTB .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2222,6 +2276,7 @@ section#companies .WTB .circle {
 }
 
 section#companies .WTB .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2229,7 +2284,7 @@ section#companies .WTB .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .WTB .circle::after {
@@ -2317,7 +2372,7 @@ section#companies .Mortgage img {
 
 section#companies .Mortgage .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2350,6 +2405,7 @@ section#companies .Mortgage .circle {
 }
 
 section#companies .Mortgage .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2357,7 +2413,7 @@ section#companies .Mortgage .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Mortgage .circle::after {
@@ -2443,7 +2499,7 @@ section#companies .Payments img {
 
 section#companies .Payments .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2476,6 +2532,7 @@ section#companies .Payments .circle {
 }
 
 section#companies .Payments .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2483,7 +2540,7 @@ section#companies .Payments .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Payments .circle::after {
@@ -2562,7 +2619,7 @@ section#companies .Gov img {
 
 section#companies .Gov .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2595,6 +2652,7 @@ section#companies .Gov .circle {
 }
 
 section#companies .Gov .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2602,7 +2660,7 @@ section#companies .Gov .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Gov .circle::after {
@@ -2690,7 +2748,7 @@ section#companies .Commercial img {
 
 section#companies .Commercial .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2724,6 +2782,7 @@ section#companies .Commercial .circle {
 }
 
 section#companies .Commercial .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2731,7 +2790,7 @@ section#companies .Commercial .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Commercial .circle::after {
@@ -2824,7 +2883,7 @@ section#companies .Hemp img {
 
 section#companies .Hemp .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2857,6 +2916,7 @@ section#companies .Hemp .circle {
 }
 
 section#companies .Hemp .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2864,7 +2924,7 @@ section#companies .Hemp .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Hemp .circle::after {
@@ -2958,7 +3018,7 @@ section#companies .Small img {
 
 section#companies .Small .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2991,6 +3051,7 @@ section#companies .Small .circle {
 }
 
 section#companies .Small .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -2998,7 +3059,7 @@ section#companies .Small .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#companies .Small .circle::after {
@@ -3076,7 +3137,7 @@ section#subsidiaries .grid-container {
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1px 1px;
-      grid-template-areas: "Intro Intro Intro Intro Intro . . VeriLeaf VeriLeaf" "Intro Intro Intro Intro Intro SBA SBA VeriLeaf VeriLeaf" ". . GSF GSF . SBA SBA VeriLeaf VeriLeaf" ". . GSF GSF . SBA SBA Dogwood Dogwood" ". . GSF GSF . SBA SBA Dogwood Dogwood" "Patriarch Patriarch Windsor Windsor Windsor Insurance Insurance Dogwood Dogwood" "Patriarch Patriarch Windsor Windsor Windsor Insurance Insurance . ." "Patriarch Patriarch Windsor Windsor Windsor Insurance Insurance . ." ". . . . . Insurance Insurance . .";
+      grid-template-areas: "Intro Intro Intro Intro Intro . . VeriLeaf VeriLeaf" "Intro Intro Intro Intro Intro Windsor Windsor VeriLeaf VeriLeaf" ". . GSF GSF . Windsor Windsor VeriLeaf VeriLeaf" ". . GSF GSF . Windsor Windsor Dogwood Dogwood" ". . GSF GSF . Windsor Windsor Dogwood Dogwood" "Patriarch Patriarch SBA SBA SBA Insurance Insurance Dogwood Dogwood" "Patriarch Patriarch SBA SBA SBA Insurance Insurance . ." "Patriarch Patriarch SBA SBA SBA Insurance Insurance . ." ". . . . . Insurance Insurance . .";
 }
 
 section#subsidiaries .Intro {
@@ -3086,7 +3147,6 @@ section#subsidiaries .Intro {
   -ms-grid-column-span: 5;
   grid-area: Intro;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3128,14 +3188,13 @@ section#subsidiaries .Intro p {
   font-size: 18px;
 }
 
-section#subsidiaries .SBA {
+section#subsidiaries .Windsor {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
   -ms-grid-column: 6;
   -ms-grid-column-span: 2;
-  grid-area: SBA;
+  grid-area: Windsor;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3151,17 +3210,17 @@ section#subsidiaries .SBA {
           justify-content: center;
 }
 
-section#subsidiaries .SBA p {
+section#subsidiaries .Windsor p {
   font-size: 14px;
 }
 
-section#subsidiaries .SBA img {
+section#subsidiaries .Windsor img {
   margin-bottom: 1em;
 }
 
-section#subsidiaries .SBA .circle {
+section#subsidiaries .Windsor .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3175,8 +3234,8 @@ section#subsidiaries .SBA .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
-  color: #203967;
+  background-color: #18294a;
+  color: #ffffff;
   width: 400px;
   height: 400px;
   max-width: 400px;
@@ -3195,7 +3254,8 @@ section#subsidiaries .SBA .circle {
   margin-right: auto;
 }
 
-section#subsidiaries .SBA .circle:hover {
+section#subsidiaries .Windsor .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3203,49 +3263,49 @@ section#subsidiaries .SBA .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
-section#subsidiaries .SBA .circle::after {
+section#subsidiaries .Windsor .circle::after {
   content: "";
   position: absolute;
-  border: 6.45161px solid #bebebe;
-  width: 106%;
-  height: 106%;
+  border: 6.45161px solid #2ab2af;
+  width: 108%;
+  height: 108%;
   border-radius: 50%;
 }
 
-section#subsidiaries .SBA .circle .front {
+section#subsidiaries .Windsor .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#subsidiaries .SBA .circle .front h4 {
+section#subsidiaries .Windsor .circle .front h4 {
   text-transform: uppercase;
   color: unset;
 }
 
-section#subsidiaries .SBA .circle:hover .front {
+section#subsidiaries .Windsor .circle:hover .front {
   display: none;
 }
 
-section#subsidiaries .SBA .circle .back {
+section#subsidiaries .Windsor .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#subsidiaries .SBA .circle .back a:hover {
+section#subsidiaries .Windsor .circle .back a:hover {
   text-decoration: none;
 }
 
-section#subsidiaries .SBA .circle:hover .back {
+section#subsidiaries .Windsor .circle:hover .back {
   display: block;
   z-index: 2001;
 }
 
-section#subsidiaries .SBA .circle h2 {
-  color: #203967;
+section#subsidiaries .Windsor .circle h2 {
+  color: #ffffff;
   font-size: 133.33333px;
   font-size: 8.33333rem;
 }
@@ -3257,7 +3317,6 @@ section#subsidiaries .Dogwood {
   -ms-grid-column-span: 2;
   grid-area: Dogwood;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3289,7 +3348,7 @@ section#subsidiaries .Dogwood img {
 
 section#subsidiaries .Dogwood .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3303,13 +3362,13 @@ section#subsidiaries .Dogwood .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
+  background-color: #18294a;
   color: #ffffff;
   width: 300px;
   height: 300px;
   max-width: 300px;
   max-height: 300px;
-  border: 5px solid #bebebe;
+  border: 5px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3324,6 +3383,7 @@ section#subsidiaries .Dogwood .circle {
 }
 
 section#subsidiaries .Dogwood .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3331,7 +3391,7 @@ section#subsidiaries .Dogwood .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#subsidiaries .Dogwood .circle::after {
@@ -3385,7 +3445,6 @@ section#subsidiaries .VeriLeaf {
   -ms-grid-column-span: 2;
   grid-area: VeriLeaf;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3417,7 +3476,7 @@ section#subsidiaries .VeriLeaf img {
 
 section#subsidiaries .VeriLeaf .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3431,13 +3490,13 @@ section#subsidiaries .VeriLeaf .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
+  background-color: #18294a;
   color: #ffffff;
   width: 300px;
   height: 300px;
   max-width: 300px;
   max-height: 300px;
-  border: 5px solid #bebebe;
+  border: 5px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3450,6 +3509,7 @@ section#subsidiaries .VeriLeaf .circle {
 }
 
 section#subsidiaries .VeriLeaf .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3457,7 +3517,7 @@ section#subsidiaries .VeriLeaf .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#subsidiaries .VeriLeaf .circle::after {
@@ -3511,7 +3571,6 @@ section#subsidiaries .Insurance {
   -ms-grid-column-span: 2;
   grid-area: Insurance;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3544,7 +3603,7 @@ section#subsidiaries .Insurance img {
 
 section#subsidiaries .Insurance .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3558,13 +3617,13 @@ section#subsidiaries .Insurance .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
+  background-color: #18294a;
   color: #ffffff;
   width: 300px;
   height: 300px;
   max-width: 300px;
   max-height: 300px;
-  border: 5px solid #bebebe;
+  border: 5px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3577,6 +3636,7 @@ section#subsidiaries .Insurance .circle {
 }
 
 section#subsidiaries .Insurance .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3584,7 +3644,7 @@ section#subsidiaries .Insurance .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#subsidiaries .Insurance .circle::after {
@@ -3636,14 +3696,13 @@ section#subsidiaries .Insurance .circle h4 {
   font-size: 1.125rem;
 }
 
-section#subsidiaries .Windsor {
+section#subsidiaries .SBA {
   -ms-grid-row: 6;
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
-  grid-area: Windsor;
+  grid-area: SBA;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3660,17 +3719,17 @@ section#subsidiaries .Windsor {
   padding-bottom: 2em;
 }
 
-section#subsidiaries .Windsor p {
+section#subsidiaries .SBA p {
   font-size: 14px;
 }
 
-section#subsidiaries .Windsor img {
+section#subsidiaries .SBA img {
   margin-bottom: 1em;
 }
 
-section#subsidiaries .Windsor .circle {
+section#subsidiaries .SBA .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3684,13 +3743,13 @@ section#subsidiaries .Windsor .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
-  color: #18294a;
+  background-color: #bebebe;
+  color: #ffffff;
   width: 350px;
   height: 350px;
   max-width: 350px;
   max-height: 350px;
-  border: 5.83333px solid #ffffff;
+  border: 5.83333px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3702,7 +3761,8 @@ section#subsidiaries .Windsor .circle {
   transition: all ease 0.5s;
 }
 
-section#subsidiaries .Windsor .circle:hover {
+section#subsidiaries .SBA .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3710,10 +3770,10 @@ section#subsidiaries .Windsor .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
-section#subsidiaries .Windsor .circle::after {
+section#subsidiaries .SBA .circle::after {
   content: "";
   position: absolute;
   border: 5.64516px solid #2ab2af;
@@ -3722,37 +3782,37 @@ section#subsidiaries .Windsor .circle::after {
   border-radius: 50%;
 }
 
-section#subsidiaries .Windsor .circle .front {
+section#subsidiaries .SBA .circle .front {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#subsidiaries .Windsor .circle .front h4 {
+section#subsidiaries .SBA .circle .front h4 {
   text-transform: uppercase;
   color: unset;
 }
 
-section#subsidiaries .Windsor .circle:hover .front {
+section#subsidiaries .SBA .circle:hover .front {
   display: none;
 }
 
-section#subsidiaries .Windsor .circle .back {
+section#subsidiaries .SBA .circle .back {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-section#subsidiaries .Windsor .circle .back a:hover {
+section#subsidiaries .SBA .circle .back a:hover {
   text-decoration: none;
 }
 
-section#subsidiaries .Windsor .circle:hover .back {
+section#subsidiaries .SBA .circle:hover .back {
   display: block;
   z-index: 2001;
 }
 
-section#subsidiaries .Windsor .circle h2 {
-  color: #18294a;
+section#subsidiaries .SBA .circle h2 {
+  color: #ffffff;
   font-size: 116.66667px;
   font-size: 7.29167rem;
 }
@@ -3764,7 +3824,6 @@ section#subsidiaries .GSF {
   -ms-grid-column-span: 2;
   grid-area: GSF;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3797,7 +3856,7 @@ section#subsidiaries .GSF img {
 
 section#subsidiaries .GSF .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3811,13 +3870,13 @@ section#subsidiaries .GSF .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
+  background-color: #bebebe;
   color: #ffffff;
   width: 280px;
   height: 280px;
   max-width: 280px;
   max-height: 280px;
-  border: 4.66667px solid #2ab2af;
+  border: 4.66667px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3830,6 +3889,7 @@ section#subsidiaries .GSF .circle {
 }
 
 section#subsidiaries .GSF .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3837,7 +3897,7 @@ section#subsidiaries .GSF .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#subsidiaries .GSF .circle::after {
@@ -3900,7 +3960,6 @@ section#subsidiaries .Patriarch {
   -ms-grid-column-span: 2;
   grid-area: Patriarch;
   position: relative;
-  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3934,7 +3993,7 @@ section#subsidiaries .Patriarch img {
 
 section#subsidiaries .Patriarch .circle {
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3948,13 +4007,13 @@ section#subsidiaries .Patriarch .circle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
-  color: #18294a;
+  background-color: #bebebe;
+  color: #ffffff;
   width: 280px;
   height: 280px;
   max-width: 280px;
   max-height: 280px;
-  border: 4.66667px solid #2ab2af;
+  border: 4.66667px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3967,6 +4026,7 @@ section#subsidiaries .Patriarch .circle {
 }
 
 section#subsidiaries .Patriarch .circle:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -3974,7 +4034,7 @@ section#subsidiaries .Patriarch .circle:hover {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 section#subsidiaries .Patriarch .circle::after {
@@ -4016,7 +4076,7 @@ section#subsidiaries .Patriarch .circle:hover .back {
 }
 
 section#subsidiaries .Patriarch .circle h2 {
-  color: #18294a;
+  color: #ffffff;
   font-size: 93.33333px;
   font-size: 5.83333rem;
 }
@@ -4136,7 +4196,7 @@ section#other {
   -ms-grid-column-span: 3;
   grid-area: circle-1;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4172,6 +4232,7 @@ section#other {
 }
 
 .loader-wrap .loader .loader-inner .circle-1:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -4179,7 +4240,7 @@ section#other {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .loader-wrap .loader .loader-inner .circle-1::after {
@@ -4233,7 +4294,7 @@ section#other {
   -ms-grid-column-span: 3;
   grid-area: circle-2;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4269,6 +4330,7 @@ section#other {
 }
 
 .loader-wrap .loader .loader-inner .circle-2:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -4276,7 +4338,7 @@ section#other {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .loader-wrap .loader .loader-inner .circle-2::after {
@@ -4330,7 +4392,7 @@ section#other {
   -ms-grid-column-span: 5;
   grid-area: circle-3;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4366,6 +4428,7 @@ section#other {
 }
 
 .loader-wrap .loader .loader-inner .circle-3:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -4373,7 +4436,7 @@ section#other {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .loader-wrap .loader .loader-inner .circle-3::after {
@@ -4427,7 +4490,7 @@ section#other {
   -ms-grid-column-span: 3;
   grid-area: circle-4;
   position: relative;
-  z-index: 2000;
+  z-index: 1032;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4463,6 +4526,7 @@ section#other {
 }
 
 .loader-wrap .loader .loader-inner .circle-4:hover {
+  position: relative;
   background-color: #fff;
   border-color: #fff;
   color: #203967;
@@ -4470,7 +4534,7 @@ section#other {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  z-index: 2001;
+  z-index: 3000;
 }
 
 .loader-wrap .loader .loader-inner .circle-4::after {
