@@ -35,23 +35,25 @@ body.modal-open {
 
 nav.navbar {
   position: relative;
+  z-index: 5000;
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
    position: fixed;
    top:0;
    width: 100%;
   }
-  z-index: 2000;
   height: $nav-height;
   padding-bottom: 0;
   font-family: font-stack(futura);
-  //background-color: color(dark-blue);
   color: color(body);
   // padding: calculateRem(20px);
   
   // Logo
   .navbar-brand {
     color: color(white);
+    img {
+      padding-top: 50px;
+    }
   }
   // Mobile Nav Toggle Button
   .navbar-toggler {
@@ -243,9 +245,9 @@ nav.navbar {
      
     .headline {
       position: relative;
-      background-color: #fff;
+      // background-color: #fff;
       padding: 1em;
-      padding-left: 2em;
+      // padding-left: 2em;
       padding-bottom: 1.5em;
       // clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
       // border-bottom: 4px solid color(aqua);
@@ -259,7 +261,7 @@ nav.navbar {
       #main-cta {
         position: relative;
         width: auto;
-        margin-left: 0em;
+        margin-left:.5em;
         margin-top: -.5em;
         z-index: 1;
       }
@@ -431,7 +433,7 @@ section.about {
     z-index: 2000;
     // background-color: #fff;
     padding: .5rem;
-    padding-top: 2rem;
+    // padding-top: 3rem;
     .row {
       margin: 1rem 0;
       padding: 1rem 0;
@@ -944,7 +946,7 @@ section#companies {
 section#subsidiaries {
   
   background-color: color(white);
-  background: url("../images/subsidiaries-bg-main.jpg");
+  background: url("../images/companies-bg-main.jpg");
   background-size: cover;
   background-position: 0 0;
   background-attachment: fixed;
@@ -1015,7 +1017,7 @@ section#subsidiaries {
   .Intro {
     grid-area: Intro;
     @include centerCircles();
-    padding: 2em 4em 2em 4em;
+    padding: 4em 4em 2em 4em;
     .title {
       color: color(dark-blue);
       padding-left: 65px;
@@ -1027,7 +1029,6 @@ section#subsidiaries {
       font-size: 22px;
     }
     p{
-      color: #fff;
       padding-left: 65px;
       font-size: 18px;
     }
@@ -1396,6 +1397,14 @@ footer {
   }
   p{
     margin-bottom:0;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
   .footer-overlay {
       @extend .header-overlay-layer-1;
