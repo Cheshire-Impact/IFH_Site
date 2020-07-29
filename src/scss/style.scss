@@ -35,7 +35,7 @@ body.modal-open {
 
 nav.navbar {
   position: relative;
-  z-index: 5000;
+  z-index: 2000;
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
    position: fixed;
@@ -91,19 +91,19 @@ nav.navbar {
         letter-spacing: 1px;
         @include transition(all 0.3s ease);
         &:hover {
-          color: color(white);
+          color: color(white) !important;
         }
         &:active {
-          color: color(white);
+          color: color(white) !important;
         }
         &:focus {
-          color: color(white);
+          color: color(white) !important;
         }
       }
       &:hover {
         background-color: $secondary-color;
         a.nav-link {
-          color: #fff;
+          color: #fff !important;
         }
       }
     }
@@ -426,21 +426,55 @@ section.about {
     left: 0;
     background: #000;
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.65;
   }
   .container {
     position: relative;
-    z-index: 2000;
+    z-index: 1000;
     // background-color: #fff;
     padding: .5rem;
     // padding-top: 3rem;
     .row {
-      margin: 1rem 0;
-      padding: 1rem 0;
+      margin: 0;
+      padding: 0;
       color: #fff;
       font-size: 18px !important;
-      &:first-of-type {
-        border-bottom: 3px solid color(aqua);
+      // &:first-of-type {
+      //   border-bottom: 3px solid color(white);
+      // }
+      &#who-we-are {
+        position: relative;
+        background-image: url("../images/who-we-are.jpg");
+        background-size: 50% auto;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        &::after{
+          content: "";
+          position: absolute;
+          display: block;
+          bottom: -1.5px;
+          right:0;
+          height: 3px;
+         width: 50%;
+         background-color: color(dark-blue);
+        }
+      }
+      &#what-we-do {
+        position: relative;
+        background-image: url("../images/what-we-do.jpg");
+        background-size: 50% auto;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        &::before{
+          content: "";
+          position: absolute;
+          display: block;
+          top: -1.5px;
+         left:0;
+         height: 3px;
+         width: 50%;
+         background-color: color(aqua);
+        } 
       }
     }
   }
@@ -485,16 +519,21 @@ section#management-team {
     opacity: .8;
   }
 }
-
+.modal {
+  z-index: 4000;
+}
 
 .modal-dialog {
   height: 100vh;
-  max-width: 700px !important;
-
+  max-width: 100% !important;
+  width: 800px;
   .modal-content {
-    margin-top: -50%;
+    margin-top: -20%;
     .modal-header {
       border-bottom: 0;
+    }
+    .modal-body {
+      padding: 1em 2em;
     }
     img:hover {
       transform: scale(1);
@@ -968,19 +1007,19 @@ section#subsidiaries {
     gap: 1px 1px;
     grid-template-areas:
       "Intro Intro Intro Intro Intro . . VeriLeaf VeriLeaf"
-      "Intro Intro Intro Intro Intro SBA SBA VeriLeaf VeriLeaf"
-      ". . GSF GSF . SBA SBA VeriLeaf VeriLeaf"
-      ". . GSF GSF . SBA SBA Dogwood Dogwood"
-      ". . GSF GSF . SBA SBA Dogwood Dogwood"
-      "Patriarch Patriarch Windsor Windsor Windsor Insurance Insurance Dogwood Dogwood"
-      "Patriarch Patriarch Windsor Windsor Windsor Insurance Insurance . ."
-      "Patriarch Patriarch Windsor Windsor Windsor Insurance Insurance . ."
+      "Intro Intro Intro Intro Intro Windsor Windsor VeriLeaf VeriLeaf"
+      ". . GSF GSF . Windsor Windsor VeriLeaf VeriLeaf"
+      ". . GSF GSF . Windsor Windsor Dogwood Dogwood"
+      ". . GSF GSF . Windsor Windsor Dogwood Dogwood"
+      "Patriarch Patriarch SBA SBA SBA Insurance Insurance Dogwood Dogwood"
+      "Patriarch Patriarch SBA SBA SBA Insurance Insurance . ."
+      "Patriarch Patriarch SBA SBA SBA Insurance Insurance . ."
       ". . . . . Insurance Insurance . .";
 
   }
   @mixin centerCircles {
     position: relative;
-    z-index: 2000;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1035,18 +1074,19 @@ section#subsidiaries {
       padding-left: 65px;
       font-size: 18px;
     }
+    
   }
-  .SBA {
-    grid-area: SBA;
+  .Windsor {
+    grid-area: Windsor;
     @include centerCircles();
     .circle {
       @include flipCircle(
+        color(dark-blue),
         color(white),
-        color(blue),
         400px,
         color(dark-blue),
-        color(dark-grey),
-        106%
+        color(aqua),
+        108%
       );
       margin-left: auto;
       margin-right: auto;
@@ -1060,10 +1100,10 @@ section#subsidiaries {
     justify-content: flex-start;
     .circle {
       @include flipCircle(
-        color(white),
+        color(dark-blue),
         color(white),
         300px,
-        color(dark-grey),
+        color(dark-blue),
         transparent,
         108%
       );
@@ -1079,10 +1119,10 @@ section#subsidiaries {
     justify-content: flex-start;
     .circle {
       @include flipCircle(
-        color(white),
+        color(dark-blue),
         color(white),
         300px,
-        color(dark-grey),
+        color(dark-blue),
         transparent,
         108%
       );
@@ -1097,10 +1137,10 @@ section#subsidiaries {
     padding-top: 1em;
     .circle {
       @include flipCircle(
-        color(white),
+        color(dark-blue),
         color(white),
         300px,
-        color(dark-grey),
+        color(dark-blue),
         transparent,
         108%
       );
@@ -1110,16 +1150,16 @@ section#subsidiaries {
     }
   }
 
-  .Windsor {
-    grid-area: Windsor;
+  .SBA {
+    grid-area: SBA;
     @include centerCircles();
     padding-bottom: 2em;
     .circle {
       @include flipCircle(
+        color(dark-grey),
         color(white),
-        color(dark-blue),
         350px,
-        color(white),
+        color(dark-grey),
         color(aqua),
         108%
       );
@@ -1134,10 +1174,10 @@ section#subsidiaries {
     margin-left: -2em;
     .circle {
       @include flipCircle(
-       color(white),
+       color(dark-grey),
         color(white),
         280px,
-        color(aqua),
+        color(dark-grey),
         transparent,
         108%
       );
@@ -1160,10 +1200,10 @@ section#subsidiaries {
     margin-right: -2em;
     .circle {
       @include flipCircle(
+        color(dark-grey),
         color(white),
-        color(dark-blue),
         280px,
-        color(aqua),
+        color(dark-grey),
         transparent,
         108%
       );
