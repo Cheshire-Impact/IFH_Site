@@ -56,7 +56,6 @@
     position: relative;
     background-color: #fff;
     border-color: #fff;
-    color: $primary-color;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     transform: scale(1.4);
     z-index: 3000;
@@ -81,6 +80,7 @@
   }
   .back {
     display: none;
+    color: $primary-color !important;
     @include transition(all 0.5s ease);
     a {
       &:hover {
