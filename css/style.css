@@ -581,7 +581,6 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -614,6 +613,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 .v-header #headline-circles .circle-1 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -681,7 +681,6 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -714,6 +713,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 .v-header #headline-circles .circle-2 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -781,7 +781,6 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -814,6 +813,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 .v-header #headline-circles .circle-3 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -881,7 +881,6 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -914,6 +913,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 .v-header #headline-circles .circle-4 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1302,7 +1302,6 @@ section#companies .WTB .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -1335,6 +1334,7 @@ section#companies .WTB .circle:hover .front {
 
 section#companies .WTB .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1431,7 +1431,6 @@ section#companies .Mortgage .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -1464,6 +1463,7 @@ section#companies .Mortgage .circle:hover .front {
 
 section#companies .Mortgage .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1558,7 +1558,6 @@ section#companies .Payments .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -1591,6 +1590,7 @@ section#companies .Payments .circle:hover .front {
 
 section#companies .Payments .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1678,7 +1678,6 @@ section#companies .Gov .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -1711,6 +1710,7 @@ section#companies .Gov .circle:hover .front {
 
 section#companies .Gov .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1808,7 +1808,6 @@ section#companies .Commercial .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -1841,6 +1840,7 @@ section#companies .Commercial .circle:hover .front {
 
 section#companies .Commercial .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1942,7 +1942,6 @@ section#companies .Hemp .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -1975,6 +1974,7 @@ section#companies .Hemp .circle:hover .front {
 
 section#companies .Hemp .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2077,7 +2077,6 @@ section#companies .Small .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2110,6 +2109,7 @@ section#companies .Small .circle:hover .front {
 
 section#companies .Small .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2279,7 +2279,6 @@ section#companies .WTB .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2312,6 +2311,7 @@ section#companies .WTB .circle:hover .front {
 
 section#companies .WTB .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2408,7 +2408,6 @@ section#companies .Mortgage .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2441,6 +2440,7 @@ section#companies .Mortgage .circle:hover .front {
 
 section#companies .Mortgage .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2535,7 +2535,6 @@ section#companies .Payments .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2568,6 +2567,7 @@ section#companies .Payments .circle:hover .front {
 
 section#companies .Payments .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2655,7 +2655,6 @@ section#companies .Gov .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2688,6 +2687,7 @@ section#companies .Gov .circle:hover .front {
 
 section#companies .Gov .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2785,7 +2785,6 @@ section#companies .Commercial .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2818,6 +2817,7 @@ section#companies .Commercial .circle:hover .front {
 
 section#companies .Commercial .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -2919,7 +2919,6 @@ section#companies .Hemp .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -2952,6 +2951,7 @@ section#companies .Hemp .circle:hover .front {
 
 section#companies .Hemp .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3054,7 +3054,6 @@ section#companies .Small .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3087,6 +3086,7 @@ section#companies .Small .circle:hover .front {
 
 section#companies .Small .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3258,7 +3258,6 @@ section#subsidiaries .Windsor .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3291,6 +3290,7 @@ section#subsidiaries .Windsor .circle:hover .front {
 
 section#subsidiaries .Windsor .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3386,7 +3386,6 @@ section#subsidiaries .Dogwood .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3419,6 +3418,7 @@ section#subsidiaries .Dogwood .circle:hover .front {
 
 section#subsidiaries .Dogwood .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3512,7 +3512,6 @@ section#subsidiaries .VeriLeaf .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3545,6 +3544,7 @@ section#subsidiaries .VeriLeaf .circle:hover .front {
 
 section#subsidiaries .VeriLeaf .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3639,7 +3639,6 @@ section#subsidiaries .Insurance .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3672,6 +3671,7 @@ section#subsidiaries .Insurance .circle:hover .front {
 
 section#subsidiaries .Insurance .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3765,7 +3765,6 @@ section#subsidiaries .SBA .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3798,6 +3797,7 @@ section#subsidiaries .SBA .circle:hover .front {
 
 section#subsidiaries .SBA .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -3892,7 +3892,6 @@ section#subsidiaries .GSF .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -3925,6 +3924,7 @@ section#subsidiaries .GSF .circle:hover .front {
 
 section#subsidiaries .GSF .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -4029,7 +4029,6 @@ section#subsidiaries .Patriarch .circle:hover {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -4062,6 +4061,7 @@ section#subsidiaries .Patriarch .circle:hover .front {
 
 section#subsidiaries .Patriarch .circle .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -4235,7 +4235,6 @@ section#other {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -4268,6 +4267,7 @@ section#other {
 
 .loader-wrap .loader .loader-inner .circle-1 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -4333,7 +4333,6 @@ section#other {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -4366,6 +4365,7 @@ section#other {
 
 .loader-wrap .loader .loader-inner .circle-2 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -4431,7 +4431,6 @@ section#other {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -4464,6 +4463,7 @@ section#other {
 
 .loader-wrap .loader .loader-inner .circle-3 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -4529,7 +4529,6 @@ section#other {
   position: relative;
   background-color: #fff;
   border-color: #fff;
-  color: #203967;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1.4);
@@ -4562,6 +4561,7 @@ section#other {
 
 .loader-wrap .loader .loader-inner .circle-4 .back {
   display: none;
+  color: #203967 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
