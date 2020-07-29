@@ -1100,10 +1100,10 @@ section#subsidiaries {
     justify-content: flex-start;
     .circle {
       @include flipCircle(
-        color(dark-blue),
+        color(dark-grey),
         color(white),
         300px,
-        color(dark-blue),
+        color(dark-grey),
         transparent,
         108%
       );
@@ -1119,10 +1119,10 @@ section#subsidiaries {
     justify-content: flex-start;
     .circle {
       @include flipCircle(
-        color(dark-blue),
+        color(dark-grey),
         color(white),
         300px,
-        color(dark-blue),
+        color(dark-grey),
         transparent,
         108%
       );
@@ -1174,10 +1174,10 @@ section#subsidiaries {
     margin-left: -2em;
     .circle {
       @include flipCircle(
-       color(dark-grey),
+       color(dark-blue),
         color(white),
         280px,
-        color(dark-grey),
+        color(dark-blue),
         transparent,
         108%
       );
@@ -1200,10 +1200,10 @@ section#subsidiaries {
     margin-right: -2em;
     .circle {
       @include flipCircle(
-        color(dark-grey),
+        color(dark-blue),
         color(white),
         280px,
-        color(dark-grey),
+        color(dark-blue),
         transparent,
         108%
       );
