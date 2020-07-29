@@ -1156,10 +1156,10 @@ section#subsidiaries {
     padding-bottom: 2em;
     .circle {
       @include flipCircle(
-        color(dark-grey),
+        color(dark-blue),
         color(white),
         350px,
-        color(dark-grey),
+        color(dark-blue),
         color(aqua),
         108%
       );
