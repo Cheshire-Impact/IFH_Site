@@ -50,7 +50,7 @@ $font-weight: (
 
 @each $key, $value in $font-weight {
   .font-#{$key} {
-    font-weight: $value;
+    font-weight: $value !important;
   }
 }
 
@@ -78,10 +78,10 @@ $color: (
 
 @each $key, $value in $color {
   .text-#{$key} {
-    color: $value;
+    color: $value !important;
   }
   .bg-#{$key} {
-    background-color: $value;
+    background-color: $value !important;
   }
   .border-#{$key} {
     border-color: $value !important;

@@ -8,43 +8,43 @@
 }
 
 .font-extra-light {
-  font-weight: 200;
+  font-weight: 200 !important;
 }
 
 .font-light {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 .font-normal {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .font-semi-bold {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .font-bold {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .font-extra-bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .font-heavy {
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .font-black {
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 .text-transparent {
-  color: transparent;
+  color: transparent !important;
 }
 
 .bg-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .border-transparent {
@@ -52,11 +52,11 @@
 }
 
 .text-body {
-  color: #3d3d3d;
+  color: #3d3d3d !important;
 }
 
 .bg-body {
-  background-color: #3d3d3d;
+  background-color: #3d3d3d !important;
 }
 
 .border-body {
@@ -64,11 +64,11 @@
 }
 
 .text-white {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .bg-white {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 .border-white {
@@ -76,11 +76,11 @@
 }
 
 .text-grey {
-  color: #f4f8ff;
+  color: #f4f8ff !important;
 }
 
 .bg-grey {
-  background-color: #f4f8ff;
+  background-color: #f4f8ff !important;
 }
 
 .border-grey {
@@ -88,11 +88,11 @@
 }
 
 .text-dark-grey {
-  color: #bebebe;
+  color: #bebebe !important;
 }
 
 .bg-dark-grey {
-  background-color: #bebebe;
+  background-color: #bebebe !important;
 }
 
 .border-dark-grey {
@@ -100,11 +100,11 @@
 }
 
 .text-aqua {
-  color: #2ab2af;
+  color: #2ab2af !important;
 }
 
 .bg-aqua {
-  background-color: #2ab2af;
+  background-color: #2ab2af !important;
 }
 
 .border-aqua {
@@ -112,11 +112,11 @@
 }
 
 .text-blue {
-  color: #203967;
+  color: #203967 !important;
 }
 
 .bg-blue {
-  background-color: #203967;
+  background-color: #203967 !important;
 }
 
 .border-blue {
@@ -124,11 +124,11 @@
 }
 
 .text-dark-blue {
-  color: #18294a;
+  color: #18294a !important;
 }
 
 .bg-dark-blue {
-  background-color: #18294a;
+  background-color: #18294a !important;
 }
 
 .border-dark-blue {
@@ -136,11 +136,11 @@
 }
 
 .text-yellow {
-  color: #fef0c5;
+  color: #fef0c5 !important;
 }
 
 .bg-yellow {
-  background-color: #fef0c5;
+  background-color: #fef0c5 !important;
 }
 
 .border-yellow {
@@ -1172,9 +1172,13 @@ section#companies .Intro .title {
 }
 
 section#companies .Intro h4 {
-  font-weight: 600;
+  font-weight: 400;
   padding-left: 65px;
   font-size: 22px;
+}
+
+section#companies .Intro h4 span {
+  font-weight: 600;
 }
 
 section#companies .Intro p {

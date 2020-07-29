@@ -570,9 +570,12 @@ section#companies {
       font-size: 28px;
     }
     h4 {
-      font-weight: 600;
+      font-weight: 400;
       padding-left: 65px;
       font-size: 22px;
+      span {
+        font-weight: 600;
+      }
     }
     p{
       padding-left: 65px;
