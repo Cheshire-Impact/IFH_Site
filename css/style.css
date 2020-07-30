@@ -3268,7 +3268,7 @@ section#subsidiaries .Windsor .circle:hover {
 section#subsidiaries .Windsor .circle::after {
   content: "";
   position: absolute;
-  border: 6.45161px solid #2ab2af;
+  border: 6.45161px solid #bebebe;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3775,7 +3775,7 @@ section#subsidiaries .SBA .circle:hover {
 section#subsidiaries .SBA .circle::after {
   content: "";
   position: absolute;
-  border: 5.64516px solid #2ab2af;
+  border: 5.64516px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
