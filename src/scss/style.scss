@@ -626,7 +626,7 @@ section#companies {
     @include centerCircles();
     .circle {
       @include flipCircle(
-        color(blue),
+        color(dark-blue),
         color(white),
         400px,
         color(dark-blue),
