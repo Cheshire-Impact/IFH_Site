@@ -1,0 +1,22 @@
+{% set page_title = "Board of Directors | Integrated Financial Holdings, Inc." %}
+{% set body_id = "directors" %}
+
+
+
+{% extends "layout/layout.html" %}
+
+
+
+{% block header %}
+{% from "sections/nav-macro.html" import navBar %}
+{{ navBar('images/IFH_Logo.png','160','text-dark-blue','bg-transparent','blue') }}
+{% endblock %}
+
+
+{% block content %}
+{% include "sections/board.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "sections/footer.html" %}
+{% endblock %}

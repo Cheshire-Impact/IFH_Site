@@ -1,0 +1,24 @@
+{% set page_title = "Contact | Integrated Financial Holdings, Inc." %}
+{% set heading = "Contact Us" %}
+{% set body_id = "contact" %}
+
+
+
+
+{% extends "layout/layout.html" %}
+
+
+
+{% block header %}
+{% from "sections/nav-macro.html" import navBar %}
+{{ navBar('images/ifh-logo-white.png','160','text-white','bg-transparent','blue') }}
+{% endblock %}
+
+
+{% block content %}
+{% include "sections/contact.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "sections/footer.html" %}
+{% endblock %}
