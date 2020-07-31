@@ -533,7 +533,29 @@ section.companies {
   width: 100vw;
   height: 100%;
   .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
     grid-template-areas:
+        "Intro"
+        "WTB"
+        "Mortgage"
+        "Gov"
+        "Commercial"
+        "Small"
+        "Hemp"
+        "Payments";
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2000;
+    background-color: transparentize(#fff,.2);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 5em;
+    @media (min-width: 992px) { 
+      grid-template-areas:
         "Intro Intro Intro Intro Intro . . . ."
         "Intro Intro Intro Intro Intro WTB WTB . ."
         "Commercial Commercial Hemp Hemp . WTB WTB . ."
@@ -543,14 +565,6 @@ section.companies {
         "Small Small Gov Gov Gov Payments Payments . ."
         "Small Small Gov Gov Gov Payments Payments . ."
         ". . . . . Payments Payments . .";
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 2000;
-    background-color: transparentize(#fff,.2);
-    padding-left: 1em;
-    padding-right: 1em;
-    @media (min-width: 992px) { 
       /* Large devices (desktops, 992px and up) */
       background-color: transparent;
         height: 100%;
@@ -558,7 +572,7 @@ section.companies {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0px;
-        display: grid;
+        
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1r 1fr 1fr 1fr 1fr;
         gap: 1px 1px;
@@ -575,14 +589,6 @@ section.companies {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    p {
-      font-size: 12px;
-      @media (min-width: 768px) {  
-        /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-          font-size: 14px;
-          line-height: 120%;
-        }
-    }
     img {
       margin-bottom: .5em;
       max-width: 80%;
@@ -590,38 +596,32 @@ section.companies {
     h4 {
       color: #fff;
       font-weight: 400;
-      line-height: 120%;
-      font-size: 16px;
-      @media (min-width: 768px) {  
-      /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-        font-size: 18px;
-      }
       @media (min-width: 992px) { 
       /* Large devices (desktops, 992px and up) */
-        font-size: 18px;
-      }
-      /* Extra large devices (large desktops, 1200px and up) */
-      @media (min-width: 1200px) {  
-        font-size: 20px; 
+        font-size: 20px !important;
       }
     }
-    // p.lead {
-    //   font-size: 12px;
-    // }
   }
 
   .Intro {
+    padding: 2.5em;
+    h4 {
+      font-size: 28px !important;
+      text-align: center;
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) { 
+       text-align: left;
+      }
+    }
     grid-area: Intro;
     @include centerCircles();
     @media (min-width: 992px) { 
-       /* Large devices (desktops, 992px and up) */
-       padding: 0em 4em 2em 4em;
+    /* Large devices (desktops, 992px and up) */
+       padding: 2em 4em 2em 4em;
        width: 65vw;
     }
-    
-    .title {
-      color: color(dark-blue);
-      font-size: 28px;
+    @media (min-width: 1400px) {  
+      width: 50vw;
     }
     h4 {
       font-weight: 800;
@@ -632,9 +632,31 @@ section.companies {
     }
   }
   .WTB {
+    grid-area: WTB;
+    @include centerCircles();
+    .circle {
+      @include flipCircle(
+        color(blue),
+        color(white),
+        60vw,
+        color(dark-blue),
+        transparent,
+        108%
+      );
+      padding: 1em;
+      h4 {
+        font-size: 32px;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a {
+        font-size: 20px;
+      }
+
+    }
     @media (min-width: 992px) { 
       /* Large devices (desktops, 992px and up) */
-      grid-area: WTB;
       @include centerCircles();
       .circle {
         @include flipCircle(
@@ -673,25 +695,49 @@ section.companies {
         margin-right: auto;
         &:hover {
           p.lead{
-            font-size: 14px;
+            font-size: 12px;
             margin-bottom: 1em;
           }
           a {
-            font-size: 16px;
+            font-size: 14px;
           }
           img{
           width: 35%;
           margin-bottom: 1em;
           }
+          transform: scale(1.8) translate(-1em, 1em);
         }
       }
     }
   }
   .Mortgage {
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
     grid-area: Mortgage;
     @include centerCircles();
+    .circle {
+      margin-top: 1em;
+      @include flipCircle(
+        color(aqua),
+        color(white),
+        60vw,
+        color(aqua),
+        transparent,
+        108%
+      );
+      h4 {
+        font-size: 32px;
+      }
+      .h1{
+        font-size: 48px;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 992px) { 
+    /* Large devices (desktops, 992px and up) */
     align-items: flex-start;
     justify-content: flex-start;
     .circle {
@@ -752,10 +798,35 @@ section.companies {
   }
   }
   .Payments {
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
     grid-area: Payments;
     @include centerCircles();
+    .circle {
+      margin-top: 1em;
+      @include flipCircle(
+        color(dark-grey),
+        color(white),
+        60vw,
+        color(dark-grey),
+        transparent,
+        108%
+      );
+      h4 {
+        font-size: 32px;
+      }
+      img{
+        width: 60%;
+        margin-bottom: 1.5em;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a,p {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 992px) { 
+      /* Large devices (desktops, 992px and up) */
+    
     align-items: flex-start;
     padding-top: 0;
     margin-top: -2em;
@@ -777,7 +848,7 @@ section.companies {
         }
         p.lead{
           font-size: 11px;
-          margin-bottom: .5em;
+          margin-bottom: 1em;
         }
         p,a {
           font-size: 13px;
@@ -819,16 +890,39 @@ section.companies {
   }
 
   .Gov {
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
     grid-area: Gov;
     @include centerCircles();
+    .circle {
+      margin-top: 1em;
+      @include flipCircle(
+        color(aqua),
+        color(white),
+        60vw,
+        color(aqua),
+        transparent,
+        108%
+      );
+      h4 {
+        font-size: 32px;
+      }
+      .h1{
+        font-size: 48px;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a,p {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 992px) { 
+      /* Large devices (desktops, 992px and up) */
     padding-bottom: 2em;
     .circle {
       @include flipCircle(
         color(aqua),
         color(white),
-        16vw,
+        19vw,
         color(aqua),
         transparent,
         108%
@@ -841,12 +935,12 @@ section.companies {
           font-size: 8px;
         }
 
-        transform: scale(3) translate(1em, -4em);
+        transform: scale(2) translate(1em, -4em);
         .h1{
           font-size: 32px;
         }
         p.lead {
-          font-size: 14px;
+          font-size: 10px;
         }
        
       }
@@ -883,12 +977,65 @@ section.companies {
   }
   }
   .Commercial {
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
     grid-area: Commercial;
     @include centerCircles();
+    .circle {
+      margin-top: 1em;
+      @include flipCircle(
+        color(aqua),
+        color(white),
+        60vw,
+        color(aqua),
+        transparent,
+        108%
+      );
+      h4 {
+        font-size: 32px;
+      }
+      .h1{
+        font-size: 48px;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a,p {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 992px) { 
+      /* Large devices (desktops, 992px and up) */
     align-items: flex-end;
     justify-content: flex-end;
+    .circle {
+      @include flipCircle(
+        transparentize(color(aqua), 0.2),
+        color(white),
+        18vw,
+        transparent,
+        transparent,
+        108%
+      );
+      margin-left: 4rem;
+      &:hover{
+        .h1{
+          font-size: 22px;
+        }
+        p.lead {
+          font-size: 8px;
+        }
+
+        transform: scale(1.8) translate(2em, -1em);
+        .h1{
+          font-size: 36px;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
     .circle {
       @include flipCircle(
         transparentize(color(aqua), 0.2),
@@ -898,15 +1045,55 @@ section.companies {
         transparent,
         108%
       );
-      margin-left: 4rem; 
+      &:hover{
+        .h1{
+          font-size: 22px;
+        }
+        p.lead {
+          font-size: 8px;
+        }
+
+        transform: scale(1.8) translate(1em, -4em);
+        .h1{
+          font-size: 36px;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+      }
     }
   }
   }
   .Hemp {
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
     grid-area: Hemp;
     @include centerCircles();
+    .circle {
+      margin-top: 1em;
+      @include flipCircle(
+        color(aqua),
+        color(white),
+        60vw,
+        color(aqua),
+        transparent,
+        108%
+      );
+      h4 {
+        font-size: 32px;
+      }
+      img{
+        width: 60%;
+        margin-bottom: 1.5em;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a,p {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 992px) { 
+      /* Large devices (desktops, 992px and up) */
+  
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: -2em;
@@ -914,19 +1101,89 @@ section.companies {
       @include flipCircle(
         transparentize(color(aqua), 0.2),
         color(white),
+        18vw,
+        transparent,
+        transparent,
+        108%
+      );
+      margin-left: 1.5em;
+      &:hover{
+        .h1{
+          font-size: 22px;
+        }
+        p.lead {
+          font-size: 8px;
+        }
+
+        transform: scale(1.8) translate(3em, 0em);
+        .h1{
+          font-size: 36px;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    .circle {
+      @include flipCircle(
+        transparentize(color(aqua), 0.2),
+        color(white),
         14vw,
         transparent,
         transparent,
         108%
       );
+      &:hover{
+        .h1{
+          font-size: 22px;
+        }
+        p.lead {
+          font-size: 8px;
+        }
+
+        transform: scale(1.8) translate(1em, -4em);
+        .h1{
+          font-size: 36px;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+      }
     }
   }
   }
   .Small {
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
     grid-area: Small;
     @include centerCircles();
+    .circle {
+      margin-top: 1em;
+      @include flipCircle(
+        color(aqua),
+        color(white),
+        60vw,
+        color(aqua),
+        transparent,
+        108%
+      );
+      h4 {
+        font-size: 32px;
+      }
+      .h1{
+        font-size: 48px;
+      }
+      p.lead{
+        font-size: 18px;
+      }
+      a,p {
+        font-size: 20px;
+      }
+    }
+    @media (min-width: 992px) { 
+      /* Large devices (desktops, 992px and up) */
+    
     align-items: flex-start;
     justify-content: flex-end;
     margin-top: -2em;
@@ -935,11 +1192,56 @@ section.companies {
       @include flipCircle(
         transparentize(color(aqua), 0.2),
         color(white),
+        18vw,
+        transparent,
+        transparent,
+        108%
+      );
+      &:hover{
+        .h1{
+          font-size: 22px;
+        }
+        p.lead {
+          font-size: 8px;
+        }
+
+        transform: scale(1.8) translate(3em, 0em);
+        .h1{
+          font-size: 36px;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    .circle {
+      @include flipCircle(
+        transparentize(color(aqua), 0.2),
+        color(white),
         14vw,
         transparent,
         transparent,
         108%
       );
+      &:hover{
+        .h1{
+          font-size: 22px;
+        }
+        p.lead {
+          font-size: 8px;
+        }
+
+        transform: scale(1.8) translate(1em, -4em);
+        .h1{
+          font-size: 36px;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+      }
     }
   }
   }

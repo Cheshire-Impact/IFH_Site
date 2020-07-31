@@ -1179,7 +1179,14 @@ section.companies {
 }
 
 section.companies .grid-container {
-      grid-template-areas: "Intro Intro Intro Intro Intro . . . ." "Intro Intro Intro Intro Intro WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments . ." "Small Small Gov Gov Gov Payments Payments . ." ". . . . . Payments Payments . .";
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+      grid-template-areas: "Intro" "WTB" "Mortgage" "Gov" "Commercial" "Small" "Hemp" "Payments";
   width: 100%;
   height: 100%;
   position: relative;
@@ -1187,10 +1194,12 @@ section.companies .grid-container {
   background-color: rgba(255, 255, 255, 0.8);
   padding-left: 1em;
   padding-right: 1em;
+  padding-bottom: 5em;
 }
 
 @media (min-width: 992px) {
   section.companies .grid-container {
+        grid-template-areas: "Intro Intro Intro Intro Intro . . . ." "Intro Intro Intro Intro Intro WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments . ." "Small Small Gov Gov Gov Payments Payments . ." ". . . . . Payments Payments . .";
     /* Large devices (desktops, 992px and up) */
     background-color: transparent;
     height: 100%;
@@ -1198,8 +1207,6 @@ section.companies .grid-container {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0px;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr 1fr 1r 1fr 1fr 1fr 1fr;
@@ -1209,6 +1216,7 @@ section.companies .grid-container {
 }
 
 section.companies .Intro {
+  padding: 2.5em;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -1229,15 +1237,15 @@ section.companies .Intro {
           justify-content: center;
 }
 
-section.companies .Intro p {
-  font-size: 12px;
+section.companies .Intro h4 {
+  font-size: 28px !important;
+  text-align: center;
+  /* Large devices (desktops, 992px and up) */
 }
 
-@media (min-width: 768px) {
-  section.companies .Intro p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
+@media (min-width: 992px) {
+  section.companies .Intro h4 {
+    text-align: left;
   }
 }
 
@@ -1249,42 +1257,27 @@ section.companies .Intro img {
 section.companies .Intro h4 {
   color: #fff;
   font-weight: 400;
-  line-height: 120%;
-  font-size: 16px;
-  /* Extra large devices (large desktops, 1200px and up) */
-}
-
-@media (min-width: 768px) {
-  section.companies .Intro h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
 }
 
 @media (min-width: 992px) {
   section.companies .Intro h4 {
     /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1200px) {
-  section.companies .Intro h4 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
 
 @media (min-width: 992px) {
   section.companies .Intro {
     /* Large devices (desktops, 992px and up) */
-    padding: 0em 4em 2em 4em;
+    padding: 2em 4em 2em 4em;
     width: 65vw;
   }
 }
 
-section.companies .Intro .title {
-  color: #18294a;
-  font-size: 28px;
+@media (min-width: 1400px) {
+  section.companies .Intro {
+    width: 50vw;
+  }
 }
 
 section.companies .Intro h4 {
@@ -1295,14 +1288,156 @@ section.companies .Intro p {
   font-size: 18px;
 }
 
+section.companies .WTB {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: WTB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.companies .WTB img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .WTB h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .WTB h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .WTB .circle {
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #203967;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #18294a;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  padding: 1em;
+}
+
+section.companies .WTB .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .WTB .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .WTB .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .WTB .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .WTB .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .WTB .circle:hover .front {
+  display: none;
+}
+
+section.companies .WTB .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .WTB .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .WTB .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .WTB .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .WTB .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .WTB .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .WTB .circle a {
+  font-size: 20px;
+}
+
 @media (min-width: 992px) {
   section.companies .WTB {
     /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 4;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
-    grid-area: WTB;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1317,20 +1452,6 @@ section.companies .Intro p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  section.companies .WTB p {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .WTB p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
   section.companies .WTB img {
     margin-bottom: .5em;
     max-width: 80%;
@@ -1338,29 +1459,13 @@ section.companies .Intro p {
   section.companies .WTB h4 {
     color: #fff;
     font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .WTB h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
   }
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
   section.companies .WTB h4 {
     /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .WTB h4 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
 
@@ -1566,12 +1671,16 @@ section.companies .Intro p {
     font-size: 6.66667vw;
     font-size: calculateRem(6.66667vw);
   }
+  section.companies .WTB .circle:hover {
+    -webkit-transform: scale(1.8) translate(-1em, 1em);
+            transform: scale(1.8) translate(-1em, 1em);
+  }
   section.companies .WTB .circle:hover p.lead {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 1em;
   }
   section.companies .WTB .circle:hover a {
-    font-size: 16px;
+    font-size: 14px;
   }
   section.companies .WTB .circle:hover img {
     width: 35%;
@@ -1579,27 +1688,160 @@ section.companies .Intro p {
   }
 }
 
+section.companies .Mortgage {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: Mortgage;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.companies .Mortgage img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .Mortgage h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .Mortgage h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .Mortgage .circle {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2ab2af;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.companies .Mortgage .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .Mortgage .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .Mortgage .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .Mortgage .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Mortgage .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .Mortgage .circle:hover .front {
+  display: none;
+}
+
+section.companies .Mortgage .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Mortgage .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .Mortgage .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .Mortgage .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .Mortgage .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .Mortgage .circle .h1 {
+  font-size: 48px;
+}
+
+section.companies .Mortgage .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .Mortgage .circle a {
+  font-size: 20px;
+}
+
 @media (min-width: 992px) {
   section.companies .Mortgage {
     /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 2;
-    grid-area: Mortgage;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1607,54 +1849,6 @@ section.companies .Intro p {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  section.companies .Mortgage p {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Mortgage p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Mortgage img {
-    margin-bottom: .5em;
-    max-width: 80%;
-  }
-  section.companies .Mortgage h4 {
-    color: #fff;
-    font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Mortgage h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  section.companies .Mortgage h4 {
-    /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .Mortgage h4 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 992px) {
   section.companies .Mortgage .circle {
     position: relative;
     z-index: 1032;
@@ -1881,81 +2075,167 @@ section.companies .Intro p {
   }
 }
 
+section.companies .Payments {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: Payments;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.companies .Payments img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .Payments h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .Payments h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .Payments .circle {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #bebebe;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #bebebe;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.companies .Payments .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .Payments .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .Payments .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .Payments .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Payments .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .Payments .circle:hover .front {
+  display: none;
+}
+
+section.companies .Payments .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Payments .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .Payments .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .Payments .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .Payments .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .Payments .circle img {
+  width: 60%;
+  margin-bottom: 1.5em;
+}
+
+section.companies .Payments .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .Payments .circle a, section.companies .Payments .circle p {
+  font-size: 20px;
+}
+
 @media (min-width: 992px) {
   section.companies .Payments {
     /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 4;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
-    grid-area: Payments;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     padding-top: 0;
     margin-top: -2em;
   }
-  section.companies .Payments p {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Payments p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Payments img {
-    margin-bottom: .5em;
-    max-width: 80%;
-  }
-  section.companies .Payments h4 {
-    color: #fff;
-    font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Payments h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  section.companies .Payments h4 {
-    /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .Payments h4 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 992px) {
   section.companies .Payments .circle {
     position: relative;
     z-index: 1032;
@@ -2059,7 +2339,7 @@ section.companies .Intro p {
   }
   section.companies .Payments .circle:hover p.lead {
     font-size: 11px;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
   }
   section.companies .Payments .circle:hover p, section.companies .Payments .circle:hover a {
     font-size: 13px;
@@ -2184,80 +2464,162 @@ section.companies .Intro p {
 }
 
 section.companies .Gov {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: Gov;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* Extra large devices (large desktops, 1200px and up) */
+}
+
+section.companies .Gov img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .Gov h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .Gov h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .Gov .circle {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2ab2af;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.companies .Gov .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .Gov .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .Gov .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .Gov .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Gov .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .Gov .circle:hover .front {
+  display: none;
+}
+
+section.companies .Gov .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Gov .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .Gov .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .Gov .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .Gov .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .Gov .circle .h1 {
+  font-size: 48px;
+}
+
+section.companies .Gov .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .Gov .circle a, section.companies .Gov .circle p {
+  font-size: 20px;
 }
 
 @media (min-width: 992px) {
   section.companies .Gov {
     /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 3;
-    grid-area: Gov;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding-bottom: 2em;
   }
-  section.companies .Gov p {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Gov p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Gov img {
-    margin-bottom: .5em;
-    max-width: 80%;
-  }
-  section.companies .Gov h4 {
-    color: #fff;
-    font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Gov h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  section.companies .Gov h4 {
-    /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .Gov h4 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 992px) {
   section.companies .Gov .circle {
     position: relative;
     z-index: 1032;
@@ -2276,10 +2638,10 @@ section.companies .Gov {
             justify-content: center;
     background-color: #2ab2af;
     color: #ffffff;
-    width: 16vw;
-    height: 16vw;
-    max-width: 16vw;
-    max-height: 16vw;
+    width: 19vw;
+    height: 19vw;
+    max-width: 19vw;
+    max-height: 19vw;
     border: 6px solid #2ab2af;
     border-radius: 50%;
     padding: 2rem;
@@ -2346,12 +2708,12 @@ section.companies .Gov {
   }
   section.companies .Gov .circle h2 {
     color: #ffffff;
-    font-size: 5.33333vw;
-    font-size: calculateRem(5.33333vw);
+    font-size: 6.33333vw;
+    font-size: calculateRem(6.33333vw);
   }
   section.companies .Gov .circle:hover {
-    -webkit-transform: scale(3) translate(1em, -4em);
-            transform: scale(3) translate(1em, -4em);
+    -webkit-transform: scale(2) translate(1em, -4em);
+            transform: scale(2) translate(1em, -4em);
   }
   section.companies .Gov .circle:hover .h1 {
     font-size: 22px;
@@ -2363,7 +2725,7 @@ section.companies .Gov {
     font-size: 32px;
   }
   section.companies .Gov .circle:hover p.lead {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
@@ -2477,27 +2839,161 @@ section.companies .Gov {
   }
 }
 
+section.companies .Commercial {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: Commercial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Extra large devices (large desktops, 1200px and up) */
+}
+
+section.companies .Commercial img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .Commercial h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .Commercial h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .Commercial .circle {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2ab2af;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.companies .Commercial .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .Commercial .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .Commercial .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .Commercial .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Commercial .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .Commercial .circle:hover .front {
+  display: none;
+}
+
+section.companies .Commercial .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Commercial .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .Commercial .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .Commercial .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .Commercial .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .Commercial .circle .h1 {
+  font-size: 48px;
+}
+
+section.companies .Commercial .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .Commercial .circle a, section.companies .Commercial .circle p {
+  font-size: 20px;
+}
+
 @media (min-width: 992px) {
   section.companies .Commercial {
     /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: Commercial;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -2505,54 +3001,6 @@ section.companies .Gov {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  section.companies .Commercial p {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Commercial p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Commercial img {
-    margin-bottom: .5em;
-    max-width: 80%;
-  }
-  section.companies .Commercial h4 {
-    color: #fff;
-    font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Commercial h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  section.companies .Commercial h4 {
-    /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .Commercial h4 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 992px) {
   section.companies .Commercial .circle {
     position: relative;
     z-index: 1032;
@@ -2571,10 +3019,10 @@ section.companies .Gov {
             justify-content: center;
     background-color: rgba(42, 178, 175, 0.8);
     color: #ffffff;
-    width: 14vw;
-    height: 14vw;
-    max-width: 14vw;
-    max-height: 14vw;
+    width: 18vw;
+    height: 18vw;
+    max-width: 18vw;
+    max-height: 18vw;
     border: 6px solid transparent;
     border-radius: 50%;
     padding: 2rem;
@@ -2642,89 +3090,29 @@ section.companies .Gov {
   }
   section.companies .Commercial .circle h2 {
     color: #ffffff;
-    font-size: 4.66667vw;
-    font-size: calculateRem(4.66667vw);
+    font-size: 6vw;
+    font-size: calculateRem(6vw);
   }
-}
-
-@media (min-width: 992px) {
-  section.companies .Hemp {
-    /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-    grid-area: Hemp;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-left: -2em;
+  section.companies .Commercial .circle:hover {
+    -webkit-transform: scale(1.8) translate(2em, -1em);
+            transform: scale(1.8) translate(2em, -1em);
   }
-  section.companies .Hemp p {
+  section.companies .Commercial .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section.companies .Commercial .circle:hover p.lead {
+    font-size: 8px;
+  }
+  section.companies .Commercial .circle:hover .h1 {
+    font-size: 36px;
+  }
+  section.companies .Commercial .circle:hover p.lead {
     font-size: 12px;
   }
 }
 
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Hemp p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Hemp img {
-    margin-bottom: .5em;
-    max-width: 80%;
-  }
-  section.companies .Hemp h4 {
-    color: #fff;
-    font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Hemp h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  section.companies .Hemp h4 {
-    /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .Hemp h4 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Hemp .circle {
+@media (min-width: 1200px) {
+  section.companies .Commercial .circle {
     position: relative;
     z-index: 1032;
     display: -webkit-box;
@@ -2756,6 +3144,280 @@ section.companies .Gov {
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
+  }
+  section.companies .Commercial .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1200px) {
+  section.companies .Commercial .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.companies .Commercial .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section.companies .Commercial .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section.companies .Commercial .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section.companies .Commercial .circle:hover .front {
+    display: none;
+  }
+  section.companies .Commercial .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section.companies .Commercial .circle .back a:hover {
+    text-decoration: none;
+  }
+  section.companies .Commercial .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section.companies .Commercial .circle h2 {
+    color: #ffffff;
+    font-size: 4.66667vw;
+    font-size: calculateRem(4.66667vw);
+  }
+  section.companies .Commercial .circle:hover {
+    -webkit-transform: scale(1.8) translate(1em, -4em);
+            transform: scale(1.8) translate(1em, -4em);
+  }
+  section.companies .Commercial .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section.companies .Commercial .circle:hover p.lead {
+    font-size: 8px;
+  }
+  section.companies .Commercial .circle:hover .h1 {
+    font-size: 36px;
+  }
+  section.companies .Commercial .circle:hover p.lead {
+    font-size: 12px;
+  }
+}
+
+section.companies .Hemp {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: Hemp;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Extra large devices (large desktops, 1200px and up) */
+}
+
+section.companies .Hemp img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .Hemp h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .Hemp h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .Hemp .circle {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2ab2af;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.companies .Hemp .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .Hemp .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .Hemp .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .Hemp .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Hemp .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .Hemp .circle:hover .front {
+  display: none;
+}
+
+section.companies .Hemp .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Hemp .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .Hemp .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .Hemp .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .Hemp .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .Hemp .circle img {
+  width: 60%;
+  margin-bottom: 1.5em;
+}
+
+section.companies .Hemp .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .Hemp .circle a, section.companies .Hemp .circle p {
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  section.companies .Hemp {
+    /* Large devices (desktops, 992px and up) */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: -2em;
+  }
+  section.companies .Hemp .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(42, 178, 175, 0.8);
+    color: #ffffff;
+    width: 18vw;
+    height: 18vw;
+    max-width: 18vw;
+    max-height: 18vw;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    margin-left: 1.5em;
   }
   section.companies .Hemp .circle:hover {
     position: relative;
@@ -2812,90 +3474,29 @@ section.companies .Gov {
   }
   section.companies .Hemp .circle h2 {
     color: #ffffff;
-    font-size: 4.66667vw;
-    font-size: calculateRem(4.66667vw);
+    font-size: 6vw;
+    font-size: calculateRem(6vw);
   }
-}
-
-@media (min-width: 992px) {
-  section.companies .Small {
-    /* Large devices (desktops, 992px and up) */
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: Small;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-top: -2em;
-    margin-right: -2em;
+  section.companies .Hemp .circle:hover {
+    -webkit-transform: scale(1.8) translate(3em, 0em);
+            transform: scale(1.8) translate(3em, 0em);
   }
-  section.companies .Small p {
+  section.companies .Hemp .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section.companies .Hemp .circle:hover p.lead {
+    font-size: 8px;
+  }
+  section.companies .Hemp .circle:hover .h1 {
+    font-size: 36px;
+  }
+  section.companies .Hemp .circle:hover p.lead {
     font-size: 12px;
   }
 }
 
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Small p {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 14px;
-    line-height: 120%;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Small img {
-    margin-bottom: .5em;
-    max-width: 80%;
-  }
-  section.companies .Small h4 {
-    color: #fff;
-    font-weight: 400;
-    line-height: 120%;
-    font-size: 16px;
-    /* Extra large devices (large desktops, 1200px and up) */
-  }
-}
-
-@media (min-width: 992px) and (min-width: 768px) {
-  section.companies .Small h4 {
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  section.companies .Small h4 {
-    /* Large devices (desktops, 992px and up) */
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1200px) {
-  section.companies .Small h4 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 992px) {
-  section.companies .Small .circle {
+@media (min-width: 1200px) {
+  section.companies .Hemp .circle {
     position: relative;
     z-index: 1032;
     display: -webkit-box;
@@ -2917,6 +3518,279 @@ section.companies .Gov {
     height: 14vw;
     max-width: 14vw;
     max-height: 14vw;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section.companies .Hemp .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1200px) {
+  section.companies .Hemp .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.companies .Hemp .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section.companies .Hemp .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section.companies .Hemp .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section.companies .Hemp .circle:hover .front {
+    display: none;
+  }
+  section.companies .Hemp .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section.companies .Hemp .circle .back a:hover {
+    text-decoration: none;
+  }
+  section.companies .Hemp .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section.companies .Hemp .circle h2 {
+    color: #ffffff;
+    font-size: 4.66667vw;
+    font-size: calculateRem(4.66667vw);
+  }
+  section.companies .Hemp .circle:hover {
+    -webkit-transform: scale(1.8) translate(1em, -4em);
+            transform: scale(1.8) translate(1em, -4em);
+  }
+  section.companies .Hemp .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section.companies .Hemp .circle:hover p.lead {
+    font-size: 8px;
+  }
+  section.companies .Hemp .circle:hover .h1 {
+    font-size: 36px;
+  }
+  section.companies .Hemp .circle:hover p.lead {
+    font-size: 12px;
+  }
+}
+
+section.companies .Small {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: Small;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Extra large devices (large desktops, 1200px and up) */
+}
+
+section.companies .Small img {
+  margin-bottom: .5em;
+  max-width: 80%;
+}
+
+section.companies .Small h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  section.companies .Small h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 20px !important;
+  }
+}
+
+section.companies .Small .circle {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2ab2af;
+  color: #ffffff;
+  width: 60vw;
+  height: 60vw;
+  max-width: 60vw;
+  max-height: 60vw;
+  border: 6px solid #2ab2af;
+  border-radius: 50%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+section.companies .Small .circle:hover {
+  position: relative;
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section.companies .Small .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+section.companies .Small .circle::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 108%;
+  height: 108%;
+  border-radius: 50%;
+}
+
+section.companies .Small .circle .front {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Small .circle .front h4 {
+  text-transform: uppercase;
+  color: unset;
+}
+
+section.companies .Small .circle:hover .front {
+  display: none;
+}
+
+section.companies .Small .circle .back {
+  display: none;
+  color: #203967 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.companies .Small .circle .back a:hover {
+  text-decoration: none;
+}
+
+section.companies .Small .circle:hover .back {
+  display: block;
+  z-index: 2001;
+}
+
+section.companies .Small .circle h2 {
+  color: #ffffff;
+  font-size: 20vw;
+  font-size: calculateRem(20vw);
+}
+
+section.companies .Small .circle h4 {
+  font-size: 32px;
+}
+
+section.companies .Small .circle .h1 {
+  font-size: 48px;
+}
+
+section.companies .Small .circle p.lead {
+  font-size: 18px;
+}
+
+section.companies .Small .circle a, section.companies .Small .circle p {
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  section.companies .Small {
+    /* Large devices (desktops, 992px and up) */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: -2em;
+    margin-right: -2em;
+  }
+  section.companies .Small .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(42, 178, 175, 0.8);
+    color: #ffffff;
+    width: 18vw;
+    height: 18vw;
+    max-width: 18vw;
+    max-height: 18vw;
     border: 6px solid transparent;
     border-radius: 50%;
     padding: 2rem;
@@ -2983,8 +3857,134 @@ section.companies .Gov {
   }
   section.companies .Small .circle h2 {
     color: #ffffff;
+    font-size: 6vw;
+    font-size: calculateRem(6vw);
+  }
+  section.companies .Small .circle:hover {
+    -webkit-transform: scale(1.8) translate(3em, 0em);
+            transform: scale(1.8) translate(3em, 0em);
+  }
+  section.companies .Small .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section.companies .Small .circle:hover p.lead {
+    font-size: 8px;
+  }
+  section.companies .Small .circle:hover .h1 {
+    font-size: 36px;
+  }
+  section.companies .Small .circle:hover p.lead {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.companies .Small .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(42, 178, 175, 0.8);
+    color: #ffffff;
+    width: 14vw;
+    height: 14vw;
+    max-width: 14vw;
+    max-height: 14vw;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section.companies .Small .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1200px) {
+  section.companies .Small .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.companies .Small .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section.companies .Small .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section.companies .Small .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section.companies .Small .circle:hover .front {
+    display: none;
+  }
+  section.companies .Small .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section.companies .Small .circle .back a:hover {
+    text-decoration: none;
+  }
+  section.companies .Small .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section.companies .Small .circle h2 {
+    color: #ffffff;
     font-size: 4.66667vw;
     font-size: calculateRem(4.66667vw);
+  }
+  section.companies .Small .circle:hover {
+    -webkit-transform: scale(1.8) translate(1em, -4em);
+            transform: scale(1.8) translate(1em, -4em);
+  }
+  section.companies .Small .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section.companies .Small .circle:hover p.lead {
+    font-size: 8px;
+  }
+  section.companies .Small .circle:hover .h1 {
+    font-size: 36px;
+  }
+  section.companies .Small .circle:hover p.lead {
+    font-size: 12px;
   }
 }
 
