@@ -1,4 +1,5 @@
 {% set page_title = "About | Integrated Financial Holdings, Inc." %}
+{% set body_id = "about" %}
 
 {% extends "layout/layout.html" %}
 
@@ -9,8 +10,9 @@
 
 {% block content %}
 {% include "sections/about.html" %}
+{% include "sections/footer.html" %}
 {% endblock %}
 
 {% block footer %}
-{% include "sections/footer.html" %}
+
 {% endblock %}
