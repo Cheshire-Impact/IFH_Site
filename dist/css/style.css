@@ -193,7 +193,7 @@ a:hover {
   font-family: "futura-pt", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: calculateRem(18px);
   color: #ffffff;
   background-color: #203967;
   border-color: #203967;
@@ -211,7 +211,7 @@ a:hover {
 @media (min-width: 576px) {
   .btn-primary, .btn-secondary, .btn-light {
     font-size: 22px;
-    font-size: 1.375rem;
+    font-size: calculateRem(22px);
     padding: 1rem 2rem;
   }
 }
@@ -247,6 +247,7 @@ main {
 }
 
 section {
+  padding-top: 6rem;
   height: 100%;
   width: 100%;
 }
@@ -278,7 +279,15 @@ nav.navbar .navbar-brand {
 }
 
 nav.navbar .navbar-brand img {
-  padding-top: 50px;
+  padding-top: 1rem;
+  width: 100px !important;
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+}
+
+@media (min-width: 768px) {
+  nav.navbar .navbar-brand img {
+    width: 150px !important;
+  }
 }
 
 nav.navbar .navbar-toggler {
@@ -355,6 +364,21 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   }
 }
 
+@media (min-width: 992px) {
+  .navbar-collapse ul.navbar-nav::after {
+    /* Large devices (desktops, 992px and up) */
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 8px;
+    bottom: 14px;
+    right: 0;
+    border-top: 6px solid #2ab2af;
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+}
+
 .navbar-collapse .dropdown:hover .dropdown-menu {
   margin-top: -3px;
   padding-top: 0;
@@ -383,7 +407,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 .navbar-collapse.collapsing {
   background-color: #18294a;
   border-bottom: 5px solid #2ab2af;
-  padding: 1.875rem;
+  padding: calculateRem(30px);
 }
 
 .navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link,
@@ -560,7 +584,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   height: 76px;
   max-width: 76px;
   max-height: 76px;
-  border: 1.26667px solid #bebebe;
+  border: 6px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -571,7 +595,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: calculateRem(12px);
   padding: 0;
   margin-left: 29px;
   margin-top: 11px;
@@ -583,15 +607,25 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .v-header #headline-circles .circle-1:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .v-header #headline-circles .circle-1::after {
   content: "";
   position: absolute;
-  border: 1.22581px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -630,7 +664,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 .v-header #headline-circles .circle-1 h2 {
   color: #ffffff;
   font-size: 25.33333px;
-  font-size: 1.58333rem;
+  font-size: calculateRem(25.33333px);
 }
 
 .v-header #headline-circles .circle-2 {
@@ -660,7 +694,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   height: 110px;
   max-width: 110px;
   max-height: 110px;
-  border: 1.83333px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -671,7 +705,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   font-size: 13px;
-  font-size: 0.8125rem;
+  font-size: calculateRem(13px);
   padding: 0;
   margin-top: 8px;
   margin-left: -4px;
@@ -683,15 +717,25 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .v-header #headline-circles .circle-2:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .v-header #headline-circles .circle-2::after {
   content: "";
   position: absolute;
-  border: 1.77419px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -730,7 +774,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 .v-header #headline-circles .circle-2 h2 {
   color: #ffffff;
   font-size: 36.66667px;
-  font-size: 2.29167rem;
+  font-size: calculateRem(36.66667px);
 }
 
 .v-header #headline-circles .circle-3 {
@@ -760,7 +804,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   height: 132px;
   max-width: 132px;
   max-height: 132px;
-  border: 2.2px solid #2ab2af;
+  border: 6px solid #2ab2af;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -771,7 +815,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: calculateRem(16px);
   padding: 0;
   margin-top: -3px;
   margin-left: 33px;
@@ -783,15 +827,25 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .v-header #headline-circles .circle-3:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .v-header #headline-circles .circle-3::after {
   content: "";
   position: absolute;
-  border: 2.12903px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -830,7 +884,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 .v-header #headline-circles .circle-3 h2 {
   color: #ffffff;
   font-size: 44px;
-  font-size: 2.75rem;
+  font-size: calculateRem(44px);
 }
 
 .v-header #headline-circles .circle-4 {
@@ -860,7 +914,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   height: 64px;
   max-width: 64px;
   max-height: 64px;
-  border: 1.06667px solid #bebebe;
+  border: 6px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -871,7 +925,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: calculateRem(12px);
   padding: 0;
   margin-top: -22px;
   margin-left: 20px;
@@ -883,15 +937,25 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .v-header #headline-circles .circle-4:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .v-header #headline-circles .circle-4::after {
   content: "";
   position: absolute;
-  border: 1.03226px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -930,7 +994,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 .v-header #headline-circles .circle-4 h2 {
   color: #ffffff;
   font-size: 21.33333px;
-  font-size: 1.33333rem;
+  font-size: calculateRem(21.33333px);
 }
 
 .v-header #home-quote {
@@ -955,7 +1019,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 .v-header #home-quote .quote {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: calculateRem(18px);
 }
 
 .v-header #home-quote .author {
@@ -971,7 +1035,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   top: -.5em;
   left: -.25em;
   font-size: 48px;
-  font-size: 3rem;
+  font-size: calculateRem(48px);
   color: #2ab2af;
 }
 
@@ -983,7 +1047,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   bottom: -.5em;
   right: -.25em;
   font-size: 48px;
-  font-size: 3rem;
+  font-size: calculateRem(48px);
   color: #2ab2af;
 }
 
@@ -1028,8 +1092,8 @@ section.about .container .row {
 section.about .container .row#who-we-are {
   position: relative;
   background-image: url("../images/who-we-are.jpg");
-  background-size: 50% auto;
-  background-position: bottom right;
+  background-size: 40%  80%;
+  background-position: 90% center;
   background-repeat: no-repeat;
 }
 
@@ -1037,30 +1101,19 @@ section.about .container .row#who-we-are::after {
   content: "";
   position: absolute;
   display: block;
-  bottom: -1.5px;
+  bottom: -1px;
   right: 0;
-  height: 3px;
-  width: 50%;
-  background-color: #18294a;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 section.about .container .row#what-we-do {
   position: relative;
   background-image: url("../images/what-we-do.jpg");
-  background-size: 50% auto;
-  background-position: bottom left;
+  background-size: 40%  80%;
+  background-position: 10% center;
   background-repeat: no-repeat;
-}
-
-section.about .container .row#what-we-do::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -1.5px;
-  left: 0;
-  height: 3px;
-  width: 50%;
-  background-color: #2ab2af;
 }
 
 section#management-team {
@@ -1168,18 +1221,29 @@ section#companies {
 }
 
 section#companies .grid-container {
-  height: 100%;
-  width: 100%;
-  padding-top: 110px;
-  padding-bottom: 0px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1.1fr 0.9fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1.1fr 0.9fr 1fr 1fr 1fr 1fr;
-  gap: 1px 1px;
-      grid-template-areas: "Intro Intro Intro Intro Intro . . . ." "Intro Intro Intro Intro Intro WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments . ." "Small Small Gov Gov Gov Payments Payments . ." ". . . . . Payments Payments . .";
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@media (min-width: 992px) {
+  section#companies .grid-container {
+    /* Large devices (desktops, 992px and up) */
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1r 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1r 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+        grid-template-areas: "Intro Intro Intro Intro Intro . . . ." "Intro Intro Intro Intro Intro WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments . ." "Small Small Gov Gov Gov Payments Payments . ." ". . . . . Payments Payments . .";
+  }
 }
 
 section#companies .Intro {
@@ -1201,1917 +1265,1573 @@ section#companies .Intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2em 4em 2em 4em;
 }
 
 section#companies .Intro p {
-  font-size: 14px;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  section#companies .Intro p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
 }
 
 section#companies .Intro img {
-  margin-bottom: 1em;
-}
-
-section#companies .Intro .title {
-  color: #18294a;
-  padding-left: 65px;
-  font-size: 28px;
+  margin-bottom: .5em;
+  max-width: 80%;
 }
 
 section#companies .Intro h4 {
+  color: #fff;
   font-weight: 400;
-  padding-left: 65px;
-  font-size: 22px;
+  line-height: 120%;
+  font-size: 16px;
+  /* Extra large devices (large desktops, 1200px and up) */
 }
 
-section#companies .Intro h4 span {
-  font-weight: 600;
+@media (min-width: 768px) {
+  section#companies .Intro h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
 }
 
-section#companies .Intro p {
-  padding-left: 65px;
-  font-size: 18px;
+@media (min-width: 992px) {
+  section#companies .Intro h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
 }
 
-section#companies .WTB {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 2;
-  grid-area: WTB;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (min-width: 1200px) {
+  section#companies .Intro h4 {
+    font-size: 20px;
+  }
 }
 
-section#companies .WTB p {
-  font-size: 14px;
+@media (min-width: 992px) {
+  section#companies .Intro {
+    /* Large devices (desktops, 992px and up) */
+    padding: 2em 4em 2em 4em;
+    width: 55vw;
+  }
 }
 
-section#companies .WTB img {
-  margin-bottom: 1em;
-}
-
-section#companies .WTB .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #18294a;
-  color: #ffffff;
-  width: 400px;
-  height: 400px;
-  max-width: 400px;
-  max-height: 400px;
-  border: 6.66667px solid #18294a;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section#companies .WTB .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .WTB .circle::after {
-  content: "";
-  position: absolute;
-  border: 6.45161px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .WTB .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .WTB .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .WTB .circle:hover .front {
-  display: none;
-}
-
-section#companies .WTB .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .WTB .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .WTB .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .WTB .circle h2 {
-  color: #ffffff;
-  font-size: 133.33333px;
-  font-size: 8.33333rem;
-}
-
-section#companies .WTB .circle h4 {
-  color: #fff;
-}
-
-section#companies .Mortgage {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 8;
-  -ms-grid-column-span: 2;
-  grid-area: Mortgage;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-section#companies .Mortgage p {
-  font-size: 14px;
-}
-
-section#companies .Mortgage img {
-  margin-bottom: 1em;
-}
-
-section#companies .Mortgage .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2ab2af;
-  color: #ffffff;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Mortgage .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Mortgage .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.83871px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Mortgage .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Mortgage .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Mortgage .circle:hover .front {
-  display: none;
-}
-
-section#companies .Mortgage .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Mortgage .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Mortgage .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Mortgage .circle h2 {
-  color: #ffffff;
-  font-size: 100px;
-  font-size: 6.25rem;
-}
-
-section#companies .Mortgage .circle h4 {
-  color: #fff;
-}
-
-section#companies .Payments {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 2;
-  grid-area: Payments;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-top: 1em;
-}
-
-section#companies .Payments p {
-  font-size: 14px;
-}
-
-section#companies .Payments img {
-  margin-bottom: 1em;
-}
-
-section#companies .Payments .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #bebebe;
-  color: #ffffff;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid #bebebe;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Payments .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Payments .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.83871px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Payments .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Payments .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Payments .circle:hover .front {
-  display: none;
-}
-
-section#companies .Payments .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Payments .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Payments .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Payments .circle h2 {
-  color: #ffffff;
-  font-size: 100px;
-  font-size: 6.25rem;
-}
-
-section#companies .Gov {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 3;
-  grid-area: Gov;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 2em;
-}
-
-section#companies .Gov p {
-  font-size: 14px;
-}
-
-section#companies .Gov img {
-  margin-bottom: 1em;
-}
-
-section#companies .Gov .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2ab2af;
-  color: #ffffff;
-  width: 330px;
-  height: 330px;
-  max-width: 330px;
-  max-height: 330px;
-  border: 5.5px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Gov .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Gov .circle::after {
-  content: "";
-  position: absolute;
-  border: 5.32258px solid #bebebe;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Gov .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Gov .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Gov .circle:hover .front {
-  display: none;
-}
-
-section#companies .Gov .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Gov .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Gov .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Gov .circle h2 {
-  color: #ffffff;
-  font-size: 110px;
-  font-size: 6.875rem;
-}
-
-section#companies .Gov .circle h4 {
-  color: #fff;
-}
-
-section#companies .Commercial {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: Commercial;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-section#companies .Commercial p {
-  font-size: 14px;
-}
-
-section#companies .Commercial img {
-  margin-bottom: 1em;
-}
-
-section#companies .Commercial .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
-  color: #ffffff;
-  width: 280px;
-  height: 280px;
-  max-width: 280px;
-  max-height: 280px;
-  border: 4.66667px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  margin-left: 4rem;
-}
-
-section#companies .Commercial .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Commercial .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.51613px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Commercial .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Commercial .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Commercial .circle:hover .front {
-  display: none;
-}
-
-section#companies .Commercial .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Commercial .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Commercial .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Commercial .circle h2 {
-  color: #ffffff;
-  font-size: 93.33333px;
-  font-size: 5.83333rem;
-}
-
-section#companies .Commercial .circle h4 {
-  color: #fff;
-}
-
-section#companies .Commercial .circle p.lead {
-  font-size: 13px;
-}
-
-section#companies .Hemp {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: Hemp;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-left: -2em;
-}
-
-section#companies .Hemp p {
-  font-size: 14px;
-}
-
-section#companies .Hemp img {
-  margin-bottom: 1em;
-}
-
-section#companies .Hemp .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
-  color: #ffffff;
-  width: 280px;
-  height: 280px;
-  max-width: 280px;
-  max-height: 280px;
-  border: 4.66667px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Hemp .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Hemp .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.51613px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Hemp .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Hemp .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Hemp .circle:hover .front {
-  display: none;
-}
-
-section#companies .Hemp .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Hemp .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Hemp .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Hemp .circle h2 {
-  color: #ffffff;
-  font-size: 93.33333px;
-  font-size: 5.83333rem;
-}
-
-section#companies .Hemp .circle h4 {
-  color: #fff;
-}
-
-section#companies .Hemp .circle p.lead {
-  font-size: 13px;
-}
-
-section#companies .Small {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: Small;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: -2em;
-  margin-right: -2em;
-}
-
-section#companies .Small p {
-  font-size: 14px;
-}
-
-section#companies .Small img {
-  margin-bottom: 1em;
-}
-
-section#companies .Small .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
-  color: #ffffff;
-  width: 280px;
-  height: 280px;
-  max-width: 280px;
-  max-height: 280px;
-  border: 4.66667px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Small .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Small .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.51613px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Small .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Small .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Small .circle:hover .front {
-  display: none;
-}
-
-section#companies .Small .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Small .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Small .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Small .circle h2 {
-  color: #ffffff;
-  font-size: 93.33333px;
-  font-size: 5.83333rem;
-}
-
-section#companies .Small .circle h4 {
-  color: #fff;
-}
-
-section#companies .Small .circle p.lead {
-  font-size: 13px;
-}
-
-section#companies {
-  background-color: #ffffff;
-  background: url("../images/companies-bg-main.jpg");
-  background-size: cover;
-  background-position: 0 0;
-  background-attachment: fixed;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-
-section#companies .grid-container {
-  height: 100%;
-  width: 100%;
-  padding-top: 110px;
-  padding-bottom: 0px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1.1fr 0.9fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1.1fr 0.9fr 1fr 1fr 1fr 1fr;
-  gap: 1px 1px;
-      grid-template-areas: "Intro Intro Intro Intro Intro . . . ." "Intro Intro Intro Intro Intro WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB . ." "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage" "Small Small Gov Gov Gov Payments Payments . ." "Small Small Gov Gov Gov Payments Payments . ." ". . . . . Payments Payments . .";
-}
-
-section#companies .Intro {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-area: Intro;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2em 4em 2em 4em;
-}
-
-section#companies .Intro p {
-  font-size: 14px;
-}
-
-section#companies .Intro img {
-  margin-bottom: 1em;
+@media (min-width: 1200px) {
+  section#companies .Intro {
+    /* Extra large devices (large desktops, 1200px and up) */
+    width: 60wv;
+  }
 }
 
 section#companies .Intro .title {
   color: #18294a;
-  padding-left: 65px;
   font-size: 28px;
 }
 
 section#companies .Intro h4 {
-  font-weight: 600;
-  padding-left: 65px;
-  font-size: 22px;
+  font-weight: 800;
 }
 
 section#companies .Intro p {
-  padding-left: 65px;
   font-size: 18px;
 }
 
-section#companies .WTB {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 2;
-  grid-area: WTB;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-section#companies .WTB p {
-  font-size: 14px;
-}
-
-section#companies .WTB img {
-  margin-bottom: 1em;
-}
-
-section#companies .WTB .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #203967;
-  color: #ffffff;
-  width: 400px;
-  height: 400px;
-  max-width: 400px;
-  max-height: 400px;
-  border: 6.66667px solid #18294a;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section#companies .WTB .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .WTB .circle::after {
-  content: "";
-  position: absolute;
-  border: 6.45161px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .WTB .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .WTB .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .WTB .circle:hover .front {
-  display: none;
-}
-
-section#companies .WTB .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .WTB .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .WTB .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .WTB .circle h2 {
-  color: #ffffff;
-  font-size: 133.33333px;
-  font-size: 8.33333rem;
-}
-
-section#companies .WTB .circle h4 {
-  color: #fff;
-}
-
-section#companies .Mortgage {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 8;
-  -ms-grid-column-span: 2;
-  grid-area: Mortgage;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-section#companies .Mortgage p {
-  font-size: 14px;
-}
-
-section#companies .Mortgage img {
-  margin-bottom: 1em;
-}
-
-section#companies .Mortgage .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2ab2af;
-  color: #ffffff;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Mortgage .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Mortgage .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.83871px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Mortgage .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Mortgage .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Mortgage .circle:hover .front {
-  display: none;
-}
-
-section#companies .Mortgage .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Mortgage .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Mortgage .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Mortgage .circle h2 {
-  color: #ffffff;
-  font-size: 100px;
-  font-size: 6.25rem;
-}
-
-section#companies .Mortgage .circle h4 {
-  color: #fff;
-}
-
-section#companies .Payments {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 2;
-  grid-area: Payments;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-top: 1em;
-}
-
-section#companies .Payments p {
-  font-size: 14px;
-}
-
-section#companies .Payments img {
-  margin-bottom: 1em;
-}
-
-section#companies .Payments .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #bebebe;
-  color: #ffffff;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid #bebebe;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Payments .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Payments .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.83871px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Payments .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Payments .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Payments .circle:hover .front {
-  display: none;
-}
-
-section#companies .Payments .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Payments .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Payments .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Payments .circle h2 {
-  color: #ffffff;
-  font-size: 100px;
-  font-size: 6.25rem;
-}
-
-section#companies .Gov {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 3;
-  grid-area: Gov;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 2em;
-}
-
-section#companies .Gov p {
-  font-size: 14px;
-}
-
-section#companies .Gov img {
-  margin-bottom: 1em;
-}
-
-section#companies .Gov .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2ab2af;
-  color: #ffffff;
-  width: 330px;
-  height: 330px;
-  max-width: 330px;
-  max-height: 330px;
-  border: 5.5px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Gov .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Gov .circle::after {
-  content: "";
-  position: absolute;
-  border: 5.32258px solid #bebebe;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Gov .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Gov .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Gov .circle:hover .front {
-  display: none;
-}
-
-section#companies .Gov .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Gov .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Gov .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Gov .circle h2 {
-  color: #ffffff;
-  font-size: 110px;
-  font-size: 6.875rem;
-}
-
-section#companies .Gov .circle h4 {
-  color: #fff;
-}
-
-section#companies .Commercial {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: Commercial;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-section#companies .Commercial p {
-  font-size: 14px;
-}
-
-section#companies .Commercial img {
-  margin-bottom: 1em;
-}
-
-section#companies .Commercial .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
-  color: #ffffff;
-  width: 280px;
-  height: 280px;
-  max-width: 280px;
-  max-height: 280px;
-  border: 4.66667px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  margin-left: 4rem;
-}
-
-section#companies .Commercial .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Commercial .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.51613px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Commercial .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Commercial .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Commercial .circle:hover .front {
-  display: none;
-}
-
-section#companies .Commercial .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Commercial .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Commercial .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Commercial .circle h2 {
-  color: #ffffff;
-  font-size: 93.33333px;
-  font-size: 5.83333rem;
-}
-
-section#companies .Commercial .circle h4 {
-  color: #fff;
-}
-
-section#companies .Commercial .circle p.lead {
-  font-size: 13px;
-}
-
-section#companies .Hemp {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: Hemp;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-left: -2em;
-}
-
-section#companies .Hemp p {
-  font-size: 14px;
-}
-
-section#companies .Hemp img {
-  margin-bottom: 1em;
-}
-
-section#companies .Hemp .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
-  color: #ffffff;
-  width: 280px;
-  height: 280px;
-  max-width: 280px;
-  max-height: 280px;
-  border: 4.66667px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Hemp .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Hemp .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.51613px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Hemp .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Hemp .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Hemp .circle:hover .front {
-  display: none;
-}
-
-section#companies .Hemp .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Hemp .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Hemp .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Hemp .circle h2 {
-  color: #ffffff;
-  font-size: 93.33333px;
-  font-size: 5.83333rem;
-}
-
-section#companies .Hemp .circle h4 {
-  color: #fff;
-}
-
-section#companies .Hemp .circle p.lead {
-  font-size: 13px;
-}
-
-section#companies .Small {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: Small;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: -2em;
-  margin-right: -2em;
-}
-
-section#companies .Small p {
-  font-size: 14px;
-}
-
-section#companies .Small img {
-  margin-bottom: 1em;
-}
-
-section#companies .Small .circle {
-  position: relative;
-  z-index: 1032;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(42, 178, 175, 0.8);
-  color: #ffffff;
-  width: 280px;
-  height: 280px;
-  max-width: 280px;
-  max-height: 280px;
-  border: 4.66667px solid #2ab2af;
-  border-radius: 50%;
-  padding: 2rem;
-  text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-section#companies .Small .circle:hover {
-  position: relative;
-  background-color: #fff;
-  border-color: #fff;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  z-index: 3000;
-}
-
-section#companies .Small .circle::after {
-  content: "";
-  position: absolute;
-  border: 4.51613px solid transparent;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-}
-
-section#companies .Small .circle .front {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Small .circle .front h4 {
-  text-transform: uppercase;
-  color: unset;
-}
-
-section#companies .Small .circle:hover .front {
-  display: none;
-}
-
-section#companies .Small .circle .back {
-  display: none;
-  color: #203967 !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-section#companies .Small .circle .back a:hover {
-  text-decoration: none;
-}
-
-section#companies .Small .circle:hover .back {
-  display: block;
-  z-index: 2001;
-}
-
-section#companies .Small .circle h2 {
-  color: #ffffff;
-  font-size: 93.33333px;
-  font-size: 5.83333rem;
-}
-
-section#companies .Small .circle h4 {
-  color: #fff;
-}
-
-section#companies .Small .circle p.lead {
-  font-size: 13px;
+@media (min-width: 992px) {
+  section#companies .WTB {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: WTB;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section#companies .WTB p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .WTB p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .WTB img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .WTB h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .WTB h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .WTB h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .WTB h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .WTB .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #203967;
+    color: #ffffff;
+    width: 25vw;
+    height: 25vw;
+    max-width: 25vw;
+    max-height: 25vw;
+    border: 6px solid #18294a;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .WTB .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .WTB .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .WTB .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .WTB .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .WTB .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .WTB .circle:hover .front {
+    display: none;
+  }
+  section#companies .WTB .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .WTB .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .WTB .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .WTB .circle h2 {
+    color: #ffffff;
+    font-size: 8.33333vw;
+    font-size: calculateRem(8.33333vw);
+  }
+}
+
+@media (min-width: 1200px) {
+  section#companies .WTB {
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+  section#companies .WTB .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #203967;
+    color: #ffffff;
+    width: 20vw;
+    height: 20vw;
+    max-width: 20vw;
+    max-height: 20vw;
+    border: 6px solid #18294a;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section#companies .WTB .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1200px) {
+  section#companies .WTB .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section#companies .WTB .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .WTB .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .WTB .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .WTB .circle:hover .front {
+    display: none;
+  }
+  section#companies .WTB .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .WTB .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .WTB .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .WTB .circle h2 {
+    color: #ffffff;
+    font-size: 6.66667vw;
+    font-size: calculateRem(6.66667vw);
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Mortgage {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: Mortgage;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  section#companies .Mortgage p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Mortgage p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Mortgage img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .Mortgage h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Mortgage h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .Mortgage h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Mortgage h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Mortgage .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2ab2af;
+    color: #ffffff;
+    width: 20vw;
+    height: 20vw;
+    max-width: 20vw;
+    max-height: 20vw;
+    border: 6px solid #2ab2af;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Mortgage .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Mortgage .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Mortgage .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Mortgage .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Mortgage .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Mortgage .circle:hover .front {
+    display: none;
+  }
+  section#companies .Mortgage .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Mortgage .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Mortgage .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Mortgage .circle h2 {
+    color: #ffffff;
+    font-size: 6.66667vw;
+    font-size: calculateRem(6.66667vw);
+  }
+}
+
+@media (min-width: 1200px) {
+  section#companies .Mortgage {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  section#companies .Mortgage .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2ab2af;
+    color: #ffffff;
+    width: 15vw;
+    height: 15vw;
+    max-width: 15vw;
+    max-height: 15vw;
+    border: 6px solid #2ab2af;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Mortgage .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1200px) {
+  section#companies .Mortgage .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section#companies .Mortgage .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Mortgage .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Mortgage .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Mortgage .circle:hover .front {
+    display: none;
+  }
+  section#companies .Mortgage .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Mortgage .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Mortgage .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Mortgage .circle h2 {
+    color: #ffffff;
+    font-size: 5vw;
+    font-size: calculateRem(5vw);
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Payments {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: Payments;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 0;
+    margin-top: -2em;
+  }
+  section#companies .Payments p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Payments p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Payments img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .Payments h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Payments h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .Payments h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Payments h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Payments .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #bebebe;
+    color: #ffffff;
+    width: 20vw;
+    height: 20vw;
+    max-width: 20vw;
+    max-height: 20vw;
+    border: 6px solid #bebebe;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Payments .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Payments .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Payments .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Payments .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Payments .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Payments .circle:hover .front {
+    display: none;
+  }
+  section#companies .Payments .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Payments .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Payments .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Payments .circle h2 {
+    color: #ffffff;
+    font-size: 6.66667vw;
+    font-size: calculateRem(6.66667vw);
+  }
+}
+
+@media (min-width: 1200px) {
+  section#companies .Payments {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0;
+  }
+  section#companies .Payments .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #bebebe;
+    color: #ffffff;
+    width: 15vw;
+    height: 15vw;
+    max-width: 15vw;
+    max-height: 15vw;
+    border: 6px solid #bebebe;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Payments .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1200px) {
+  section#companies .Payments .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section#companies .Payments .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Payments .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Payments .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Payments .circle:hover .front {
+    display: none;
+  }
+  section#companies .Payments .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Payments .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Payments .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Payments .circle h2 {
+    color: #ffffff;
+    font-size: 5vw;
+    font-size: calculateRem(5vw);
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Gov {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: Gov;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 2em;
+  }
+  section#companies .Gov p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Gov p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Gov img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .Gov h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Gov h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .Gov h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Gov h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Gov .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2ab2af;
+    color: #ffffff;
+    width: 16vw;
+    height: 16vw;
+    max-width: 16vw;
+    max-height: 16vw;
+    border: 6px solid #2ab2af;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Gov .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Gov .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Gov .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Gov .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Gov .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Gov .circle:hover .front {
+    display: none;
+  }
+  section#companies .Gov .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Gov .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Gov .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Gov .circle h2 {
+    color: #ffffff;
+    font-size: 5.33333vw;
+    font-size: calculateRem(5.33333vw);
+  }
+  section#companies .Gov .circle:hover {
+    -webkit-transform: scale(3) translate(1em, -4em);
+            transform: scale(3) translate(1em, -4em);
+  }
+  section#companies .Gov .circle:hover .h1 {
+    font-size: 22px;
+  }
+  section#companies .Gov .circle:hover p.lead {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Gov .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6) translate(1em, -2em);
+            transform: scale(1.6) translate(1em, -2em);
+  }
+  section#companies .Gov .circle:hover .h1 {
+    font-size: 32px;
+  }
+  section#companies .Gov .circle:hover p.lead {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Commercial {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: Commercial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  section#companies .Commercial p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Commercial p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Commercial img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .Commercial h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Commercial h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .Commercial h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Commercial h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Commercial .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(42, 178, 175, 0.8);
+    color: #ffffff;
+    width: 14vw;
+    height: 14vw;
+    max-width: 14vw;
+    max-height: 14vw;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    margin-left: 4rem;
+  }
+  section#companies .Commercial .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Commercial .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Commercial .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Commercial .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Commercial .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Commercial .circle:hover .front {
+    display: none;
+  }
+  section#companies .Commercial .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Commercial .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Commercial .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Commercial .circle h2 {
+    color: #ffffff;
+    font-size: 4.66667vw;
+    font-size: calculateRem(4.66667vw);
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Hemp {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: Hemp;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: -2em;
+  }
+  section#companies .Hemp p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Hemp p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Hemp img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .Hemp h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Hemp h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .Hemp h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Hemp h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Hemp .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(42, 178, 175, 0.8);
+    color: #ffffff;
+    width: 14vw;
+    height: 14vw;
+    max-width: 14vw;
+    max-height: 14vw;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Hemp .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Hemp .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Hemp .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Hemp .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Hemp .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Hemp .circle:hover .front {
+    display: none;
+  }
+  section#companies .Hemp .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Hemp .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Hemp .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Hemp .circle h2 {
+    color: #ffffff;
+    font-size: 4.66667vw;
+    font-size: calculateRem(4.66667vw);
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Small {
+    /* Large devices (desktops, 992px and up) */
+    grid-area: Small;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: -2em;
+    margin-right: -2em;
+  }
+  section#companies .Small p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Small p {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Small img {
+    margin-bottom: .5em;
+    max-width: 80%;
+  }
+  section#companies .Small h4 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 16px;
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  section#companies .Small h4 {
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  section#companies .Small h4 {
+    /* Large devices (desktops, 992px and up) */
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Small h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Small .circle {
+    position: relative;
+    z-index: 1032;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(42, 178, 175, 0.8);
+    color: #ffffff;
+    width: 14vw;
+    height: 14vw;
+    max-width: 14vw;
+    max-height: 14vw;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  section#companies .Small .circle:hover {
+    position: relative;
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: .5rem;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    z-index: 3000;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  section#companies .Small .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#companies .Small .circle::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+  }
+  section#companies .Small .circle .front {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Small .circle .front h4 {
+    text-transform: uppercase;
+    color: unset;
+  }
+  section#companies .Small .circle:hover .front {
+    display: none;
+  }
+  section#companies .Small .circle .back {
+    display: none;
+    color: #203967 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  section#companies .Small .circle .back a:hover {
+    text-decoration: none;
+  }
+  section#companies .Small .circle:hover .back {
+    display: block;
+    z-index: 2001;
+  }
+  section#companies .Small .circle h2 {
+    color: #ffffff;
+    font-size: 4.66667vw;
+    font-size: calculateRem(4.66667vw);
+  }
 }
 
 section#subsidiaries {
@@ -3240,7 +2960,7 @@ section#subsidiaries .Windsor .circle {
   height: 400px;
   max-width: 400px;
   max-height: 400px;
-  border: 6.66667px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3260,15 +2980,25 @@ section#subsidiaries .Windsor .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .Windsor .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .Windsor .circle::after {
   content: "";
   position: absolute;
-  border: 6.45161px solid #2ab2af;
+  border: 5px solid #bebebe;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3307,7 +3037,7 @@ section#subsidiaries .Windsor .circle:hover .back {
 section#subsidiaries .Windsor .circle h2 {
   color: #ffffff;
   font-size: 133.33333px;
-  font-size: 8.33333rem;
+  font-size: calculateRem(133.33333px);
 }
 
 section#subsidiaries .Dogwood {
@@ -3368,7 +3098,7 @@ section#subsidiaries .Dogwood .circle {
   height: 300px;
   max-width: 300px;
   max-height: 300px;
-  border: 5px solid #bebebe;
+  border: 6px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3388,15 +3118,25 @@ section#subsidiaries .Dogwood .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .Dogwood .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .Dogwood .circle::after {
   content: "";
   position: absolute;
-  border: 4.83871px solid transparent;
+  border: 5px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3435,7 +3175,7 @@ section#subsidiaries .Dogwood .circle:hover .back {
 section#subsidiaries .Dogwood .circle h2 {
   color: #ffffff;
   font-size: 100px;
-  font-size: 6.25rem;
+  font-size: calculateRem(100px);
 }
 
 section#subsidiaries .VeriLeaf {
@@ -3496,7 +3236,7 @@ section#subsidiaries .VeriLeaf .circle {
   height: 300px;
   max-width: 300px;
   max-height: 300px;
-  border: 5px solid #bebebe;
+  border: 6px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3514,15 +3254,25 @@ section#subsidiaries .VeriLeaf .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .VeriLeaf .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .VeriLeaf .circle::after {
   content: "";
   position: absolute;
-  border: 4.83871px solid transparent;
+  border: 5px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3561,7 +3311,7 @@ section#subsidiaries .VeriLeaf .circle:hover .back {
 section#subsidiaries .VeriLeaf .circle h2 {
   color: #ffffff;
   font-size: 100px;
-  font-size: 6.25rem;
+  font-size: calculateRem(100px);
 }
 
 section#subsidiaries .Insurance {
@@ -3623,7 +3373,7 @@ section#subsidiaries .Insurance .circle {
   height: 300px;
   max-width: 300px;
   max-height: 300px;
-  border: 5px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3641,15 +3391,25 @@ section#subsidiaries .Insurance .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .Insurance .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .Insurance .circle::after {
   content: "";
   position: absolute;
-  border: 4.83871px solid transparent;
+  border: 5px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3688,12 +3448,12 @@ section#subsidiaries .Insurance .circle:hover .back {
 section#subsidiaries .Insurance .circle h2 {
   color: #ffffff;
   font-size: 100px;
-  font-size: 6.25rem;
+  font-size: calculateRem(100px);
 }
 
 section#subsidiaries .Insurance .circle h4 {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: calculateRem(18px);
 }
 
 section#subsidiaries .SBA {
@@ -3749,7 +3509,7 @@ section#subsidiaries .SBA .circle {
   height: 350px;
   max-width: 350px;
   max-height: 350px;
-  border: 5.83333px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3767,15 +3527,25 @@ section#subsidiaries .SBA .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .SBA .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .SBA .circle::after {
   content: "";
   position: absolute;
-  border: 5.64516px solid #2ab2af;
+  border: 5px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3814,7 +3584,7 @@ section#subsidiaries .SBA .circle:hover .back {
 section#subsidiaries .SBA .circle h2 {
   color: #ffffff;
   font-size: 116.66667px;
-  font-size: 7.29167rem;
+  font-size: calculateRem(116.66667px);
 }
 
 section#subsidiaries .GSF {
@@ -3876,7 +3646,7 @@ section#subsidiaries .GSF .circle {
   height: 280px;
   max-width: 280px;
   max-height: 280px;
-  border: 4.66667px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -3894,15 +3664,25 @@ section#subsidiaries .GSF .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .GSF .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .GSF .circle::after {
   content: "";
   position: absolute;
-  border: 4.51613px solid transparent;
+  border: 5px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -3941,12 +3721,12 @@ section#subsidiaries .GSF .circle:hover .back {
 section#subsidiaries .GSF .circle h2 {
   color: #ffffff;
   font-size: 93.33333px;
-  font-size: 5.83333rem;
+  font-size: calculateRem(93.33333px);
 }
 
 section#subsidiaries .GSF .circle h4 {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: calculateRem(18px);
 }
 
 section#subsidiaries .GSF .circle p.lead {
@@ -4013,7 +3793,7 @@ section#subsidiaries .Patriarch .circle {
   height: 280px;
   max-width: 280px;
   max-height: 280px;
-  border: 4.66667px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -4031,15 +3811,25 @@ section#subsidiaries .Patriarch .circle:hover {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  section#subsidiaries .Patriarch .circle:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 section#subsidiaries .Patriarch .circle::after {
   content: "";
   position: absolute;
-  border: 4.51613px solid transparent;
+  border: 5px solid transparent;
   width: 108%;
   height: 108%;
   border-radius: 50%;
@@ -4078,7 +3868,7 @@ section#subsidiaries .Patriarch .circle:hover .back {
 section#subsidiaries .Patriarch .circle h2 {
   color: #ffffff;
   font-size: 93.33333px;
-  font-size: 5.83333rem;
+  font-size: calculateRem(93.33333px);
 }
 
 section#subsidiaries .Patriarch .circle p.lead {
@@ -4216,7 +4006,7 @@ section#other {
   height: 38px;
   max-width: 38px;
   max-height: 38px;
-  border: 0.63333px solid #bebebe;
+  border: 6px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -4237,15 +4027,25 @@ section#other {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .loader-wrap .loader .loader-inner .circle-1:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .loader-wrap .loader .loader-inner .circle-1::after {
   content: "";
   position: absolute;
-  border: 0.6129px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -4284,7 +4084,7 @@ section#other {
 .loader-wrap .loader .loader-inner .circle-1 h2 {
   color: #ffffff;
   font-size: 12.66667px;
-  font-size: 0.79167rem;
+  font-size: calculateRem(12.66667px);
 }
 
 .loader-wrap .loader .loader-inner .circle-2 {
@@ -4314,7 +4114,7 @@ section#other {
   height: 55px;
   max-width: 55px;
   max-height: 55px;
-  border: 0.91667px solid #18294a;
+  border: 6px solid #18294a;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -4335,15 +4135,25 @@ section#other {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .loader-wrap .loader .loader-inner .circle-2:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .loader-wrap .loader .loader-inner .circle-2::after {
   content: "";
   position: absolute;
-  border: 0.8871px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -4382,7 +4192,7 @@ section#other {
 .loader-wrap .loader .loader-inner .circle-2 h2 {
   color: #ffffff;
   font-size: 18.33333px;
-  font-size: 1.14583rem;
+  font-size: calculateRem(18.33333px);
 }
 
 .loader-wrap .loader .loader-inner .circle-3 {
@@ -4412,7 +4222,7 @@ section#other {
   height: 66px;
   max-width: 66px;
   max-height: 66px;
-  border: 1.1px solid #2ab2af;
+  border: 6px solid #2ab2af;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -4433,15 +4243,25 @@ section#other {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .loader-wrap .loader .loader-inner .circle-3:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .loader-wrap .loader .loader-inner .circle-3::after {
   content: "";
   position: absolute;
-  border: 1.06452px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -4480,7 +4300,7 @@ section#other {
 .loader-wrap .loader .loader-inner .circle-3 h2 {
   color: #ffffff;
   font-size: 22px;
-  font-size: 1.375rem;
+  font-size: calculateRem(22px);
 }
 
 .loader-wrap .loader .loader-inner .circle-4 {
@@ -4510,7 +4330,7 @@ section#other {
   height: 32px;
   max-width: 32px;
   max-height: 32px;
-  border: 0.53333px solid #bebebe;
+  border: 6px solid #bebebe;
   border-radius: 50%;
   padding: 2rem;
   text-align: center;
@@ -4531,15 +4351,25 @@ section#other {
   border-color: #fff;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  padding: .5rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
   z-index: 3000;
+}
+
+@media (min-width: 1200px) {
+  .loader-wrap .loader .loader-inner .circle-4:hover {
+    /* Extra large devices (large desktops, 1200px and up) */
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    padding: 2rem;
+  }
 }
 
 .loader-wrap .loader .loader-inner .circle-4::after {
   content: "";
   position: absolute;
-  border: 0.51613px solid transparent;
+  border: 5px solid transparent;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -4578,7 +4408,7 @@ section#other {
 .loader-wrap .loader .loader-inner .circle-4 h2 {
   color: #ffffff;
   font-size: 10.66667px;
-  font-size: 0.66667rem;
+  font-size: calculateRem(10.66667px);
 }
 
 @-webkit-keyframes rotate {
@@ -4681,7 +4511,7 @@ footer {
   left: 0;
   min-height: 100px;
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: calculateRem(12px);
 }
 
 footer img {

@@ -4,10 +4,10 @@ html {
   font-size: 16px; /* Required for Function + Mixin */
 }
 
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
+// @function calculateRem($size) {
+//   $remSize: $size / 16px;
+//   @return $remSize * 1rem;
+// }
 
 @mixin font-size($size) {
   font-size: $size;
