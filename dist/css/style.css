@@ -6939,8 +6939,6 @@ section#other {
   z-index: -1000;
   padding-top: 0;
   background-color: #18294a;
-  -webkit-animation: bye 5s linear 1;
-          animation: bye 5s linear 1;
   height: 100vh;
   width: 100vw;
 }
