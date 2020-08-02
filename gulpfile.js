@@ -1,11 +1,41 @@
 const gulp = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
+const prefix = require('gulp-autoprefixer');
 const data = require("gulp-data");
+const prettier = require("gulp-prettier");
+const browserSync = require("browser-sync");
+const server = browserSync.create();
 
-gulp.task("default", function () {
-  return gulp
-    .src("src/templates/*.html")
+
+const paths = {
+  styles: {
+    src: 'src/scss/*.scss',
+    dest: 'dist/css/'
+  },
+  html: {
+    src: 'src/templates/**/*'
+  }
+};
+
+
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: './dist/'
+    }
+  });
+  done();
+}
+
+
+function nunjucks(done) {
+  gulp.src("./src/templates/*.html")
     .pipe(
       data(function () {
         return require("./src/data/global.json");
@@ -13,28 +43,45 @@ gulp.task("default", function () {
     )
     .pipe(
       nunjucksRender({
-        path: ["src/templates/"], // String or Array
+        path: ["./src/templates/"],
       })
     )
-    .pipe(gulp.dest("dist"));
-});
-
-// Compile scss
-
-function style() {
-  // Locate scss file
-  return (
-    gulp
-      .src("src/scss/**/*.scss")
-      // Pass through scss compiler
-      .pipe(sass())
-      // Destination for compiled css
-      .pipe(gulp.dest("dist/css/"))
-  );
+    .pipe(gulp.dest("./dist/"));
+  done();
 }
-exports.style = style;
+
+function style(done) {
+  gulp.src(paths.styles.src)
+    .pipe(sass())
+    .pipe(prefix())
+    .pipe(gulp.dest(paths.styles.dest))
+  done();
+}
 
 
-gulp.task("watch", function () {
-  gulp.watch('src/**/*', gulp.series(['default']));
-});
+// function pretty(done) {
+//   gulp.src("./dist/*.html")
+//     .pipe(prettier({ singleQuote: true }))
+//     .pipe(gulp.dest("./dist/"));
+//   done();
+// }
+
+// function styleWatch() {
+//   gulp.watch("./src/scss/*.scss", style);
+// }
+
+
+const watch = () => gulp.watch([paths.styles.src, paths.html.src], gulp.series(nunjucks, style, reload));
+
+const dev = gulp.series(nunjucks, style, serve, watch);
+exports.default = dev;
+
+
+
+// gulp.task("default", gulp.series(nunjucks, pretty, style));
+// gulp.task("watch", styleWatch);
+// gulp.task("serve", serve);
+
+// const build = gulp.series(nunjucks, pretty, styles);
+
+// exports.default = build;
