@@ -5,22 +5,14 @@
 @import "inc/base";
 
 
-
-main {
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) { 
-    height: 100vh;
-    width: 100vw;
-  }
+body{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  @media (min-width: 992px) { 
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
+main {
+  min-height: calc(100vh - 220px);
 }
 
 
@@ -41,7 +33,7 @@ nav.navbar {
   z-index: 2000;
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
-   position: fixed;
+  //  position: fixed;
    top:0;
    width: 100%;
   }
@@ -189,8 +181,28 @@ nav.navbar {
 // Header
 
 body#home{
-  background-color: color(dark-blue);
-
+  background-image: url('../images/home-bg-v2.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+  ul.navbar-nav {
+    li.nav-item {
+      a.nav-link {
+        color: color(white) !important;
+        &:hover {
+          color: $primary-color;
+        }
+        &:active {
+          color: $primary-color;
+        }
+        &:focus {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
   /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {  
     ul.navbar-nav {
@@ -201,6 +213,26 @@ body#home{
     }
   }
   }
+
+  @media (max-width: 1399px) {  
+    ul.navbar-nav {
+      li.nav-item:nth-child(1) {
+        a.nav-link {
+          color: color(dark-blue) !important;
+        }
+    }
+  }
+  }
+  @media (max-width: 1299px) {  
+    ul.navbar-nav {
+      li.nav-item:nth-child(2) {
+        a.nav-link {
+          color: color(dark-blue) !important;
+        }
+    }
+  }
+  }
+
 }
 
 
@@ -218,6 +250,7 @@ body#home{
     height: 100vh;
     overflow: hidden;
     video {
+      object-fit: cover;
       min-width: 100%;
       min-height: 100%;
     }
@@ -256,54 +289,86 @@ body#home{
     }
   }
   .header-content {
-    padding-top: 150px;
-    padding-bottom: 200px;
-    /* Extra large devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) {  
-    padding-top: 200px;
-    padding-bottom: 200px;
+    .row {
+      min-height: calc(100vh - 220px);
     }
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 100%;
-    }
-    .header-content-inner{
-     padding-top: 4em;
-    .headline {
-      position: relative;
-      padding: 1em;
-      padding-bottom: 1.5em;
-      z-index: 0;
-      h1 {
-        font-weight: 300;
-        color: color(blue);
+      z-index: 100;
+      #home-left {
+        padding-top: 5%;
+        * {
+          max-width: 100%;
         }
       }
-      #main-cta {
+      #home-right {
+        padding-top: 5%;
+       *{
+        max-width: 100%;
+       }
+      }
+      @media (min-width: 1200px) {  
+      /* Extra large devices (large desktops, 1200px and up) */
+        #home-left {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         justify-content: flex-end;
+        }
+        #home-right {
+         position: ab;
+         right: 2em;
+         bottom: 2em;
+        }
+      }
+     
+      #home-quote {
+        color: #fff;
         position: relative;
-        width: auto;
-        margin-left:.5em;
-        margin-top: -.5em;
-        z-index: 1;
+        padding: 2em;
+        background-color: transparentize(color(dark-blue),.2);
+        margin-bottom: 3em;
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {  
+         background-color: transparentize(color(dark-blue),.5);   
+        }
+        .quote {
+          @include font-size(18px);
+        }
+        .author {
+          text-align: right;
+          padding-bottom: 1em;
+        }
+        &::before{
+          content: "\f10d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          top: -.5em;
+          left: -.25em;
+          @include font-size(48px);
+          color: color(aqua);
+        }
+        &::after{
+          content: "\f10e";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          bottom: -.5em;
+          right: -.25em;
+          @include font-size(48px);
+          color: color(aqua);
+        }
       }
     }
 
     #headline-circles { 
-    margin-left: auto;
-    margin-right: auto;
-      /* Extra large devices (large desktops, 1200px and up) */
-      @media (min-width: 1200px) {  
-      display: none;   
-      }
-      // position: absolute;
-      // top: calc(30vh - 130px);
-      // left: calc(75vw - 130px);
+      // animation: rotate .1s linear 4;
+      margin-left: auto;
+      margin-right: auto;
       display: grid;
       height: 255px;
       width: 255px;
       text-transform: uppercase;
+      /* autoprefixer grid: autoplace */
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       gap: 1px 1px;
@@ -317,140 +382,72 @@ body#home{
         "circle-3 circle-3 circle-3 circle-3 circle-3 . circle-4 circle-4 circle-4"
         "circle-3 circle-3 circle-3 circle-3 circle-3 . circle-4 circle-4 circle-4"
         "circle-3 circle-3 circle-3 circle-3 circle-3 . . . .";
-  
-    
-  
-     
-  
+
+        // .circle {
+        //   animation: grow 1.6s linear 1;
+        //   transform: scale(1);
+        // }
       .circle-1 {
         grid-area: circle-1;
-        @include flipCircle(
-          color(dark-grey),
-          color(white),
-          76px,
-          color(dark-grey),
-          transparent,
-          100%
-        );
-        @include font-size(12px);
+        @include circle(color(dark-grey), #fff, 50px, transparent, transparent, 100%);
+        @include font-size(8px);
+        .front{
+          @include font-size(14px);
+        }
         padding:0;
         margin-left: 29px;
         margin-top: 11px;
-        &:hover{
-          color: color(dark-blue);
-        }
+        
       }
       .circle-2 {
         grid-area: circle-2;
-        @include flipCircle(
-          color(blue),
-          color(white),
-          110px,
-          color(blue),
-          transparent,
-          100%
-        );
-        @include font-size(13px);
+        @include circle(color(blue), #fff, 80px, transparent, transparent, 100%);
+        @include font-size(10px);
+        .front{
+          @include font-size(18px);
+        }
+        &:hover {
+          transform: scale(2.2);
+        }
         padding:0;
         margin-top: 8px;
         margin-left: -4px;
-        &:hover{
-          color: color(dark-blue);
-        }
+       
       }
       .circle-3 {
         grid-area: circle-3;
-        @include flipCircle(
-          transparentize(color(aqua), 0.2),
-          color(white),
-          132px,
-          transparentize(color(aqua), 0.2),
-         transparent,
-          100%
-        );
-        @include font-size(16px);
+        @include circle(color(aqua), #fff, 120px, transparent, transparent, 100%);
+        @include font-size(15px);
+        .front{
+          @include font-size(28px);
+        }
+        &:hover {
+          transform: scale(2);
+        }
         padding:0;
         margin-top: -3px;
         margin-left: 33px;
-        &:hover{
-          color: color(dark-blue);
-        }
+        
       }
       .circle-4 {
         grid-area: circle-4;
-        @include flipCircle(
-          color(dark-grey),
-          color(white),
-          64px,
-          color(dark-grey),
-          transparent,
-          100%
-        );
-        @include font-size(12px);
+        @include circle(color(dark-grey), #fff, 55px, transparent, transparent, 100%);
+        @include font-size(8px);
+        .front{
+          @include font-size(16px);
+        }
         padding:0;
         margin-top: -22px;
         margin-left: 20px;
-        &:hover{
-          color: color(dark-blue);
-        }
+      
       }
     }
     
   
 
-    #home-quote {
-      position: relative;
-      top: 120px;
-      //background-color: transparentize(color(dark-blue),.3);
-      font-family: $headline-font;
-      color: color(body);
-      // margin-top: 3rem;
-      margin-right: auto;
-      background-color: transparentize(#fff,.05);
-      /* Extra large devices (large desktops, 1200px and up) */
-      @media (min-width: 1200px) {  
-        width: 450px;
-        background-color: transparent;
-        color: color(white);
-        margin-right: 0em;
-        margin-left:auto;
-        top:200px;
-      } 
-     
-      @media (min-width: 1400px) { 
-        width: 600px;
-      }
-      
-      padding: 2em;
-      .quote {
-        @include font-size(18px);
-      }
-      .author {
-        text-align: right;
-        padding-bottom: 1em;
-      }
-      &::before{
-        content: "\f10d";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        top: -.5em;
-        left: -.25em;
-        @include font-size(48px);
-        color: color(aqua);
-      }
-      &::after{
-        content: "\f10e";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        bottom: -.5em;
-        right: -.25em;
-        @include font-size(48px);
-        color: color(aqua);
-      }
-    }
+    
   }
+
 
 
 // About Us Section
@@ -462,17 +459,11 @@ body#about {
 }
 
 section.about {
-  width: 100vw;
-  height: 100%;
-  display:flex;
-  align-items: center;
+  padding-top: 2rem;
   .container {
-    position: relative;
-    // z-index: 1000;
     .row {
       color: #fff;
       font-size: 18px !important;
-      padding-top: 1em;
       &#who-we-are {
         border-bottom: 1px solid color(white);
       }
@@ -485,6 +476,9 @@ body#management-team {
   background-size: cover;
   background-position: 0 0;
   background-attachment: fixed;
+  .management-team {
+    padding-top: 5rem;
+  }
 }
 
 body#directors {
@@ -492,6 +486,9 @@ body#directors {
   background-size: cover;
   background-position: 0 0;
   background-attachment: fixed;
+  .management-team {
+    padding-top: 5rem;
+  }
 }
 
 
@@ -532,11 +529,14 @@ body#directors {
 }
 
 .modal-dialog {
-  height: 100vh;
+
   max-width: 100% !important;
   width: 800px;
+  margin-top: 80px;
+  @media (min-width: 992px) { 
+    margin-top: 0%;
+  }
   .modal-content {
-    margin-top: -20%;
     .modal-header {
       border-bottom: 0;
     }
@@ -572,57 +572,10 @@ body#companies {
 }
 
 section.companies {
-  overflow: hidden;
+  overflow: show;
   width: 100vw;
   height: 100%;
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-        "Intro"
-        "WTB"
-        "Mortgage"
-        "Gov"
-        "Commercial"
-        "Small"
-        "Hemp"
-        "Payments";
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 2000;
-    padding-left: 1em;
-    padding-right: 1em;
-    @media (min-width: 992px) { 
-      grid-template-areas:
-        "Intro Intro Intro Intro Intro . . . ."
-        "Intro Intro Intro Intro Intro WTB WTB . ."
-        "Commercial Commercial Hemp Hemp . WTB WTB . ."
-        "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage"
-        "Commercial Commercial Hemp Hemp . WTB WTB Mortgage Mortgage"
-        "Small Small Gov Gov Gov Payments Payments Mortgage Mortgage"
-        "Small Small Gov Gov Gov Payments Payments . ."
-        "Small Small Gov Gov Gov Payments Payments . ."
-        ". . . . . Payments Payments . .";
-      /* Large devices (desktops, 992px and up) */
-      background-color: transparent;
-        height: 100%;
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0px;
-        
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1r 1fr 1fr 1fr 1fr;
-        gap: 1px 1px;
-        
-      
-      }
-    
-  }
-  
+ 
 
   
   @mixin centerCircles {
@@ -630,10 +583,7 @@ section.companies {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    img {
-      margin-bottom: .5em;
-      max-width: 80%;
-    }
+
     h4 {
       color: #fff;
       font-weight: 400;
@@ -655,7 +605,7 @@ section.companies {
        text-align: left;
       }
     }
-    grid-area: Intro;
+
     @include centerCircles();
     @media (min-width: 992px) { 
     background-color: transparent;
@@ -674,620 +624,191 @@ section.companies {
       font-size: 18px;
     }
   }
-  .WTB {
-    grid-area: WTB;
-    @include centerCircles();
+  
+
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+
+  @mixin circleMobilePad {
+    @media (max-width: 991px) { 
+     padding-right: 1em;
+     padding-left: 1em;
+     margin: 1em auto 1em auto !important;
+     max-width: 500px;
+     
+    }
+  }
+
+  .Commercial {
+    @include circleMobilePad();
+    margin-top: -10%;
+    margin-right: -15%;
     .circle {
       @include flipCircle(
-        color(blue),
-        color(white),
-        60vw,
-        color(dark-blue),
-        transparent,
-        108%
+       transparentize(color(aqua),.1),
+        color(aqua)
       );
-      padding: 1em;
-      h4 {
-        font-size: 32px;
+      &:hover {
+        @media (min-width: 992px) { 
+        transform: scale(2.5) translate(2em,2em);
       }
-      p.lead{
-        font-size: 18px;
+      @media (min-width: 1400px) {  
+        transform: scale(2) translate(2em,2em);
       }
-      a {
-        font-size: 20px;
       }
-
     }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-      @include centerCircles();
-      .circle {
-        @include flipCircle(
-          color(blue),
-          color(white),
-          25vw,
-          color(dark-blue),
-          transparent,
-          108%
-        );
-        &:hover{
-          padding: 1em;
-
-          p.lead{
-            font-size: 10px;
+  }
+  .Hemp {
+    @include circleMobilePad();
+    margin-top: 10%;
+    margin-left: -10%;
+    .circle {
+      @include flipCircle(
+        transparentize(color(aqua),.1),
+        color(aqua)
+      );
+      &:hover {
+        @media (min-width: 992px) { 
+          transform: scale(2.75) translate(2em,2em);
+          padding: .5em;
+          padding-bottom: 100%;
+          p.lead {
+            font-size: 8px;
           }
           a {
-            font-size: 12px;
+           font-size: 9px; 
           }
-          transform: scale(2) translate(-1em, 1em);
         }
-      }
-    }
-    @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-      .circle {
-        @include flipCircle(
-          color(blue),
-          color(white),
-          20vw,
-          color(dark-blue),
-          transparent,
-          108%
-        );
-        margin-left: auto;
-        margin-right: auto;
-        &:hover {
-          p.lead{
-            font-size: 12px;
-            margin-bottom: 1em;
-          }
-          a {
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(2em,2em);
+          p.lead {
             font-size: 14px;
           }
-          img{
-          width: 35%;
-          margin-bottom: 1em;
+          a {
+            font-size: 16px;
           }
-          transform: scale(1.8) translate(-1em, 1em);
         }
+      }
+    }
+  }
+  .WTB {
+    @include circleMobilePad();
+    padding: 5%;
+    margin-top: -25%;
+    .circle {
+      @include flipCircle(
+        color(dark-blue),
+        color(dark-blue)
+      );
+      &:hover {
+        @media (min-width: 992px) { 
+        transform: scale(2.5) translate(-2em,2em);
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(-2em,2em);
+          }
+      }
+    }
+  }
+  .Small {
+    @include circleMobilePad();
+    margin-top: -20%;
+    padding: 0% 10% 15% 20%;
+    .circle {
+      @include flipCircle(
+        transparentize(color(aqua),.1),
+        color(aqua)
+      );
+      &:hover {
+        @media (min-width: 992px) { 
+        transform: scale(2.5) translate(2em,-2em);
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(2em,-2em);
+          }
+      }
+    }
+  }
+  .Gov {
+    @include circleMobilePad();
+    margin-top: -15%;
+    margin-left: 15%;
+    .circle {
+      @include flipCircle(
+        color(aqua),
+        color(aqua)
+      );
+      &:hover {
+        @media (min-width: 992px) { 
+        transform: scale(2.5) translate(2em,-4em);
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(2em,-4em);
+          }
+      }
+    }
+  }
+  .Payments {
+    @include circleMobilePad();
+    padding: 0% 5% 5% 5%;
+    margin-right: 10%;
+    margin-top: -15%;
+    .circle {
+      @include flipCircle(
+        color(dark-grey),
+        color(dark-grey)
+      );
+      &:hover {
+        @media (min-width: 992px) { 
+        transform: scale(2.5) translate(-2em,-4em);
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(-2em,-4em);
+          }
       }
     }
   }
   .Mortgage {
-    grid-area: Mortgage;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        60vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      .h1{
-        font-size: 48px;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-    /* Large devices (desktops, 992px and up) */
-    align-items: flex-start;
-    justify-content: flex-start;
+    @include circleMobilePad();
+    margin-top: -75%;
+    padding-right: 5%;
     .circle {
       @include flipCircle(
         color(aqua),
-        color(white),
-        19vw,
-        color(aqua),
-        transparent,
-        108%
+        color(aqua)
       );
-      margin-top: 1em;
-      margin-left: .75em;
-      &:hover{
+      @media (min-width: 992px) { 
+      .back {
         padding: 1em;
-        .h1{
-          font-size: 32px;
-        }
-        p.lead{
-          font-size: 12px;
-        }
-        a {
-          font-size: 14px;
-        }
-        transform: scale(1.8) translate(-2.5em, -1em);
-      }
-    }
-    
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: flex-start;
-    justify-content: flex-start;
-    .circle {
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        15vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      &:hover{
-        padding: 1em;
-        .h1{
-          font-size: 32px;
-        }
-        p.lead{
-          font-size: 12px;
-        }
-        a {
-          font-size: 14px;
-        }
-        transform: scale(1.8) translate(-2.5em, -1em);
       }
      
     }
-  }
-  }
-  .Payments {
-    grid-area: Payments;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        60vw,
-        color(dark-grey),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    padding-top: 0;
-    margin-top: -2em;
-    .circle {
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        20vw,
-        color(dark-grey),
-        transparent,
-        108%
-      );
-      margin-top: 1.5em;
-      &:hover{
-        padding: 1em;
-        img {
-          width: 60%;
-          margin-bottom: .5em;
-        }
-        p.lead{
-          font-size: 11px;
-          margin-bottom: 1em;
-        }
-        p,a {
-          font-size: 13px;
-        }
-        transform: scale(2.1) translate(-2.5em, -1em);
-      }
-    }
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: flex-start;
-    margin-top: 0;
-    .circle {
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        17vw,
-        color(dark-grey),
-        transparent,
-        108%
-      );
-      margin-top: 1em;
       &:hover {
-        transform: scale(2) translate(-2.5em, -4em);
-          img {
-            margin-top: 1em;
-            width: 70%;
+        @media (min-width: 992px) { 
+        transform: scale(2.75) translate(-3em,0em);
+        p.lead {
+          font-size: 8px;
+        }
+        a {
+          font-size: 9px;
+        }
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(-3em,0em);
           }
-          p.lead{
-            margin-top: .2em;
-            font-size: 11px;
-          }
-          p,a {
+          p.lead {
             font-size: 12px;
           }
+          a {
+            font-size: 14px;
+          }
       }
     }
   }
-  }
-
-  .Gov {
-    grid-area: Gov;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        60vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      .h1{
-        font-size: 48px;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    padding-bottom: 2em;
-    .circle {
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        19vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(2) translate(1em, -4em);
-        .h1{
-          font-size: 32px;
-        }
-        p.lead {
-          font-size: 10px;
-        }
-       
-      }
-    }
-  }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-    .circle {
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        18vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(1em, -4em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  }
-  .Commercial {
-    grid-area: Commercial;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        60vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      .h1{
-        font-size: 48px;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    align-items: flex-end;
-    justify-content: flex-end;
-    .circle {
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        18vw,
-        transparent,
-        transparent,
-        108%
-      );
-      margin-left: 4rem;
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(2em, -1em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-    .circle {
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        14vw,
-        transparent,
-        transparent,
-        108%
-      );
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(1em, -4em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  }
-  .Hemp {
-    grid-area: Hemp;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        60vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
   
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: -2em;
-    .circle {
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        18vw,
-        transparent,
-        transparent,
-        108%
-      );
-      margin-left: 1.5em;
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(3em, 0em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-    .circle {
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        14vw,
-        transparent,
-        transparent,
-        108%
-      );
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(1em, -4em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  }
-  .Small {
-    grid-area: Small;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(aqua),
-        color(white),
-        60vw,
-        color(aqua),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      .h1{
-        font-size: 48px;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    justify-content: flex-end;
-    margin-top: -2em;
-    margin-right: -2em;
-    .circle {
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        18vw,
-        transparent,
-        transparent,
-        108%
-      );
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(3em, 0em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-    .circle {
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        14vw,
-        transparent,
-        transparent,
-        108%
-      );
-      &:hover{
-        .h1{
-          font-size: 22px;
-        }
-        p.lead {
-          font-size: 8px;
-        }
-
-        transform: scale(1.8) translate(1em, -4em);
-        .h1{
-          font-size: 36px;
-        }
-        p.lead {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  }
 }
 body#subsidiaries {
   background-color: color(white);
@@ -1297,49 +818,8 @@ body#subsidiaries {
   background-attachment: fixed;
 }
 section.subsidiaries {
-  overflow: hidden;
-  width: 100vw;
-  height: 100%;
 
-  .grid-container {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-      "Intro"
-      "Windsor"
-      "Insurance"
-      "Dogwood"
-      "VeriLeaf"
-      "SBA"
-      "GSF"
-      "Patriarch";
-  }
 
-  @media (min-width: 992px) { 
-  /* Large devices (desktops, 992px and up) */
-  .grid-container {
-    padding-bottom: 0px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-      "Intro Intro Intro Intro Intro . . VeriLeaf VeriLeaf"
-      "Intro Intro Intro Intro Intro Windsor Windsor VeriLeaf VeriLeaf"
-      ". GSF GSF . . Windsor Windsor VeriLeaf VeriLeaf"
-      ". GSF GSF . . Windsor Windsor Dogwood Dogwood"
-      ". GSF GSF . . Windsor Windsor Dogwood Dogwood"
-      "Patriarch Patriarch SBA SBA SBA Insurance Insurance Dogwood Dogwood"
-      "Patriarch Patriarch SBA SBA SBA Insurance Insurance . ."
-      "Patriarch Patriarch SBA SBA SBA Insurance Insurance . ."
-      ". . . . . Insurance Insurance . .";
-
-  }
-   
-  }
   
   @mixin centerCircles {
     display: flex;
@@ -1372,16 +852,13 @@ section.subsidiaries {
        text-align: left;
       }
     }
-    grid-area: Intro;
+
     @include centerCircles();
     @media (min-width: 992px) { 
     background-color: transparent;
     /* Large devices (desktops, 992px and up) */
-       padding: 2em 3em 2em 3em;
+       padding: 2em 4em 2em 4em;
        width: 65vw;
-       p {
-         font-size: 16px;
-       }
     }
     @media (min-width: 1400px) {  
       width: 50vw;
@@ -1394,640 +871,268 @@ section.subsidiaries {
       font-size: 18px;
     }
   }
+
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
+
+  @mixin circleMobilePad {
+    @media (max-width: 991px) { 
+     padding-right: 1em;
+     padding-left: 1em;
+     margin: 1em auto 1em auto !important;
+     max-width: 500px;
+     
+    }
+  }
+
+
   .Windsor {
-    grid-area: Windsor;
-    @include centerCircles();
+    @include circleMobilePad();
+    padding: 5%;
+    margin-top: -20%;
     .circle {
       @include flipCircle(
         color(dark-blue),
-        color(white),
-        60vw,
-        color(dark-grey),
-        transparent,
-        108%
+        color(dark-blue)
       );
-      padding: 1em;
-      h4 {
-        font-size: 32px;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a {
-        font-size: 20px;
-      }
-
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-      @include centerCircles();
-      .circle {
-        @include flipCircle(
-          color(dark-blue),
-          color(white),
-          25vw,
-          color(dark-grey),
-          transparent,
-          108%
-        );
-        &:hover{
-          padding: 1em;
-
-          p.lead{
-            font-size: 11px;
-          }
-          a {
-            font-size: 13px;
-          }
-          transform: scale(2) translate(-1em, 1em);
+      &:hover {
+        @media (min-width: 992px) { 
+        transform: scale(2.25) translate(-2em,2em);
         }
-      }
-    }
-    @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-      .circle {
-        @include flipCircle(
-          color(dark-blue),
-          color(white),
-          20vw,
-          color(dark-grey),
-          transparent,
-          108%
-        );
-        margin-left: auto;
-        margin-right: auto;
-        &:hover {
-          p.lead{
-            font-size: 12px;
-            margin-bottom: 1em;
+        @media (min-width: 1400px) { 
+          transform: scale(1.8) translate(-2em,2em);
           }
-          a {
-            font-size: 14px;
-          }
-          img{
-          width:50%;
-          margin-bottom: 1em;
-          }
-          transform: scale(1.8) translate(-1em, 1em);
-        }
       }
     }
   }
   .Dogwood {
-    grid-area: Dogwood;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        60vw,
-        color(dark-grey),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    padding-top: 0;
+    @include circleMobilePad();
+    margin-top: -75%;
+    padding-right: 5%;
     .circle {
       @include flipCircle(
         color(dark-grey),
-        color(white),
-        18vw,
-        color(dark-grey),
-        transparent,
-        108%
+        color(dark-grey)
       );
-      &:hover{
-        padding: 1em;
-        img {
-          width: 60%;
-          margin-bottom: .5em;
-        }
-        p.lead{
-          font-size: 10px;
-          margin-bottom: .5em;
-        }
-        p,a {
-          font-size: 11px;
-        }
-        transform: scale(2.1) translate(-2.5em, -1em);
-      }
-    }
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: flex-start;
-    margin-top: 6em;
-    margin-right: 8em;
-    .circle {
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        16vw,
-        color(dark-grey),
-        transparent,
-        108%
-      );
-      &:hover {
-        transform: scale(2) translate(-3em, -3em);
+        &:hover {
+          @media (min-width: 992px) { 
+          transform: scale(2.75) translate(-3em,0em);
           img {
-            margin-top: 1em;
-            width: 70%;
+            width: 60%;
           }
-          p.lead{
-            margin-top: .2em;
-            margin-bottom: .25em;
-            font-size: 11px;
+          p.lead {
+            font-size: 7px;
           }
-          p,a {
-            font-size: 12px;
+          a,p {
+            font-size: 8px;
           }
-      }
-    }
+          }
+          @media (min-width: 1400px) { 
+            transform: scale(2) translate(-3em,0em);
+            p.lead {
+              font-size: 12px;
+            }
+            a,p {
+              font-size: 14px;
+            }
+            }
+
+        }
   }
-  }
+}
   .VeriLeaf {
-    grid-area: VeriLeaf;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        60vw,
-        color(dark-grey),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    padding-top: 0;
+    @include circleMobilePad();
+    margin-top: -50%;
+    padding-right: 5%;
     .circle {
       @include flipCircle(
         color(dark-grey),
-        color(white),
-        18vw,
-        color(dark-grey),
-        transparent,
-        108%
+        color(dark-grey)
       );
-      &:hover{
-        padding: 1em;
-        img {
-          width: 30% !important;
-          margin-bottom: .5em;
+     
+        &:hover {
+          @media (min-width: 992px) { 
+          transform: scale(3) translate(-3em,3em);
+          img {
+            width: 60%;
+          }
+          p.lead {
+            font-size: 7px;
+          }
+          a,p {
+            font-size:8px;
+          }
+          }
+          @media (min-width: 1400px) { 
+            transform: scale(2) translate(-3em,3em);
+            p.lead {
+              font-size: 12px;
+            }
+            a,p {
+              font-size: 14px;
+            }
+            }
         }
-        p.lead{
-          font-size: 8px;
-          margin-bottom: .25em;
-        }
-        p,a {
-          font-size: 10px;
-        }
-        transform: scale(2.4) translate(-4em, 2em);
-      }
-    }
   }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: flex-start;
-    margin-top: 0;
+}
+  .Insurance {
+    @include circleMobilePad();
+
+    margin-right: 10%;
+    margin-top: -15%;
     .circle {
       @include flipCircle(
-        color(dark-grey),
-        color(white),
-        16vw,
-        color(dark-grey),
-        transparent,
-        108%
+        color(dark-blue),
+        color(dark-blue)
       );
       &:hover {
-        transform: scale(2) translate(-4em, 3em);
-          img {
-            margin-top: 1em;
-            width: 30%;
-          }
-          p.lead{
-            margin-top: .2em;
-            margin-bottom: .25em;
-            font-size: 11px;
-          }
-          p,a {
-            font-size: 12px;
-          }
-      }
-    }
-  }
-  }
-  .Insurance {
-    grid-area: Insurance;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        60vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    padding-top: 0;
-    .circle {
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        18vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      &:hover{
-        padding: 1em;
+        @media (min-width: 992px) { 
+        transform: scale(3.25) translate(-2em,-4em);
         img {
           width: 60%;
-          margin-bottom: .5em;
         }
-        p.lead{
-          font-size: 10px;
-          margin-bottom: .5em;
+        p.lead {
+          font-size: 7px;
         }
-        p,a {
-          font-size: 12px;
+        a,p {
+          font-size: 7.5px;
         }
-        transform: scale(2.1) translate(-2.5em, -1em);
-      }
-    }
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: flex-start;
-    margin-top: 4em;
-    margin-right: 4em;
-    .circle {
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        16vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      &:hover {
-        transform: scale(2) translate(-4em, -3em);
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2.25) translate(-2em,-4em);
           img {
-            margin-top: 1em;
-            width: 70%;
+            width: 60%;
           }
-          p.lead{
-            margin-top: .2em;
-            margin-bottom: .25em;
-            font-size: 11px;
-          }
-          p,a {
+          p.lead {
             font-size: 12px;
           }
+          a,p {
+            font-size: 13px;
+          }
+          }
       }
-    }
   }
   }
 
   .SBA {
-    grid-area: SBA;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        60vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
-    }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    padding-top: 0;
+    @include circleMobilePad();
+    margin-top: -25%;
+    margin-right: 15%;
     .circle {
       @include flipCircle(
         color(dark-blue),
-        color(white),
-        20vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      &:hover{
-        padding: 1em;
-        img {
-          width: 60%;
-          margin-bottom: .5em;
-        }
-        p.lead{
-          font-size: 10px;
-          margin-bottom: .5em;
-        }
-        p,a {
-          font-size: 13px;
-        }
-        transform: scale(2.1) translate(2em, -1em);
-      }
-    }
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: center;
-    justify-content: center;
-    margin-right: 5em;
-    .circle {
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        18vw,
-        color(dark-blue),
-        transparent,
-        108%
+        color(dark-blue)
       );
       &:hover {
-        transform: scale(2) translate(2em, -5em);
-          img {
-            margin-top: 1em;
-            width: 70%;
-          }
-          p.lead{
-            margin-top: .2em;
-            margin-bottom: .25em;
-            font-size: 11px;
-          }
-          p,a {
-            font-size: 12px;
+        @media (min-width: 992px) { 
+        transform: scale(2.25) translate(1em,-5em);
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(1.8) translate(1em,-5em);
           }
       }
     }
-  }
-  }
+}
   
   .GSF {
-    grid-area: GSF;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        60vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
+    @include circleMobilePad();
+    margin-top: 0;
+    margin-right: 0;
+    padding: 0em;
+    @media (min-width: 1200px) {  
+      padding: .5em;  
     }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    margin-top: 2em;
-    align-items: flex-start;
-    padding-top: 0;
     .circle {
       @include flipCircle(
-        color(dark-blue),
-        color(white),
-        18vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      &:hover{
-        padding: 1em;
-        img {
-          width: 60%;
-          margin-bottom: .5em;
-        }
-        p.lead{
-          font-size: 10px;
-          margin-bottom: .5em;
-        }
-        p,a {
-          font-size: 13px;
-        }
-        transform: scale(2.1) translate(2em, 2em);
-      }
-    }
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: center;
-    justify-content: center;
-
-    .circle {
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        15vw,
-        color(dark-blue),
-        transparent,
-        108%
+       color(dark-blue),
+        color(dark-blue)
       );
       &:hover {
-        transform: scale(2) translate(4em, 0em);
-          img {
-            margin-top: 1em;
-            width: 70%;
-          }
-          p.lead{
-            margin-top: .2em;
-            margin-bottom: .25em;
-            font-size: 11px;
-          }
-          p,a {
-            font-size: 12px;
-          }
+        @media (min-width: 992px) { 
+        transform: scale(2.5) translate(2em,0em);
+        img {
+          width: 60%;
+        }
+        p.lead {
+          font-size: 8.5px;
+        }
+        a,p {
+          font-size: 9px;
+        }
+      }
+      @media (min-width: 1400px) {  
+        transform: scale(2) translate(2em,0em);
+        img {
+          width: 60%;
+        }
+        p.lead {
+          font-size: 12px;
+        }
+        a,p {
+          font-size: 13px;
+        }
+      }
+      
       }
     }
-  }
-  }
+}
   .Patriarch {
     grid-area: Patriarch;
-    @include centerCircles();
-    .circle {
-      margin-top: 1em;
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        60vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      h4 {
-        font-size: 32px;
-      }
-      img{
-        width: 60%;
-        margin-bottom: 1.5em;
-      }
-      p.lead{
-        font-size: 18px;
-      }
-      a,p {
-        font-size: 20px;
-      }
+    @include circleMobilePad();
+    margin-top: -15%;
+    margin-left: 5%;
+    @media (min-width: 1200px) {  
+      margin-top: -15%;
+      margin-left: 15%;
     }
-    @media (min-width: 992px) { 
-      /* Large devices (desktops, 992px and up) */
-    
-    align-items: flex-start;
-    padding-top: 0;
     .circle {
       @include flipCircle(
         color(dark-blue),
-        color(white),
-        18vw,
-        color(dark-blue),
-        transparent,
-        108%
-      );
-      &:hover{
-        padding: 1em;
-        img {
-          width: 60%;
-          margin-bottom: .5em;
-        }
-        p.lead{
-          font-size: 11px;
-          margin-bottom: 1em;
-        }
-        p,a {
-          font-size: 13px;
-        }
-        transform: scale(2.1) translate(3.5em, -1em);
-      }
-    }
-  }
-  @media (min-width: 1200px) {  
-    /* Extra large devices (large desktops, 1200px and up) */
-    align-items: flex-start;
-    justify-content: flex-end;
-    margin-top: 2em;
-    margin-left: 8em;
-    .circle {
-      @include flipCircle(
-        color(dark-blue),
-        color(white),
-        15vw,
-        color(dark-blue),
-        transparent,
-        108%
+        color(dark-blue)
       );
       &:hover {
-        transform: scale(2) translate(4em, -3em);
+        @media (min-width: 992px) { 
+        transform: scale(2.8) translate(3em,-4em);
+        img {
+          width: 60%;
+        }
+        p.lead {
+          font-size:8.5px;
+        }
+        a,p {
+          font-size: 9.5px;
+        }
+        }
+        @media (min-width: 1400px) { 
+          transform: scale(2) translate(2em,-4em);
           img {
-            margin-top: 1em;
-            width: 70%;
+            width: 60%;
           }
-          p.lead{
-            margin-top: .2em;
-            font-size: 11px;
-          }
-          p,a {
+          p.lead {
             font-size: 12px;
           }
+          a,p {
+            font-size: 13px;
+          }
+          }
+         
       }
     }
   }
-  }
 }
+
+
 body#contact{
   background-image: url("../images/contact-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 section.contact {
-  height:100vh;
-  width:100%;
   #contact-content {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1000;
+    padding-top: 3rem;
     #contact-content-inner {
       color: #fff;
       padding: 4rem;
@@ -2039,10 +1144,119 @@ section.contact {
         }
       }
     }
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 }
 
 // Loader Styles
+
+#loader-circles {
+  position: absolute;
+  top:0;
+  left:0;
+  // z-index: -1000;
+  display: grid;
+  height: 150px;
+  width: 150px;
+  min-width:150px;
+  max-width:150px;
+  text-transform: uppercase;
+  /* autoprefixer grid: autoplace */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    "l-circle-1 l-circle-1 l-circle-1 . . l-circle-2 l-circle-2 l-circle-2 ."
+    "l-circle-1 l-circle-1 l-circle-1 . . l-circle-2 l-circle-2 l-circle-2 ."
+    "l-circle-1 l-circle-1 l-circle-1 . . l-circle-2 l-circle-2 l-circle-2 ."
+    "l-circle-1 l-circle-1 l-circle-1 . . l-circle-2 l-circle-2 l-circle-2 ."
+    "l-circle-3 l-circle-3 l-circle-3 l-circle-3 l-circle-3 l-circle-2 l-circle-2 l-circle-2 ."
+    "l-circle-3 l-circle-3 l-circle-3 l-circle-3 l-circle-3 . l-circle-4 l-circle-4 l-circle-4"
+    "l-circle-3 l-circle-3 l-circle-3 l-circle-3 l-circle-3 . l-circle-4 l-circle-4 l-circle-4"
+    "l-circle-3 l-circle-3 l-circle-3 l-circle-3 l-circle-3 . l-circle-4 l-circle-4 l-circle-4"
+    "l-circle-3 l-circle-3 l-circle-3 l-circle-3 l-circle-3 . . . .";
+
+    .circle {
+      // animation: grow 1.6s linear 1;
+      transform: scale(1);
+      animation: pulse 1s ease-out 1;
+      span {
+        display:block;
+      }
+    }
+  .circle-1 {
+    grid-area: l-circle-1;
+    @include circle(color(dark-grey), #fff, 42px, transparent, transparent, 100%);
+    @include font-size(8px);
+    .front{
+      @include font-size(14px);
+    }
+    font-size: 6px;
+    padding:0;
+    margin-left: 7px;
+    margin-top: -16px;
+    animation-delay: .4s;
+  }
+  .circle-2 {
+    grid-area: l-circle-2;
+    @include circle(color(blue), #fff, 60px, transparent, transparent, 100%);
+    @include font-size(10px);
+    .front{
+      @include font-size(18px);
+    }
+    &:hover {
+      transform: scale(2.2);
+    }
+    font-size: 7px;
+    padding:0;
+    margin-top: -20px;
+    margin-left: -12px;
+    animation-delay: 1.2s;
+  }
+  .circle-3 {
+    grid-area: l-circle-3;
+    @include circle(color(aqua), #fff, 74px, transparent, transparent, 100%);
+    @include font-size(15px);
+    .front{
+      @include font-size(28px);
+    }
+    &:hover {
+      transform: scale(2);
+    }
+    padding:0;
+    margin-top: -22px;
+    margin-left: 10px;
+    animation-delay: 2s;
+
+    
+  }
+  .circle-4 {
+    grid-area: l-circle-4;
+    @include circle(color(dark-grey), #fff, 30px, transparent, transparent, 100%);
+    @include font-size(8px);
+    .front{
+      @include font-size(16px);
+    }
+    font-size: 6px;
+    padding:0;
+    margin-top: -35px;
+    margin-left: 18px;
+    animation-delay: 2.8s;
+  }
+}
+
 
 
 section#other {
@@ -2057,179 +1271,128 @@ section#other {
 
 .loader-wrap {
   position: absolute;
-  top:0;
-  left:0;
+  top:-120%;
+  left:-120%;
   z-index: -1000;
   padding-top:0;
   background-color: color(dark-blue);
+  opacity:1;
   animation: bye 5s linear 1;
   height: 100vh;
   width: 100vw;
 .loader {
+  animation: exitLeft .32s linear 5;
+  // animation: appear 1.6s linear 1;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  #loader-logo {
-    animation: appear 1.8s linear 1;
-  }
-
   .loader-inner {
-    animation: rotate .4s linear 4;
-
-    display: grid;
-    height: 170px;
-    width: 170px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-      "circle-1 circle-1 circle-1 . . circle-2 circle-2 circle-2 ."
-      "circle-1 circle-1 circle-1 . . circle-2 circle-2 circle-2 ."
-      "circle-1 circle-1 circle-1 . . circle-2 circle-2 circle-2 ."
-      "circle-1 circle-1 circle-1 . . circle-2 circle-2 circle-2 ."
-      "circle-3 circle-3 circle-3 circle-3 circle-3 circle-2 circle-2 circle-2 ."
-      "circle-3 circle-3 circle-3 circle-3 circle-3 . circle-4 circle-4 circle-4"
-      "circle-3 circle-3 circle-3 circle-3 circle-3 . circle-4 circle-4 circle-4"
-      "circle-3 circle-3 circle-3 circle-3 circle-3 . circle-4 circle-4 circle-4"
-      "circle-3 circle-3 circle-3 circle-3 circle-3 . . . .";
-
+    position: relative;
+    margin-top:-150px;
+    margin-left: -200px;
+    #loader-logo {
+      animation: appear 1.8s linear 1;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 300px;
+      margin-top: -17px;
+    }
+  }
   
-
-    .circle {
-      animation: grow 1.6s linear 1;
-      transform: scale(1);
-    }
-
-    .circle-1 {
-      grid-area: circle-1;
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        38px,
-        color(dark-grey),
-        transparent,
-        100%
-      );
-      padding:0;
-      margin-left: 29px;
-      margin-top: 11px;
-   
-    }
-    .circle-2 {
-      grid-area: circle-2;
-      @include flipCircle(
-        color(blue),
-        color(white),
-        55px,
-        color(dark-blue),
-        transparent,
-        100%
-      );
-      padding:0;
-      margin-top: 8px;
-      margin-left: -4px;
-      color: transparent !important;
-    }
-    .circle-3 {
-      grid-area: circle-3;
-      @include flipCircle(
-        transparentize(color(aqua), 0.2),
-        color(white),
-        66px,
-        color(aqua),
-       transparent,
-        100%
-      );
-      padding:0;
-      margin-top: -3px;
-      margin-left: 33px;
-      color: transparent !important;
-    }
-    .circle-4 {
-      grid-area: circle-4;
-      @include flipCircle(
-        color(dark-grey),
-        color(white),
-        32px,
-        color(dark-grey),
-        transparent,
-        100%
-      );
-      padding:0;
-      margin-top: -22px;
-      margin-left: 20px;
-      color: transparent !important;
-    }
-  }
 }
 }
 
 
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes grow {
+@keyframes pulse {
   0% {
-    width: 10px;
-    height: 10px;
-    opacity: 0;
+    transform: scale(1);
   }
-  70% {
-    width: 10px;
-    height: 10px;
-    opacity: 1;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
+  50% {
+    transform: scale(2);
   }
   100% {
-    opacity: 1;
+    transform: scale(1);
   }
 }
+
+@keyframes pulseText {
+  0% {
+    display: none;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+
+
+// @keyframes rotate {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// @keyframes outerGrow {
+//   0% {
+//     width: 0;
+//     height: 0;
+//   }
+//   70% {
+//     width: 20px;
+//     height: 20px;
+//   }
+//   100% {
+//     width: 102px;
+//     height: 102px;
+//   }
+// }
+
+// @keyframes grow {
+//   0% {
+//     width: 1px;
+//     height: 1px;
+//     opacity: 0;
+//   }
+//   80% {
+//     width: 20px;
+//     height: 20px;
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes appear {
+//   0% {
+//     display:none;
+//   }
+  
+//   100% {
+//     display: block;
+//   }
+// }
 
 @keyframes bye {
   0% {
     z-index: 4000;
-    opacity: 1;
+    top: 0;
+    left:0;
   }
 
-  70% {
+  80% {
     z-index: 4000;
-    opacity: 1;
+    top: 0;
+    left:0;
   }
-
   100% {
-    z-index: 0;
-    opacity:0;
+    z-index: -1000;
+    top: 0;
+    right: 120%;
   }
 }
-
-// @keyframes pulse {
-//   0% {
-//     color: transparent;
-//     transform: scale(1);
-//   }
-//   50% {
-//     color: white !important;
-//     transform: scale(4);
-//    }
-//   100% {
-//    color: transparent;
-//    transform: scale(1);
-//   }
-// }
 
 
 
@@ -2237,16 +1400,9 @@ section#other {
 
 footer {
   position: relative;
-  // background-color: color(dark-blue);
- /* Large devices (desktops, 992px and up) */
- @media (min-width: 992px) { 
-    position: fixed;
-    bottom: 0;
-    left:0;
-    min-height:100px;
-    width: 100%;
-    z-index: 1999;
-  }
+  min-height: 120px;
+  margin-bottom:0;
+
   
 
   @include font-size(12px);
@@ -2274,9 +1430,9 @@ footer {
       width:100%;
       background: color(dark-blue);
       z-index: 4;
-      opacity: 0.8;
-      /* Large devices (desktops, 992px and up) */
+      opacity: .8;
       @media (min-width: 992px) { 
+      /* Large devices (desktops, 992px and up) */
       clip-path: polygon(0 53%, 100% 0, 100% 100%, 0% 100%);
       }
     }

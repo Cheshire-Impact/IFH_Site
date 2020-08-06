@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="" />
   <title>Integrated Financial Holdings, Inc.</title>
   <link rel="shortcut icon" href="images/ifh-favicon.png" type="image/x-icon" />
@@ -30,11 +30,10 @@
     
     
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed bg-transparent blue">
+<nav class="navbar navbar-expand-lg bg-transparent blue">
     <div class="container-fluid">
         <div class="navbar-brand">
-            <a href="index.html"><img class="img-fluid" src="images/IFH_Logo.png" width="160"
-                    style="width:160px" /></a>
+            <a href="/"><img class="img-fluid" src="images/IFH_Logo.png" width="160" style="width:160px" /></a>
         </div>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -89,44 +88,37 @@
   <main>
     
     <section class="v-header">
-    <div class="fullscreen-video-wrap">
+    <!-- <div class="fullscreen-video-wrap">
         <video id="header-bg-video" src="images/ifh-bg-video.mp4" loop="true">
             <source src="images/ifh-bg-video.mp4" type="video/mp4">
+            <img src="images/ifh-video-bg-fallback.jpg" alt="">
         </video>
-    </div>
-    <div class="header-overlay-layer-1"></div>
-    <div class="header-overlay-layer-3"></div>
-    <div class="header-content container-fluid">
+    </div> -->
+    <!-- <div class="header-overlay-layer-1"></div>
+    <div class="header-overlay-layer-3"></div> -->
+    <div class="header-content container-fluid px-5 px-xl-0">
         <div class="row">
-            <div class="col-10 mx-auto col-xl-4 offset-xl-1 text-center text-xl-left text-white">
-                <div class="header-content-inner">
-                    <div class="row">
-                        <div class="col-xl-12 order-2 order-xl-1">
-                            <div class="headline">
-                                <h1>At Integrated Financial Holidings, Inc., our highest priorities are solving
-                                    problems
-                                    and helping people. We run our business day in and day out with a focus on these
-                                    four core
-                                    values.
-                                </h1>
-                            </div>
-                            <a id="main-cta" href="about.html" class="btn btn-primary">Learn More
-                                &raquo;</a>
-                        </div>
-                        <div class="col-xl-12 order-1 order-xl-2">
-                            <div id="headline-circles">
-                                <div class="circle circle-1">Ownership</div>
-                                <div class="circle circle-2">Collaboration</div>
-                                <div class="circle circle-3">Passion</div>
-                                <div class="circle circle-4">Empathy</div>
-                            </div>
-                        </div>
+            <div id="home-left"
+                class="col-12 col-sm-10 col-xl-4 offset-xl-1 mx-auto d-flex flex-wrap flex-column justify-content-center align-items-start">
+                <div id="headline-circles">
+                    <div class="circle circle-1"><span>Ownership</span></div>
+                    <div class="circle circle-2"><span>Collaboration</span>
                     </div>
-
-
+                    <div class="circle circle-3"><span>Passion</span></div>
+                    <div class="circle circle-4"><span>Empathy</span></div>
                 </div>
+                <h1 class="text-dark-blue">At Integrated Financial Holidings, our highest priorities are solving
+                    problems
+                    and helping people. We run our business day in and day out with a focus on these
+                    four core
+                    values.
+                </h1>
+                <a id="main-cta" href="about.html" class="btn btn-primary">Learn More
+                    &raquo;</a>
+
             </div>
-            <div class="col-10 mx-auto col-xl-6 offset-xl-1">
+            <div id="home-right"
+                class="col-12 col-sm-10 col-xl-4 offset-xl-2  mx-auto d-flex flex-column flex-wrap justify-content-end align-items-start">
                 <div id="home-quote">
                     <div class="quote">
                         As demands for more efficient financial service offerings from small businesses increase,
@@ -134,7 +126,7 @@
                         must harness collaboration and technology to bring themselves closer to the consumers to provide
                         faster,
                         higher quality service.
-                        Our entire family of companies are deeply rooted in synergies with our core banking services
+                        Each company within the IFH family is deeply rooted in synergies with our core banking services
                         offered
                         through West Town Bank & Trust, enabling us to more effectively serve our small business
                         clients. New
@@ -152,9 +144,9 @@
             </div>
         </div>
 
-
     </div>
 </section>
+
 
   </main>
 
@@ -162,11 +154,11 @@
     <footer>
     <div class="footer-overlay"></div>
     <div class="container-fluid">
-        <div id="footer-content" class="row">
-            <div class="col-md-8 text-center text-lg-left text-white d-flex align-items-end">
+        <div id="footer-content" class="row pb-0">
+            <div class="col-md-8 text-center text-lg-left text-white d-flex align-items-end pb-2">
                 <p>
                     Copyright © 2020 Integrated Financial Holdings, Inc. All Rights Reserved. | Member FDIC, Equal
-                    Housing Lender | <a href="https://www.westtownbank.com/terms-and-conditions" target="_blank">Terms &
+                    Housing Lender | <a href="https://www.westtownbank.com/terms-conditions/" target="_blank">Terms &
                         Conditions</a> | <a href="https://www.westtownbank.com/legal" target="_blank">Legal</a> |
                     <a href="Privacy_Statement.pdf" target="_blank">Privacy Statement</a> | <a
                         href="CRA_Strategic_Plan.pdf" target="_blank">
@@ -187,14 +179,19 @@
     <section class="loader-wrap">
   <div class="loader">
     <div class="loader-inner">
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-      <div class="circle circle-3"></div>
-      <div class="circle circle-4"></div>
+      <img id="loader-logo" src="images/ifh-logo-white.png" alt="">
+      <div id="loader-circles">
+        <div class="circle circle-1"><span>Ownership</span></div>
+        <div class="circle circle-2"><span>Collaboration</span>
+        </div>
+        <div class="circle circle-3"><span>Passion</span></div>
+        <div class="circle circle-4"><span>Empathy</span></div>
+      </div>
+
     </div>
-    <img id="loader-logo" src="images/IFH_Logo_Reverse.png" width="300" style="margin-left: -150px;" alt="">
   </div>
 </section>
+
 
 
   <!-- jQuery, Popper, Bootstrap -->
@@ -208,7 +205,6 @@
     crossorigin="anonymous"></script>
 
   <script src="js/scripts.js"></script>
-
 </body>
 
 </html>
