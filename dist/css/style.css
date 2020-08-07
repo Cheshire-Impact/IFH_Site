@@ -181,6 +181,7 @@ p {
 
 a {
   color: #2ab2af;
+  outline: 0;
   transition: all 0.3s ease;
 }
 
@@ -242,6 +243,8 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -394,6 +397,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
   background-color: #18294a;
   border-bottom: 5px solid #2ab2af;
   padding: calculateRem(30px);
+  margin-top: 5em;
 }
 
 .navbar-collapse.show ul.navbar-nav,
@@ -869,6 +873,20 @@ footer .v-header .footer-overlay {
   transform: scale(2);
 }
 
+.v-header #headline-circles .circle-3::after {
+  content: "";
+  width: 114%;
+  height: 114%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -7%;
+  margin-top: -7%;
+  border: 4px solid #bebebe;
+  border-radius: 50%;
+}
+
 .v-header #headline-circles .circle-4 {
   -ms-grid-row: 11;
   -ms-grid-row-span: 5;
@@ -948,6 +966,7 @@ body#about {
 }
 
 section.about {
+  min-height: calc(100vh - 220px);
   padding-top: 2rem;
 }
 
@@ -956,8 +975,16 @@ section.about .container .row {
   font-size: 18px !important;
 }
 
+section.about .container .row h2 {
+  font-weight: 600;
+}
+
 section.about .container .row#who-we-are {
   border-bottom: 1px solid #ffffff;
+}
+
+section.about .container .row#what-we-do {
+  padding-top: 1em;
 }
 
 body#management-team {
@@ -1012,6 +1039,10 @@ body#directors .management-team {
   margin-bottom: 0;
   color: #203967;
   font-weight: 400;
+}
+
+.person a:focus {
+  outline: 0;
 }
 
 .modal-backdrop {
@@ -1163,6 +1194,10 @@ section.companies .Commercial .circle {
   transition: all ease 0.6s;
 }
 
+section.companies .Commercial .circle * {
+  max-width: 100%;
+}
+
 section.companies .Commercial .circle:hover {
   background-color: #fff;
   border-color: #fff;
@@ -1282,6 +1317,10 @@ section.companies .Commercial .circle:hover .back {
   section.companies .Commercial .circle:hover {
     transform: scale(2.5) translate(2em, 2em);
   }
+
+  section.companies .Commercial .circle:hover img {
+    max-width: 60% !important;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1317,6 +1356,10 @@ section.companies .Hemp .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.companies .Hemp .circle * {
+  max-width: 100%;
 }
 
 section.companies .Hemp .circle:hover {
@@ -1441,6 +1484,10 @@ section.companies .Hemp .circle:hover .back {
     padding-bottom: 100%;
   }
 
+  section.companies .Hemp .circle:hover img {
+    max-width: 80% !important;
+  }
+
   section.companies .Hemp .circle:hover p.lead {
     font-size: 8px;
   }
@@ -1491,6 +1538,10 @@ section.companies .WTB .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.companies .WTB .circle * {
+  max-width: 100%;
 }
 
 section.companies .WTB .circle:hover {
@@ -1612,6 +1663,10 @@ section.companies .WTB .circle:hover .back {
   section.companies .WTB .circle:hover {
     transform: scale(2.5) translate(-2em, 2em);
   }
+
+  section.companies .WTB .circle:hover img {
+    max-width: 60% !important;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1647,6 +1702,10 @@ section.companies .Small .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.companies .Small .circle * {
+  max-width: 100%;
 }
 
 section.companies .Small .circle:hover {
@@ -1768,6 +1827,10 @@ section.companies .Small .circle:hover .back {
   section.companies .Small .circle:hover {
     transform: scale(2.5) translate(2em, -2em);
   }
+
+  section.companies .Small .circle:hover img {
+    max-width: 60% !important;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1803,6 +1866,10 @@ section.companies .Gov .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.companies .Gov .circle * {
+  max-width: 100%;
 }
 
 section.companies .Gov .circle:hover {
@@ -1924,12 +1991,30 @@ section.companies .Gov .circle:hover .back {
   section.companies .Gov .circle:hover {
     transform: scale(2.5) translate(2em, -4em);
   }
+
+  section.companies .Gov .circle:hover img {
+    max-width: 60% !important;
+  }
 }
 
 @media (min-width: 1400px) {
   section.companies .Gov .circle:hover {
     transform: scale(2) translate(2em, -4em);
   }
+}
+
+section.companies .Gov .circle::after {
+  content: "";
+  width: 106%;
+  height: 106%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -3%;
+  margin-top: -3%;
+  border: 8px solid #bebebe;
+  border-radius: 50%;
 }
 
 section.companies .Payments {
@@ -1960,6 +2045,10 @@ section.companies .Payments .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.companies .Payments .circle * {
+  max-width: 100%;
 }
 
 section.companies .Payments .circle:hover {
@@ -2081,6 +2170,10 @@ section.companies .Payments .circle:hover .back {
   section.companies .Payments .circle:hover {
     transform: scale(2.5) translate(-2em, -4em);
   }
+
+  section.companies .Payments .circle:hover img {
+    max-width: 60% !important;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -2116,6 +2209,10 @@ section.companies .Mortgage .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.companies .Mortgage .circle * {
+  max-width: 100%;
 }
 
 section.companies .Mortgage .circle:hover {
@@ -2244,6 +2341,10 @@ section.companies .Mortgage .circle:hover .back {
     transform: scale(2.75) translate(-3em, 0em);
   }
 
+  section.companies .Mortgage .circle:hover img {
+    max-width: 60%;
+  }
+
   section.companies .Mortgage .circle:hover p.lead {
     font-size: 8px;
   }
@@ -2257,14 +2358,14 @@ section.companies .Mortgage .circle:hover .back {
   section.companies .Mortgage .circle:hover {
     transform: scale(2) translate(-3em, 0em);
   }
-}
 
-section.companies .Mortgage .circle:hover p.lead {
-  font-size: 12px;
-}
+  section.companies .Mortgage .circle:hover p.lead {
+    font-size: 12px;
+  }
 
-section.companies .Mortgage .circle:hover a {
-  font-size: 14px;
+  section.companies .Mortgage .circle:hover a {
+    font-size: 14px;
+  }
 }
 
 body#subsidiaries {
@@ -2294,6 +2395,10 @@ section.subsidiaries .Intro h4 {
   section.subsidiaries .Intro h4 {
     text-align: left;
   }
+}
+
+section.subsidiaries .Intro * {
+  max-width: 100%;
 }
 
 section.subsidiaries .Intro img {
@@ -2341,6 +2446,10 @@ section.subsidiaries .Windsor {
   margin-top: -20%;
 }
 
+section.subsidiaries .Windsor * {
+  max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
   section.subsidiaries .Windsor {
     padding-right: 1em;
@@ -2363,6 +2472,10 @@ section.subsidiaries .Windsor .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .Windsor .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .Windsor .circle:hover {
@@ -2492,9 +2605,27 @@ section.subsidiaries .Windsor .circle:hover .back {
   }
 }
 
+section.subsidiaries .Windsor .circle::after {
+  content: "";
+  width: 107%;
+  height: 107%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -3.5%;
+  margin-top: -3.5%;
+  border: 8px solid #bebebe;
+  border-radius: 50%;
+}
+
 section.subsidiaries .Dogwood {
   margin-top: -75%;
   padding-right: 5%;
+}
+
+section.subsidiaries .Dogwood * {
+  max-width: 100% !important;
 }
 
 @media (max-width: 991px) {
@@ -2519,6 +2650,10 @@ section.subsidiaries .Dogwood .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .Dogwood .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .Dogwood .circle:hover {
@@ -2642,7 +2777,7 @@ section.subsidiaries .Dogwood .circle:hover .back {
   }
 
   section.subsidiaries .Dogwood .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .Dogwood .circle:hover p.lead {
@@ -2675,6 +2810,10 @@ section.subsidiaries .VeriLeaf {
   padding-right: 5%;
 }
 
+section.subsidiaries .VeriLeaf * {
+  max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
   section.subsidiaries .VeriLeaf {
     padding-right: 1em;
@@ -2697,6 +2836,10 @@ section.subsidiaries .VeriLeaf .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .VeriLeaf .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .VeriLeaf .circle:hover {
@@ -2820,7 +2963,7 @@ section.subsidiaries .VeriLeaf .circle:hover .back {
   }
 
   section.subsidiaries .VeriLeaf .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .VeriLeaf .circle:hover p.lead {
@@ -2853,6 +2996,10 @@ section.subsidiaries .Insurance {
   margin-top: -15%;
 }
 
+section.subsidiaries .Insurance * {
+  max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
   section.subsidiaries .Insurance {
     padding-right: 1em;
@@ -2875,6 +3022,10 @@ section.subsidiaries .Insurance .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .Insurance .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .Insurance .circle:hover {
@@ -2998,7 +3149,7 @@ section.subsidiaries .Insurance .circle:hover .back {
   }
 
   section.subsidiaries .Insurance .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .Insurance .circle:hover p.lead {
@@ -3017,7 +3168,7 @@ section.subsidiaries .Insurance .circle:hover .back {
   }
 
   section.subsidiaries .Insurance .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .Insurance .circle:hover p.lead {
@@ -3033,6 +3184,10 @@ section.subsidiaries .Insurance .circle:hover .back {
 section.subsidiaries .SBA {
   margin-top: -25%;
   margin-right: 15%;
+}
+
+section.subsidiaries .SBA * {
+  max-width: 100% !important;
 }
 
 @media (max-width: 991px) {
@@ -3057,6 +3212,10 @@ section.subsidiaries .SBA .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .SBA .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .SBA .circle:hover {
@@ -3192,6 +3351,10 @@ section.subsidiaries .GSF {
   padding: 0em;
 }
 
+section.subsidiaries .GSF * {
+  max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
   section.subsidiaries .GSF {
     padding-right: 1em;
@@ -3220,6 +3383,10 @@ section.subsidiaries .GSF .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .GSF .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .GSF .circle:hover {
@@ -3343,7 +3510,7 @@ section.subsidiaries .GSF .circle:hover .back {
   }
 
   section.subsidiaries .GSF .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .GSF .circle:hover p.lead {
@@ -3362,7 +3529,7 @@ section.subsidiaries .GSF .circle:hover .back {
   }
 
   section.subsidiaries .GSF .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .GSF .circle:hover p.lead {
@@ -3379,6 +3546,10 @@ section.subsidiaries .Patriarch {
   grid-area: Patriarch;
   margin-top: -15%;
   margin-left: 5%;
+}
+
+section.subsidiaries .Patriarch * {
+  max-width: 100% !important;
 }
 
 @media (max-width: 991px) {
@@ -3410,6 +3581,10 @@ section.subsidiaries .Patriarch .circle {
   transform: scale(1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all ease 0.6s;
+}
+
+section.subsidiaries .Patriarch .circle * {
+  max-width: 100%;
 }
 
 section.subsidiaries .Patriarch .circle:hover {
@@ -3533,7 +3708,7 @@ section.subsidiaries .Patriarch .circle:hover .back {
   }
 
   section.subsidiaries .Patriarch .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .Patriarch .circle:hover p.lead {
@@ -3552,7 +3727,7 @@ section.subsidiaries .Patriarch .circle:hover .back {
   }
 
   section.subsidiaries .Patriarch .circle:hover img {
-    width: 60%;
+    max-width: 60%;
   }
 
   section.subsidiaries .Patriarch .circle:hover p.lead {
@@ -3966,8 +4141,6 @@ section#other {
 }
 
 .loader-wrap .loader {
-  -webkit-animation: exitLeft .32s linear 5;
-  animation: exitLeft .32s linear 5;
   height: 100%;
   width: 100%;
   display: flex;
@@ -3978,7 +4151,13 @@ section#other {
 .loader-wrap .loader .loader-inner {
   position: relative;
   margin-top: -150px;
-  margin-left: -200px;
+  margin-left: -75%;
+}
+
+@media (min-width: 992px) {
+  .loader-wrap .loader .loader-inner {
+    margin-left: -200px;
+  }
 }
 
 .loader-wrap .loader .loader-inner #loader-logo {
@@ -4052,18 +4231,21 @@ section#other {
     z-index: 4000;
     top: 0;
     left: 0;
+    opacity: 1;
   }
 
   80% {
     z-index: 4000;
     top: 0;
     left: 0;
+    opacity: 1;
   }
 
   100% {
     z-index: -1000;
     top: 0;
-    right: 120%;
+    left: 0;
+    opacity: 0;
   }
 }
 
@@ -4072,18 +4254,21 @@ section#other {
     z-index: 4000;
     top: 0;
     left: 0;
+    opacity: 1;
   }
 
   80% {
     z-index: 4000;
     top: 0;
     left: 0;
+    opacity: 1;
   }
 
   100% {
     z-index: -1000;
     top: 0;
-    right: 120%;
+    left: 0;
+    opacity: 0;
   }
 }
 
@@ -4093,6 +4278,11 @@ footer {
   margin-bottom: 0;
   font-size: 12px;
   font-size: calculateRem(12px);
+}
+
+footer a i::before {
+  position: relative;
+  top: 1px;
 }
 
 footer img {

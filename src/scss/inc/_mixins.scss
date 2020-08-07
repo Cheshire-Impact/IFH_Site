@@ -55,6 +55,9 @@
 
 
 @mixin flipCircle($bg,$border) {
+  * {
+    max-width: 100%;
+  }
   position: relative;
   z-index: 1032;
   background-color: $bg;

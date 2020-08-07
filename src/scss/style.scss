@@ -8,6 +8,8 @@
 body{
   margin: 0;
   padding:0;
+  height: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -156,6 +158,7 @@ nav.navbar {
   background-color: color(dark-blue);
   border-bottom: 5px solid color(aqua);
   padding: calculateRem(30px);
+  margin-top: 5em;
   ul.navbar-nav {
     text-align: center;
     li.nav-item {
@@ -361,7 +364,6 @@ body#home{
     }
 
     #headline-circles { 
-      // animation: rotate .1s linear 4;
       margin-left: auto;
       margin-right: auto;
       display: grid;
@@ -383,10 +385,6 @@ body#home{
         "circle-3 circle-3 circle-3 circle-3 circle-3 . circle-4 circle-4 circle-4"
         "circle-3 circle-3 circle-3 circle-3 circle-3 . . . .";
 
-        // .circle {
-        //   animation: grow 1.6s linear 1;
-        //   transform: scale(1);
-        // }
       .circle-1 {
         grid-area: circle-1;
         @include circle(color(dark-grey), #fff, 50px, transparent, transparent, 100%);
@@ -427,7 +425,19 @@ body#home{
         padding:0;
         margin-top: -3px;
         margin-left: 33px;
-        
+        &::after {
+          content:"";
+          width: 114%;
+          height: 114%;
+          display:block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-left: -7%;
+          margin-top: -7%;
+          border: 4px solid color(dark-grey);
+          border-radius: 50%;
+        }
       }
       .circle-4 {
         grid-area: circle-4;
@@ -456,16 +466,24 @@ body#about {
   background-image: url("../images/about-bg-v2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 section.about {
+  min-height: calc(100vh - 220px);
   padding-top: 2rem;
   .container {
     .row {
       color: #fff;
       font-size: 18px !important;
+      h2 {
+        font-weight: 600;
+      }
       &#who-we-are {
         border-bottom: 1px solid color(white);
+      }
+      &#what-we-do {
+        padding-top: 1em;
       }
     }
   }
@@ -516,6 +534,9 @@ body#directors {
     color: color(blue);
     font-weight: 400;
   }
+  a:focus{
+    outline:0;
+   }
 }
 
 .modal-backdrop {
@@ -575,15 +596,11 @@ section.companies {
   overflow: show;
   width: 100vw;
   height: 100%;
- 
-
-  
   @mixin centerCircles {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     h4 {
       color: #fff;
       font-weight: 400;
@@ -654,6 +671,9 @@ section.companies {
       &:hover {
         @media (min-width: 992px) { 
         transform: scale(2.5) translate(2em,2em);
+        img {
+          max-width: 60% !important;
+        }
       }
       @media (min-width: 1400px) {  
         transform: scale(2) translate(2em,2em);
@@ -675,6 +695,9 @@ section.companies {
           transform: scale(2.75) translate(2em,2em);
           padding: .5em;
           padding-bottom: 100%;
+          img {
+            max-width: 80% !important;
+          }
           p.lead {
             font-size: 8px;
           }
@@ -706,6 +729,9 @@ section.companies {
       &:hover {
         @media (min-width: 992px) { 
         transform: scale(2.5) translate(-2em,2em);
+        img {
+          max-width: 60% !important;
+        }
         }
         @media (min-width: 1400px) { 
           transform: scale(2) translate(-2em,2em);
@@ -725,6 +751,9 @@ section.companies {
       &:hover {
         @media (min-width: 992px) { 
         transform: scale(2.5) translate(2em,-2em);
+        img {
+          max-width: 60% !important;
+        }
         }
         @media (min-width: 1400px) { 
           transform: scale(2) translate(2em,-2em);
@@ -744,10 +773,26 @@ section.companies {
       &:hover {
         @media (min-width: 992px) { 
         transform: scale(2.5) translate(2em,-4em);
+        img {
+          max-width: 60% !important;
+        }
         }
         @media (min-width: 1400px) { 
           transform: scale(2) translate(2em,-4em);
           }
+      }
+      &::after {
+        content:"";
+        width: 106%;
+        height: 106%;
+        display:block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -3%;
+        margin-top: -3%;
+        border: 8px solid color(dark-grey);
+        border-radius: 50%;
       }
     }
   }
@@ -764,6 +809,9 @@ section.companies {
       &:hover {
         @media (min-width: 992px) { 
         transform: scale(2.5) translate(-2em,-4em);
+        img {
+          max-width: 60% !important;
+        }
         }
         @media (min-width: 1400px) { 
           transform: scale(2) translate(-2em,-4em);
@@ -789,6 +837,9 @@ section.companies {
       &:hover {
         @media (min-width: 992px) { 
         transform: scale(2.75) translate(-3em,0em);
+        img {
+          max-width: 60%;
+        }
         p.lead {
           font-size: 8px;
         }
@@ -798,13 +849,14 @@ section.companies {
         }
         @media (min-width: 1400px) { 
           transform: scale(2) translate(-3em,0em);
-          }
+          
           p.lead {
             font-size: 12px;
           }
           a {
             font-size: 14px;
           }
+        }
       }
     }
   }
@@ -817,15 +869,15 @@ body#subsidiaries {
   background-position: 0 0;
   background-attachment: fixed;
 }
-section.subsidiaries {
-
-
-  
+section.subsidiaries {  
   @mixin centerCircles {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    * {
+      max-width: 100%;
+    }
     img {
       margin-bottom: .5em;
       max-width: 80%;
@@ -879,6 +931,9 @@ section.subsidiaries {
   ///////////////////////////////////////////////////////////////
 
   @mixin circleMobilePad {
+    * {
+      max-width: 100% !important; 
+    }
     @media (max-width: 991px) { 
      padding-right: 1em;
      padding-left: 1em;
@@ -906,6 +961,19 @@ section.subsidiaries {
           transform: scale(1.8) translate(-2em,2em);
           }
       }
+      &::after {
+        content:"";
+        width: 107%;
+        height: 107%;
+        display:block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -3.5%;
+        margin-top: -3.5%;
+        border: 8px solid color(dark-grey);
+        border-radius: 50%;
+      }
     }
   }
   .Dogwood {
@@ -921,7 +989,7 @@ section.subsidiaries {
           @media (min-width: 992px) { 
           transform: scale(2.75) translate(-3em,0em);
           img {
-            width: 60%;
+            max-width:60%;
           }
           p.lead {
             font-size: 7px;
@@ -957,7 +1025,7 @@ section.subsidiaries {
           @media (min-width: 992px) { 
           transform: scale(3) translate(-3em,3em);
           img {
-            width: 60%;
+            max-width:60%;
           }
           p.lead {
             font-size: 7px;
@@ -992,7 +1060,7 @@ section.subsidiaries {
         @media (min-width: 992px) { 
         transform: scale(3.25) translate(-2em,-4em);
         img {
-          width: 60%;
+          max-width: 60%;
         }
         p.lead {
           font-size: 7px;
@@ -1004,7 +1072,7 @@ section.subsidiaries {
         @media (min-width: 1400px) { 
           transform: scale(2.25) translate(-2em,-4em);
           img {
-            width: 60%;
+            max-width: 60%;
           }
           p.lead {
             font-size: 12px;
@@ -1054,7 +1122,7 @@ section.subsidiaries {
         @media (min-width: 992px) { 
         transform: scale(2.5) translate(2em,0em);
         img {
-          width: 60%;
+          max-width: 60%;
         }
         p.lead {
           font-size: 8.5px;
@@ -1066,7 +1134,7 @@ section.subsidiaries {
       @media (min-width: 1400px) {  
         transform: scale(2) translate(2em,0em);
         img {
-          width: 60%;
+          max-width: 60%;
         }
         p.lead {
           font-size: 12px;
@@ -1097,7 +1165,7 @@ section.subsidiaries {
         @media (min-width: 992px) { 
         transform: scale(2.8) translate(3em,-4em);
         img {
-          width: 60%;
+          max-width: 60%;
         }
         p.lead {
           font-size:8.5px;
@@ -1109,7 +1177,7 @@ section.subsidiaries {
         @media (min-width: 1400px) { 
           transform: scale(2) translate(2em,-4em);
           img {
-            width: 60%;
+            max-width: 60%;
           }
           p.lead {
             font-size: 12px;
@@ -1281,8 +1349,6 @@ section#other {
   height: 100vh;
   width: 100vw;
 .loader {
-  animation: exitLeft .32s linear 5;
-  // animation: appear 1.6s linear 1;
   height: 100%;
   width: 100%;
   display: flex;
@@ -1291,7 +1357,10 @@ section#other {
   .loader-inner {
     position: relative;
     margin-top:-150px;
-    margin-left: -200px;
+    margin-left: -75%;
+    @media (min-width: 992px) { 
+      margin-left: -200px;
+    }
     #loader-logo {
       animation: appear 1.8s linear 1;
       position: absolute;
@@ -1330,67 +1399,25 @@ section#other {
   }
 }
 
-
-// @keyframes rotate {
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
-
-// @keyframes outerGrow {
-//   0% {
-//     width: 0;
-//     height: 0;
-//   }
-//   70% {
-//     width: 20px;
-//     height: 20px;
-//   }
-//   100% {
-//     width: 102px;
-//     height: 102px;
-//   }
-// }
-
-// @keyframes grow {
-//   0% {
-//     width: 1px;
-//     height: 1px;
-//     opacity: 0;
-//   }
-//   80% {
-//     width: 20px;
-//     height: 20px;
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes appear {
-//   0% {
-//     display:none;
-//   }
-  
-//   100% {
-//     display: block;
-//   }
-// }
-
 @keyframes bye {
   0% {
     z-index: 4000;
     top: 0;
     left:0;
+    opacity: 1;
   }
 
   80% {
     z-index: 4000;
     top: 0;
     left:0;
+    opacity: 1;
   }
   100% {
     z-index: -1000;
     top: 0;
-    right: 120%;
+    left:0;
+    opacity: 0;
   }
 }
 
@@ -1403,7 +1430,10 @@ footer {
   min-height: 120px;
   margin-bottom:0;
 
-  
+  a i::before {
+    position: relative;
+    top:1px;
+  }
 
   @include font-size(12px);
   img{

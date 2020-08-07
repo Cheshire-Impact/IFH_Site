@@ -27,6 +27,7 @@ p {
 
 a {
   color: $secondary-color;
+  outline: 0;
   @include transition(all 0.3s ease);
   &:hover {
     color: $primary-color;
