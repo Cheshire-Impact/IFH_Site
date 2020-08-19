@@ -2007,14 +2007,44 @@ section.companies .Gov .circle::after {
   content: "";
   width: 106%;
   height: 106%;
+  margin-left: -3%;
+  margin-top: -3%;
+  border: 8px solid #bebebe;
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: -3%;
-  margin-top: -3%;
-  border: 8px solid #bebebe;
   border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+  section.companies .Gov .circle::after {
+    width: 110%;
+    height: 110%;
+    margin-left: -5%;
+    margin-top: -5%;
+    border: 7px solid #bebebe;
+  }
+}
+
+@media (min-width: 1400px) {
+  section.companies .Gov .circle::after {
+    width: 108%;
+    height: 108%;
+    margin-left: -4%;
+    margin-top: -4%;
+    border: 8px solid #bebebe;
+  }
+}
+
+@media (min-width: 1600px) {
+  section.companies .Gov .circle::after {
+    width: 107%;
+    height: 107%;
+    margin-left: -3.5%;
+    margin-top: -3.5%;
+    border: 8px solid #bebebe;
+  }
 }
 
 section.companies .Payments {
@@ -4168,6 +4198,35 @@ section#other {
   left: 0;
   width: 300px;
   margin-top: -17px;
+}
+
+body {
+  -webkit-animation: preventScroll 5s linear 1;
+  animation: preventScroll 5s linear 1;
+}
+
+@-webkit-keyframes preventScroll {
+  0% {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  100% {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@keyframes preventScroll {
+  0% {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  100% {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 @-webkit-keyframes pulse {

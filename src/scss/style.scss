@@ -785,13 +785,35 @@ section.companies {
         content:"";
         width: 106%;
         height: 106%;
+        margin-left: -3%;
+        margin-top: -3%;
+        border: 8px solid color(dark-grey);
+        @media (min-width: 992px) { 
+        width: 110%;
+        height: 110%;
+        margin-left: -5%;
+        margin-top: -5%;
+        border: 7px solid color(dark-grey);
+      }
+        @media (min-width: 1400px) {  
+          width: 108%;
+          height: 108%;
+          margin-left: -4%;
+          margin-top: -4%;
+          border: 8px solid color(dark-grey);
+        }
+        @media (min-width: 1600px) {  
+          width: 107%;
+          height: 107%;
+          margin-left: -3.5%;
+          margin-top: -3.5%;
+          border: 8px solid color(dark-grey);
+        }
         display:block;
         position: absolute;
         top: 0;
         left: 0;
-        margin-left: -3%;
-        margin-top: -3%;
-        border: 8px solid color(dark-grey);
+       
         border-radius: 50%;
       }
     }
@@ -1372,6 +1394,21 @@ section#other {
   }
   
 }
+}
+
+body {
+  animation: preventScroll 5s linear 1;
+}
+
+@keyframes preventScroll {
+  0% {
+    height: 100vh;
+    overflow:hidden;
+  }
+  100% {
+    height: 100vh;
+    overflow:hidden;
+  }
 }
 
 
