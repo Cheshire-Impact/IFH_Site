@@ -4388,3 +4388,9 @@ footer #footer-content {
   padding-top: 2em;
   padding-bottom: 1em;
 }
+
+#pardotForm,
+#googleMaps {
+  width: 1px;
+  min-width: 100%;
+}
